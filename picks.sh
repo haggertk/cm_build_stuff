@@ -12,9 +12,6 @@ repopick 167484
 # NOTE: Pretty close to done enough for me, I like the text-only option
 repopick 167464
 
-# sepolicy: allow sdcard access via sdcardfs
-repopick 168504
-
 # klte-common: Enable legacy mediaserver
 # NOTE: Depends on 167485, 167484
 repopick 167511
