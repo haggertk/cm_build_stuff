@@ -2,8 +2,11 @@
 
 source build/envsetup.sh
 
-# av: Add support for CameraSource as metadata type
-repopick 167485
+# libstagefright: Support for legacy camera/encoder buffers
+repopick 168923
+
+# camera/media: Support for legacy camera HALv1
+repopick 168929
 
 # Add rules required for TARGET_HAS_LEGACY_CAMERA_HAL1
 repopick 167484
@@ -13,7 +16,7 @@ repopick 167484
 repopick 167464
 
 # klte-common: Enable legacy mediaserver
-# NOTE: Depends on 167485, 167484
+# NOTE: Depends on 168923, 168929, 167484
 repopick 167511
 
 # [DO NOT MERGE] Revert "klte: Enable blur"
@@ -22,6 +25,3 @@ repopick 167512
 
 # Revert "Revert "klte-common: enable sdcardfs""
 repopick 168974
-
-# klte-common: sepolicy: Add rules for sdcardfs external SD card
-repopick 169069
