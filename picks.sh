@@ -22,6 +22,3 @@ repopick 167511
 # [DO NOT MERGE] Revert "klte: Enable blur"
 # NOTE: Temp until 167370 is merged, then drop
 repopick 167512
-
-# Revert "Revert "klte-common: enable sdcardfs""
-repopick 168974
