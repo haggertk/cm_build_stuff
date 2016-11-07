@@ -2,12 +2,6 @@
 
 source build/envsetup.sh
 
-# libstagefright: Support for legacy camera/encoder buffers
-repopick 168923
-
-# camera/media: Support for legacy camera HALv1
-repopick 168929
-
 # Add rules required for TARGET_HAS_LEGACY_CAMERA_HAL1
 repopick 167484
 
@@ -16,9 +10,18 @@ repopick 167484
 repopick 167464
 
 # klte-common: Enable legacy mediaserver
-# NOTE: Depends on 168923, 168929, 167484
+# NOTE: Depends on 167484
 repopick 167511
 
 # [DO NOT MERGE] Revert "klte: Enable blur"
 # NOTE: Temp until 167370 is merged, then drop
 repopick 167512
+
+# klte-common: Add buildable libpn547_fw
+repopick 169338
+
+# klte: nfc: Update configs and build
+repopick 169331
+
+# klte: Use source-built libpn547 NFC firmware blob
+repopick 169353
