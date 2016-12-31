@@ -2,3 +2,4 @@
 
 source build/envsetup.sh
 
+repopick -t rebrand
