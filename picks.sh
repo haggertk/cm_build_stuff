@@ -13,8 +13,5 @@ repopick 155020
 # kltespr: Add overlay for config_volte_replacement_rat
 #repopick 151854
 
-# sensors: Allow opting out of default batch size
-repopick 156735
-
-# klte-common: Fix rotation sensor
-repopick 156738
+# vendor: lineage boot animation
+repopick 156893
