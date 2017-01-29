@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <project name="LineageOS/hudson" path="hudson" remote="github" revision="master" />
+  <project name="LineageOS/lineage_wiki" path="lineage_wiki" remote="github" revision="master" />
 
   <project name="TheMuppets/proprietary_vendor_huawei" path="vendor/huawei" remote="github" revision="cm-14.1"/>
   <project name="TheMuppets/proprietary_vendor_samsung" path="vendor/samsung" remote="github" revision="cm-14.1"/>
