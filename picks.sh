@@ -13,6 +13,3 @@ repopick 159752
 
 # klte-common: Quiet "KERNEL IS NOT SEANDROID ENFORCING" boot message
 repopick 159458
-
-# klte-common: Squashed set of TWRP support patches
-repopick 159705
