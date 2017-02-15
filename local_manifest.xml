@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project name="CyanogenMod/hudson" path="hudson" remote="github" revision="master" />
+  <project name="LineageOS/hudson" path="hudson" remote="github" revision="master" />
 
   <project name="TheMuppets/proprietary_vendor_samsung" path="vendor/samsung" remote="github" revision="cm-13.0"/>
 
