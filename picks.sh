@@ -10,3 +10,9 @@ source build/envsetup.sh
 
 # klte-common: Squashed set of TWRP support patches
 repopick 159705
+
+# NfcNci: make T3T/Nfc-F HCE optional
+repopick 161917
+
+# klte-common: fix rmt_storage denial
+repopick 161844
