@@ -22,6 +22,3 @@ repopick 162358
 
 # AVRCP: Add null pointer check
 repopick 162121
-
-# Use fw/b overlay for GPS configuration
-repopick -t overlay_gpsconf_klte
