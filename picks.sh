@@ -17,8 +17,5 @@ repopick 161917
 # klte-common: Disable T3T/Nfc-F HCE support
 repopick 161932
 
-# Revert "Bluetooth: DUT discovery the correct adapter name"
-repopick 162358
-
 # AVRCP: Add null pointer check
 repopick 162121
