@@ -19,3 +19,9 @@ repopick 161932
 
 # AVRCP: Add null pointer check
 repopick 162121
+
+# Squashed update to LA.BF.1.1.3_rb1.15 (hardware_qcom_audio/cm-14.1-caf-8974)
+repopick 163407
+
+# Squashed update to LA.BF.1.1.3_rb1.15 (hardware_qcom_media/cm-14.1-caf-8974)
+repopick 163406
