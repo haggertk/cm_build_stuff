@@ -17,11 +17,5 @@ repopick 161917
 # klte-common: Disable T3T/Nfc-F HCE support
 repopick 161932
 
-# AVRCP: Add null pointer check
-repopick 162121
-
-# klte-common: kang brigthness overlays from bacon
-repopick 163339
-
 # IMS: Phone switching
 repopick 163531
