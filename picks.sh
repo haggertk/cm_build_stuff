@@ -8,9 +8,6 @@ source build/envsetup.sh
 # kltespr: Add overlay for config_volte_replacement_rat
 #repopick 151854
 
-# klte-common: Squashed set of TWRP support patches
-repopick 159705
-
 # NfcNci: make T3T/Nfc-F HCE optional
 repopick 161917
 
