@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project name="LineageOS/hudson" path="hudson" remote="github" revision="master" />
-  <project name="LineageOS/lineage_wiki" path="lineage_wiki" remote="github" revision="master" />
-
   <project name="TheMuppets/manifests" path="vendor/muppets_manifests" remote="github" revision="cm-14.1" />
 
   <project name="haggertk/cm_build_stuff" path="cm_build_stuff" remote="github" revision="cm-14.1" />
