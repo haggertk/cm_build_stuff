@@ -16,3 +16,6 @@ repopick 161932
 
 # IMS: Phone switching
 repopick 163531
+
+# boringssl update
+repopick -t boringssl-update-from-master
