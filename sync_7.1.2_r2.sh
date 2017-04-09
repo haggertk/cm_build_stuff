@@ -102,10 +102,8 @@ vendor/cm
 
 for r in ${repos[@]}; do
   cd $r
-  project=`repo info . | grep Project | awk '{print $2}' | sed 's/LineageOS/invisiblek/g'`
-  git remote add invisiblek git://github.com/$project
-  git fetch invisiblek
-  git reset --hard invisiblek/cm-14.1_android-7.1.2_r2
+  git fetch github staging/cm-14.1_android-7.1.2_r2
+  git reset --hard staging/cm-14.1_android-7.1.2_r2
   cd - > /dev/null
 done
 
