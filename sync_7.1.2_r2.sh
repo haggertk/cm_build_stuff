@@ -103,7 +103,7 @@ vendor/cm
 for r in ${repos[@]}; do
   cd $r
   git fetch github staging/cm-14.1_android-7.1.2_r2
-  git reset --hard staging/cm-14.1_android-7.1.2_r2
+  git reset --hard github/staging/cm-14.1_android-7.1.2_r2
   cd - > /dev/null
 done
 
