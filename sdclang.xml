@@ -3,6 +3,6 @@
 
   <remote name="local_repos" fetch="file:///depot/software/source/my_repos" />
 
-  <project name="android_prebuilts_snapdragon-llvm.git" path="prebuilts/snapdragon-llvm" remote="local_repos" />
+  <project name="android_prebuilts_snapdragon-llvm.git" path="prebuilts/snapdragon-llvm" remote="local_repos" revision="cm-14.1"/>
 
 </manifest>
