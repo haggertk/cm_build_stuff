@@ -2,20 +2,17 @@
 
 source build/envsetup.sh
 
-# telephony: Add state check for LteOnCdma to isGsm and isCdma
-#repopick 64932
+for PICK in `curl https://gist.githubusercontent.com/invisiblek/85ebd8a96fba6086dbed3972557eba9e/raw/repopicks-lineage-15.0 | cut -d ' ' -f 1  | egrep "^[0-9]"`; do
+    repopick $PICK
+done
 
-# kltespr: Add overlay for config_volte_replacement_rat
-#repopick 151854
+# Add roomservice
+repopick 185913
 
-# NfcNci: make T3T/Nfc-F HCE optional
-repopick 161917
+# dtbhtool: Use libfdt from external/dtc
+repopick 186324
 
-# klte-common: Disable T3T/Nfc-F HCE support
-repopick 161932
+repopick -t releasetools-scripts
 
-# IMS: Phone switching
-repopick 163531
-
-# boringssl update
-repopick -t boringssl-update-from-master
+# releasetools: ota_from_target_files: add FullOTA_PostValidate
+repopick 187374
