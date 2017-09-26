@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project name="TheMuppets/manifests" path="vendor/muppets_manifests" remote="github" revision="cm-14.1" />
+  <project name="haggertk/cm_build_stuff" path="haggertk" remote="github" />
 
-  <project name="haggertk/cm_build_stuff" path="cm_build_stuff" remote="github" revision="cm-14.1" />
+  <project name="TheMuppets/proprietary_vendor_samsung" path="vendor/samsung" remote="github" />
 </manifest>
