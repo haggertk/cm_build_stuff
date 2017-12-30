@@ -10,10 +10,23 @@ CAF_HALS="audio display media"
 for hal in $CAF_HALS; do
   d=`pwd`
   cd hardware/qcom/${hal}-caf/msm8974 || exit 1
-  git remote remove bgcngm
+  git remote remove bgcngm > /dev/null 2>&1
   git remote add bgcngm https://github.com/bgcngm/android_hardware_qcom_${hal}.git || exit 1
   git fetch bgcngm staging/lineage-15.1-caf-8974-rebase-LA.BF.1.1.3_rb1.15  || exit 1
   git checkout bgcngm/staging/lineage-15.1-caf-8974-rebase-LA.BF.1.1.3_rb1.15 || exit 1
+  cd $d
+done
+
+# NOTE: Snap is directly in local_manifest.xml, these have currently synched
+# branches
+ARCO_APPS="Gallery2 Trebuchet"
+for APP in $ARCO_APPS; do
+  d=`pwd`
+  cd packages/apps/${APP} || exit 1
+  git remote remove arch > /dev/null 2>&1
+  git remote add arco https://github.com/arco/android_packages_apps_${APP}.git || exit 1
+  git fetch arco staging/lineage-15.1 || exit 1
+  git checkout arco/staging/lineage-15.1 || exit 1
   cd $d
 done
 
