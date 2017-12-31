@@ -17,19 +17,6 @@ for hal in $CAF_HALS; do
   cd $d
 done
 
-# NOTE: Snap is directly in local_manifest.xml, these have currently synched
-# branches
-ARCO_APPS="Gallery2 Trebuchet"
-for APP in $ARCO_APPS; do
-  d=`pwd`
-  cd packages/apps/${APP} || exit 1
-  git remote remove arch > /dev/null 2>&1
-  git remote add arco https://github.com/arco/android_packages_apps_${APP}.git || exit 1
-  git fetch arco staging/lineage-15.1 || exit 1
-  git checkout arco/staging/lineage-15.1 || exit 1
-  cd $d
-done
-
 kpick 199120 # tinycompress: HAXXX: Move libtinycompress_vendor back to Android.mk
 
 # device/lineage/sepolicy

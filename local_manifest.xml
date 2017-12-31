@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <project name="haggertk/cm_build_stuff" path="haggertk" remote="github" revision="lineage-15.1" />
-  <project name="arco/android_packages_apps_Snap" path="packages/apps/Snap" />
 
   <project name="TheMuppets/proprietary_vendor_htc" path="vendor/htc" remote="github" revision="lineage-15.1" />
   <project name="TheMuppets/proprietary_vendor_samsung" path="vendor/samsung" remote="github" revision="lineage-15.1" />
