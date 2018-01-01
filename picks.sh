@@ -17,6 +17,7 @@ for hal in $CAF_HALS; do
   cd $d
 done
 
+# external/tinycompress
 kpick 199120 # tinycompress: HAXXX: Move libtinycompress_vendor back to Android.mk
 
 # device/lineage/sepolicy
@@ -52,6 +53,9 @@ kpick 199565 # sepolicy: Label pre-O location data and socket file paths
 kpick 199554 # sepolicy: Add /data/vendor/time label for old oreo blobs
 kpick 199600 # sepolicy: Allow 'sys_admin' capability for rmt_storage
 
+# system/sepolicy
+kpick 199664 # sepolicy: Fix up exfat and ntfs support
+
 # hardware/broadcom/libbt
 kpick 200115 # libbt: Add btlock support
 kpick 200116 # libbt: Add prepatch support
@@ -65,10 +69,35 @@ kpick 200124 # Broadcom BT: Add support fm/bt via v4l2.
 kpick 200126 # libbt: Import CID_PATH from samsung_macloader.h
 kpick 200127 # libbt: Only allow upio_start_stop_timer on 32bit arm
 
-# hardware/samsung
-kpick 200133 # macloader: Stop allowing G and O write perms to the cidfile
+# frameworks/base
+kpick 199835 # Runtime toggle of navbar
+kpick 198564 # Long-press power while display is off for torch
+kpick 199897 # Reimplement hardware keys custom rebinding
+kpick 199860 # Reimplement device hardware wake keys support
+kpick 199199 # PhoneWindowManager: add LineageButtons volumekey hook
+kpick 199200 # Framework: Volume key cursor control
+kpick 199203 # Forward port 'Swap volume buttons' (1/3)
+kpick 199865 # PhoneWindowManager: Tap volume buttons to answer call
+kpick 199906 # PhoneWindowManager: Implement press home to answer call
+kpick 199982 # SystemUI: add left and right virtual buttons while typing
+kpick 199947 # PowerManager: Re-integrate button brightness
+kpick 200112 # Framework: Forward port Long press back to kill app (2/2)
+kpick 200188 # Allow screen unpinning on devices without navbar
 
-# system/sepolicy
-kpick 199664 # sepolicy: Fix up exfat and ntfs support
+# frameworks/native
+kpick 199204 # Forward port 'Swap volume buttons' (2/3)
 
+# packages/apps/Settings
+kpick 200113 # Settings: Add kill app back button toggle
 
+# packages/apps/LineageParts
+kpick 200069 # LineageParts: Deprecate few button settings
+kpick 199198 # LineageParts: Bring up buttons settings
+kpick 199948 # LineageParts: Bring up button backlight settings
+
+# lineage-sdk
+kpick 199196 # lineage-sdk internal: add LineageButtons
+kpick 199197 # lineage-sdk: Import device hardware keys configs and constants
+kpick 199898 # lineage-sdk: Import device keys custom rebinding configs and add helpers
+kpick 200106 # lineage-sdk: Import ActionUtils class
+kpick 200114 # lineage-sdk: Add kill app back button configs and strings
