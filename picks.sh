@@ -14,8 +14,44 @@ for hal in $CAF_HALS; do
   git remote add bgcngm https://github.com/bgcngm/android_hardware_qcom_${hal}.git || exit 1
   git fetch bgcngm staging/lineage-15.1-caf-8974-rebase-LA.BF.1.1.3_rb1.15  || exit 1
   git checkout bgcngm/staging/lineage-15.1-caf-8974-rebase-LA.BF.1.1.3_rb1.15 || exit 1
-  cd $d
+  cd "$d"
 done
+
+if [ $USER != haggertk ]; then
+  d=`pwd`
+  cd vendor/samsung || exit 1
+  git remote remove haggertk > /dev/null 2>&1
+  git remote add haggertk https://github.com/haggertk/proprietary_vendor_samsung.git || exit 1
+  git fetch haggertk lineage-15.1 || exit 1
+  git checkout haggertk/lineage-15.1 || exit 1
+  cd "$d"
+fi
+
+# device/samsung/msm8974-common
+kpick 200637 # msm8974-common: Enable boot and system server dex-preopt
+
+# device/samsung/klte-common
+kpick 199932 # [DNM] klte-common: import libril from hardware/ril-caf
+kpick 199933 # [DNM] klte-common: libril: Add Samsung changes
+kpick 199934 # klte-common: libril: Fix RIL_Call structure
+kpick 199935 # klte-common: libril: Fix SMS on certain variants
+kpick 199936 # klte-common: libril: fix network operator search and attach
+kpick 199937 # klte-common: Update RIL_REQUEST_QUERY_AVAILABLE_NETWORKS response prop
+kpick 199938 # klte-common: Set system property to fix network attach on search
+kpick 199939 # klte-common: libril: Support custom number of data registration response strings
+kpick 200757 # klte-common: libril: Add workaround for "ring of death" bug
+kpick 199940 # klte-common: Properly parse RIL_REQUEST_DATA_REGISTRATION_STATE response
+kpick 199941 # klte-common: libril: Fix RIL_UNSOL_NITZ_TIME_RECEIVED Parcel
+kpick 200495 # klte-common: Fixup RIL_Call structure
+kpick 199942 # klte-common: Enable radio service 1.1
+kpick 199943 # [DNM] klte-common: selinux permissive for O bringup
+kpick 199944 # [DNM] klte-common: Kill blur overlay
+kpick 199946 # [DNM] klte-common: sepolicy: Rewrite for O
+kpick 200643 # klte-common: Move hardware key overlays from fw/b to lineage-sdk
+kpick 200805 # klte-common: Fragment NFC support to chip type
+
+# device/samsung/klte
+kpick 200807 # klte: Use fragmented NFC support from -common
 
 # external/tinycompress
 kpick 199120 # tinycompress: HAXXX: Move libtinycompress_vendor back to Android.mk
