@@ -6,17 +6,6 @@ function kpick() {
 
 source build/envsetup.sh
 
-CAF_HALS="audio display media"
-for hal in $CAF_HALS; do
-  d=`pwd`
-  cd hardware/qcom/${hal}-caf/msm8974 || exit 1
-  git remote remove bgcngm > /dev/null 2>&1
-  git remote add bgcngm https://github.com/bgcngm/android_hardware_qcom_${hal}.git || exit 1
-  git fetch bgcngm staging/lineage-15.1-caf-8974-rebase-LA.BF.1.1.3_rb1.15  || exit 1
-  git checkout bgcngm/staging/lineage-15.1-caf-8974-rebase-LA.BF.1.1.3_rb1.15 || exit 1
-  cd "$d"
-done
-
 if [ $USER != haggertk ]; then
   d=`pwd`
   cd vendor/samsung || exit 1
@@ -27,34 +16,32 @@ if [ $USER != haggertk ]; then
   cd "$d"
 fi
 
-# device/samsung/msm8974-common
-kpick 200637 # msm8974-common: Enable boot and system server dex-preopt
-
 # device/samsung/klte-common
 kpick 199932 # [DNM] klte-common: import libril from hardware/ril-caf
 kpick 199933 # [DNM] klte-common: libril: Add Samsung changes
 kpick 199934 # klte-common: libril: Fix RIL_Call structure
 kpick 199935 # klte-common: libril: Fix SMS on certain variants
-kpick 199936 # klte-common: libril: fix network operator search and attach
+kpick 199936 # klte-common: libril: fix network operator search
 kpick 199937 # klte-common: Update RIL_REQUEST_QUERY_AVAILABLE_NETWORKS response prop
-kpick 199938 # klte-common: Set system property to fix network attach on search
-kpick 199939 # klte-common: libril: Support custom number of data registration response strings
 kpick 200757 # klte-common: libril: Add workaround for "ring of death" bug
-kpick 199940 # klte-common: Properly parse RIL_REQUEST_DATA_REGISTRATION_STATE response
 kpick 199941 # klte-common: libril: Fix RIL_UNSOL_NITZ_TIME_RECEIVED Parcel
 kpick 200495 # klte-common: Fixup RIL_Call structure
-kpick 199942 # klte-common: Enable radio service 1.1
+kpick 201182 # klte-common: libril: Get off my back
 kpick 199943 # [DNM] klte-common: selinux permissive for O bringup
 kpick 199944 # [DNM] klte-common: Kill blur overlay
 kpick 199946 # [DNM] klte-common: sepolicy: Rewrite for O
 kpick 200643 # klte-common: Move hardware key overlays from fw/b to lineage-sdk
 kpick 200805 # klte-common: Fragment NFC support to chip type
+kpick 201051 # klte-common: Move charger service into the charger domain
 
 # device/samsung/klte
 kpick 200807 # klte: Use fragmented NFC support from -common
 
 # external/tinycompress
 kpick 199120 # tinycompress: HAXXX: Move libtinycompress_vendor back to Android.mk
+
+# hardware/samsung
+kpick 200068 # AdvancedDisplay: cyanogenmod -> lineageos
 
 # device/lineage/sepolicy
 kpick 198594 # sepolicy: qcom: Import bluetooth_loader/hci_attach rules
@@ -92,18 +79,11 @@ kpick 199600 # sepolicy: Allow 'sys_admin' capability for rmt_storage
 # system/sepolicy
 kpick 199664 # sepolicy: Fix up exfat and ntfs support
 
-# hardware/broadcom/libbt
-kpick 200115 # libbt: Add btlock support
-kpick 200116 # libbt: Add prepatch support
-kpick 200117 # libbt: Add support for using two stop bits
-kpick 200118 # libbt-vendor: add support for samsung bluetooth
-kpick 200119 # libbt-vendor: Add support for Samsung wisol flavor
-kpick 200121 # libbt-vendor: Fix Samsung patchfile detection.
-kpick 200122 # Avoid an annoying bug that only hits BCM chips running at less than 3MBps
-kpick 200123 # libbt-vendor: add support for Samsung semco
-kpick 200124 # Broadcom BT: Add support fm/bt via v4l2.
-kpick 200126 # libbt: Import CID_PATH from samsung_macloader.h
-kpick 200127 # libbt: Only allow upio_start_stop_timer on 32bit arm
+# system/core
+d=`pwd`
+cd system/core || exit 1
+curl https://github.com/invisiblek/android_system_core/commit/96c4433e.patch | git am || exit 1
+cd "$d" || exit 1
 
 # frameworks/base
 kpick 199835 # Runtime toggle of navbar
@@ -116,20 +96,24 @@ kpick 199203 # Forward port 'Swap volume buttons' (1/3)
 kpick 199865 # PhoneWindowManager: Tap volume buttons to answer call
 kpick 199906 # PhoneWindowManager: Implement press home to answer call
 kpick 199982 # SystemUI: add left and right virtual buttons while typing
-kpick 199947 # PowerManager: Re-integrate button brightness
 kpick 200112 # Framework: Forward port Long press back to kill app (2/2)
 kpick 200188 # Allow screen unpinning on devices without navbar
+kpick 199947 # PowerManager: Re-integrate button brightness
+kpick 200968 # statusbar: Add arguments to shutdown and reboot to allow confirmation
+kpick 200969 # SystemUI: Power menu customizations
 
 # frameworks/native
 kpick 199204 # Forward port 'Swap volume buttons' (2/3)
 
 # packages/apps/Settings
 kpick 200113 # Settings: Add kill app back button toggle
+kpick 199839 # Settings: Add advanced restart switch
 
 # packages/apps/LineageParts
 kpick 200069 # LineageParts: Deprecate few button settings
 kpick 199198 # LineageParts: Bring up buttons settings
 kpick 199948 # LineageParts: Bring up button backlight settings
+kpick 201309 # LineageParts: Re-enable PowerMenuActions and adapt to SDK updates
 
 # lineage-sdk
 kpick 199196 # lineage-sdk internal: add LineageButtons
@@ -137,3 +121,36 @@ kpick 199197 # lineage-sdk: Import device hardware keys configs and constants
 kpick 199898 # lineage-sdk: Import device keys custom rebinding configs and add helpers
 kpick 200106 # lineage-sdk: Import ActionUtils class
 kpick 200114 # lineage-sdk: Add kill app back button configs and strings
+kpick 200970 # sdk: Move isAdvancedRebootEnabled to SDK from global access
+kpick 201311 # lineage-sdk: Add broadcast action for power menu update
+
+exit 0
+
+d=`pwd`
+cd frameworks/opt/telephony || exit 1
+git remote remove paul > /dev/null 2>&1
+git remote add paul https://github.com/randomstuffpaul/android_frameworks_opt_telephony.git || exit 1
+git fetch paul lineage-15.1 || exit 1
+git checkout paul/lineage-15.1 || exit 1
+cd "$d"
+
+exit 0
+
+# frameworks/opt/telephony
+kpick 200781 # Telephony: Enable data call on CSIM.
+kpick 200783 # Support Fetching IMSI MCC and MNC for RuimRecords.
+kpick 200784 # Get default from CdmaSubscriptionSourceManager
+kpick 200785 # Telephony: Reduce back to back same APN activation delay.
+kpick 200786 # Fix the roaming searching text display in standby screen
+kpick 200787 # Telephony: Fix RUIM app mcc/mnc issue.
+kpick 200788 # Fix copying SMS into RUIM with failure
+kpick 200793 # Mms: Add the retrieve conf type support in MMS PDU composer.
+kpick 200797 # PhoneFactory: fix creating a cdma phone type
+kpick 200796 # Telephony: Enable NV based CDMA data call.
+kpick 200798 # For NV-based devices like CDMA only devices, ignore ICC Card status change EVENT.
+kpick 200799 # Send EVENT_NV_READY to GsmCdmaPhone
+kpick 200800 # Add dummy SUB record in CDMA NV mode
+kpick 200801 # Update carrier services on EVENT_NV_READY
+kpick 200802 # GsmCdmaPhone: Return dummy ICCID serial for NV sub
+kpick 200803 # GsmCdmaPhone: Fix GSM SIM card ICCID on NV sub CDMA devices
+kpick 200804 # Create cdma dummy apns.
