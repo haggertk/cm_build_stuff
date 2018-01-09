@@ -31,11 +31,7 @@ kpick 199943 # [DNM] klte-common: selinux permissive for O bringup
 kpick 199944 # [DNM] klte-common: Kill blur overlay
 kpick 199946 # [DNM] klte-common: sepolicy: Rewrite for O
 kpick 200643 # klte-common: Move hardware key overlays from fw/b to lineage-sdk
-kpick 200805 # klte-common: Fragment NFC support to chip type
 kpick 201051 # klte-common: Move charger service into the charger domain
-
-# device/samsung/klte
-kpick 200807 # klte: Use fragmented NFC support from -common
 
 # external/tinycompress
 kpick 199120 # tinycompress: HAXXX: Move libtinycompress_vendor back to Android.mk
@@ -78,6 +74,9 @@ kpick 199600 # sepolicy: Allow 'sys_admin' capability for rmt_storage
 
 # system/sepolicy
 kpick 199664 # sepolicy: Fix up exfat and ntfs support
+kpick 198106 # Add rules required for TARGET_HAS_LEGACY_CAMERA_HAL1
+kpick 198107 # Adapt add_service uses for TARGET_HAS_LEGACY_CAMERA_HAL1
+kpick 198108 # mediaserver: Allow finding the hal_camera hardware service
 
 # system/core
 d=`pwd`
@@ -105,6 +104,11 @@ kpick 200969 # SystemUI: Power menu customizations
 # frameworks/native
 kpick 199204 # Forward port 'Swap volume buttons' (2/3)
 
+# frameworks/av
+kpick 198113 # camera/media: Support for legacy camera HALv1
+kpick 198114 # libstagefright: Support for legacy camera/encoder buffers
+kpick 198116 # CameraService: Fix deadlock in binder death cleanup.
+
 # packages/apps/Settings
 kpick 200113 # Settings: Add kill app back button toggle
 kpick 199839 # Settings: Add advanced restart switch
@@ -123,6 +127,9 @@ kpick 200106 # lineage-sdk: Import ActionUtils class
 kpick 200114 # lineage-sdk: Add kill app back button configs and strings
 kpick 200970 # sdk: Move isAdvancedRebootEnabled to SDK from global access
 kpick 201311 # lineage-sdk: Add broadcast action for power menu update
+
+# vendor/lineage
+kpick 201336 # soong_config: Add TARGET_HAS_LEGACY_CAMERA_HAL1 variable
 
 exit 0
 
