@@ -27,10 +27,8 @@ kpick 200757 # klte-common: libril: Add workaround for "ring of death" bug
 kpick 199941 # klte-common: libril: Fix RIL_UNSOL_NITZ_TIME_RECEIVED Parcel
 kpick 200495 # klte-common: Fixup RIL_Call structure
 kpick 201182 # klte-common: libril: Get off my back
-kpick 199943 # [DNM] klte-common: selinux permissive for O bringup
-kpick 199946 # [DNM] klte-common: sepolicy: Rewrite for O
-kpick 201051 # klte-common: Move charger service into the charger domain
 kpick 202457 # klte-common: HAXX: Fix seeming RIL start race condition
+kpick 199946 # [DNM] klte-common: sepolicy: Rewrite for O
 
 # hardware/samsung
 kpick 200068 # AdvancedDisplay: cyanogenmod -> lineageos
@@ -70,7 +68,6 @@ kpick 202391 # legacy: label per_mgr as a binder service
 kpick 198303 # sepolicy: Add sysfs labels for devices using 'soc.0'
 kpick 199564 # sepolicy: Allow energyawareness to read sysfs files
 kpick 199554 # sepolicy: Add /data/vendor/time label for old oreo blobs
-kpick 198620 # sepolicy: Let keystore load firmware
 kpick 199559 # sepolicy: Allow dataservice_app to read/write to IPA device
 kpick 198141 # Use set_prop() macro for property sets
 kpick 202104 # DNM: Squashed update to LA.UM.6.4.r1-05700-8x98.0
@@ -82,13 +79,16 @@ kpick 198107 # Adapt add_service uses for TARGET_HAS_LEGACY_CAMERA_HAL1
 kpick 198108 # mediaserver: Allow finding the hal_camera hardware service
 
 # system/core
-#d=`pwd`
-#cd system/core || exit 1
-#git remote remove blek > /dev/null 2>&1
-#git remote add blek https://github.com/invisiblek/android_system_core.git || exit 1
-#git fetch blek lineage-15.1_safetynet || exit 1
-#git cherry-pick 96c4433e || exit 1 # init: I hate safety net
-#cd "$d" || exit 1
+kpick 202493 # init: add detection of charging mode
+kpick 202494 # init: define BOARD_CHARGING_CMDLINE parameters
+kpick 202495 # init: Bring back support for arbitrary chargermode cmdlines
+d=`pwd`
+cd system/core || exit 1
+git remote remove blek > /dev/null 2>&1
+git remote add blek https://github.com/invisiblek/android_system_core.git || exit 1
+git fetch blek lineage-15.1_safetynet || exit 1
+git cherry-pick 96c4433e || exit 1 # init: I hate safety net
+cd "$d" || exit 1
 
 # frameworks/base
 kpick 199947 # PowerManager: Re-integrate button brightness
