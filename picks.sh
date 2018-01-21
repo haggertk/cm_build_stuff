@@ -25,7 +25,6 @@ kpick 203304 # klte-common: power: Add legacy qcom HAL compat code
 
 # device/lineage/sepolicy
 kpick 198594 # sepolicy: qcom: Import bluetooth_loader/hci_attach rules
-kpick 199571 # sepolicy: Move fingerprint 2.0 service out of private sepolicy
 kpick 199572 # sepolicy: SELinux policy for persistent properties API
 kpick 201552 # Squashed import of superuser SELinux policies
 kpick 201582 # sepolicy: adapt sudaemon policy for O
@@ -35,7 +34,6 @@ kpick 202830 # legacy: Add back legacy sensors rules
 kpick 202995 # legacy: Address mpdecision denials
 
 # system/sepolicy
-kpick 199664 # sepolicy: Fix up exfat and ntfs support
 kpick 198106 # Add rules required for TARGET_HAS_LEGACY_CAMERA_HAL1
 kpick 198107 # Adapt add_service uses for TARGET_HAS_LEGACY_CAMERA_HAL1
 kpick 201553 # sepolicy: We need to declare before referencing
@@ -54,8 +52,6 @@ git cherry-pick 96c4433e || exit 1 # init: I hate safety net
 cd "$d" || exit 1
 
 # frameworks/base
-kpick 200968 # statusbar: Add arguments to shutdown and reboot to allow confirmation
-kpick 200969 # SystemUI: Power menu customizations
 kpick 201879 # frameworks: Privacy Guard for O
 kpick 199947 # PowerManager: Re-integrate button brightness
 
@@ -70,17 +66,12 @@ kpick 201530 # AppOpsManager: Update with the new ops
 kpick 203256 # MMS: Update apnProfileID for MMS only apn
 
 # packages/apps/Settings
-kpick 199839 # Settings: Add advanced restart switch
 kpick 201529 # Settings: Privacy Guard
 kpick 201531 # Settings: Add developer setting for root access
 
 # packages/apps/LineageParts
-kpick 201309 # LineageParts: Re-enable PowerMenuActions and adapt to SDK updates
 kpick 201528 # PrivacyGuard: Bring up and inject into Settings
 kpick 199948 # LineageParts: Bring up button backlight settings
-
-# lineage-sdk
-kpick 200970 # lineage-sdk: Import power menu related classes
 
 # vendor/lineage
 kpick 201336 # soong_config: Add TARGET_HAS_LEGACY_CAMERA_HAL1 variable
