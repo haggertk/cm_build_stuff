@@ -25,7 +25,6 @@ kpick 203304 # klte-common: power: Add legacy qcom HAL compat code
 
 # device/lineage/sepolicy
 kpick 198594 # sepolicy: qcom: Import bluetooth_loader/hci_attach rules
-kpick 199572 # sepolicy: SELinux policy for persistent properties API
 kpick 201552 # Squashed import of superuser SELinux policies
 kpick 201582 # sepolicy: adapt sudaemon policy for O
 
@@ -52,12 +51,17 @@ git cherry-pick 96c4433e || exit 1 # init: I hate safety net
 cd "$d" || exit 1
 
 # frameworks/base
-kpick 201879 # frameworks: Privacy Guard for O
+kpick 201879 # appops: Privacy Guard for O
 kpick 199947 # PowerManager: Re-integrate button brightness
 
 # frameworks/av
-kpick 198113 # camera/media: Support for legacy camera HALv1
 kpick 198116 # CameraService: Fix deadlock in binder death cleanup.
+kpick 203520 # media: fix infinite wait at source for HAL1 based recording
+kpick 203521 # libstagefright: Free buffers on observer died
+kpick 203522 # stagefright: ACodec: Resolve empty vendor parameters usage
+kpick 201731 # libstagefright: use 64-bit usage for native_window_set_usage
+kpick 203523 # Camera: fix use after disconnect error
+kpick 198113 # camera/media: Support legacy HALv1 camera in mediaserver
 
 # frameworks/native
 kpick 201530 # AppOpsManager: Update with the new ops
