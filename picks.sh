@@ -6,16 +6,6 @@ function kpick() {
 
 source build/envsetup.sh
 
-if [ $USER != haggertk ]; then
-  d=`pwd`
-  cd vendor/samsung || exit 1
-  git remote remove haggertk > /dev/null 2>&1
-  git remote add haggertk https://github.com/haggertk/proprietary_vendor_samsung.git || exit 1
-  git fetch haggertk lineage-15.1 || exit 1
-  git checkout haggertk/lineage-15.1 || exit 1
-  cd "$d"
-fi
-
 # device/samsung/msm8974-common
 kpick 203120 # msm8974: Enable full dex preopt
 kpick 203303 # Revert "msm8974-common: Use QTI HIDL power HAL"
@@ -35,13 +25,12 @@ kpick 202995 # legacy: Address mpdecision denials
 # system/sepolicy
 kpick 198106 # Add rules required for TARGET_HAS_LEGACY_CAMERA_HAL1
 kpick 198107 # Adapt add_service uses for TARGET_HAS_LEGACY_CAMERA_HAL1
-kpick 201553 # sepolicy: We need to declare before referencing
-kpick 201583 # sepolicy: Allow su by apps on userdebug_or_eng
 kpick 201584 # sepolicy: update policies for sudaemon on O
-kpick 201732 # sepilocy: add sudaemon to ignore list
+kpick 201732 # sepolicy: add sudaemon to ignore list
 
 # system/core
 kpick 202849 # Update permissions to the superuser binary
+kpick 204100 # adbd: Disable "adb root" by system property (2/3)
 d=`pwd`
 cd system/core || exit 1
 git remote remove blek > /dev/null 2>&1
@@ -52,7 +41,6 @@ cd "$d" || exit 1
 
 # frameworks/base
 kpick 201879 # appops: Privacy Guard for O
-kpick 199947 # PowerManager: Re-integrate button brightness
 
 # frameworks/av
 kpick 198116 # CameraService: Fix deadlock in binder death cleanup.
@@ -70,12 +58,14 @@ kpick 201530 # AppOpsManager: Update with the new ops
 kpick 203256 # MMS: Update apnProfileID for MMS only apn
 
 # packages/apps/Settings
-kpick 201529 # Settings: Privacy Guard
 kpick 201531 # Settings: Add developer setting for root access
+kpick 204128 # Settings: Set root access options appropriately
+kpick 204127 # Settings: Root appops access in developer settings
+kpick 201529 # Settings: Privacy Guard
+kpick 199922 # settings: Kill night mode if we have LiveDisplay
 
 # packages/apps/LineageParts
 kpick 201528 # PrivacyGuard: Bring up and inject into Settings
-kpick 199948 # LineageParts: Bring up button backlight settings
 
 # vendor/lineage
 kpick 201336 # soong_config: Add TARGET_HAS_LEGACY_CAMERA_HAL1 variable
