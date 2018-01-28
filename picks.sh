@@ -8,15 +8,20 @@ source build/envsetup.sh
 
 # device/samsung/msm8974-common
 kpick 203120 # msm8974: Enable full dex preopt
+kpick 204289 # msm8974-common: ril: Import libril from hardware/ril-caf
+kpick 204290 # msm8974-common: ril: Makefile maintenance
+kpick 204291 # msm8974-common: libril: Add Samsung changes
+kpick 204292 # msm8974-common: libril: Fix SMS on certain variants
+kpick 204293 # msm8974-common: libril: fix network operator search
+kpick 204294 # msm8974-common: libril: Add workaround for "ring of death" bug
+kpick 204295 # msm8974-common: libril: Fix RIL_UNSOL_NITZ_TIME_RECEIVED Parcel
+kpick 204296 # msm8974-common: libril: Get off my back
 kpick 203303 # Revert "msm8974-common: Use QTI HIDL power HAL"
 
 # device/samsung/klte-common
+kpick 204310 # klte-common: Move ril_{,unsol}_commands_vendor.h to include/
+kpick 204311 # klte-common: Drop libril
 kpick 203304 # klte-common: power: Add legacy qcom HAL compat code
-
-# device/lineage/sepolicy
-kpick 198594 # sepolicy: qcom: Import bluetooth_loader/hci_attach rules
-kpick 201552 # Squashed import of superuser SELinux policies
-kpick 201582 # sepolicy: adapt sudaemon policy for O
 
 # device/qcom/sepolicy
 kpick 202830 # legacy: Add back legacy sensors rules
@@ -25,8 +30,6 @@ kpick 202995 # legacy: Address mpdecision denials
 # system/sepolicy
 kpick 198106 # Add rules required for TARGET_HAS_LEGACY_CAMERA_HAL1
 kpick 198107 # Adapt add_service uses for TARGET_HAS_LEGACY_CAMERA_HAL1
-kpick 201584 # sepolicy: update policies for sudaemon on O
-kpick 201732 # sepolicy: add sudaemon to ignore list
 
 # system/core
 kpick 202849 # Update permissions to the superuser binary
@@ -53,9 +56,6 @@ kpick 198113 # camera/media: Support legacy HALv1 camera in mediaserver
 
 # frameworks/native
 kpick 201530 # AppOpsManager: Update with the new ops
-
-# frameworks/opt/telephony
-kpick 203256 # MMS: Update apnProfileID for MMS only apn
 
 # packages/apps/Settings
 kpick 201531 # Settings: Add developer setting for root access
