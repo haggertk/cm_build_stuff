@@ -15,12 +15,10 @@ kpick 204293 # msm8974-common: libril: fix network operator search
 kpick 204294 # msm8974-common: libril: Add workaround for "ring of death" bug
 kpick 204295 # msm8974-common: libril: Fix RIL_UNSOL_NITZ_TIME_RECEIVED Parcel
 kpick 204296 # msm8974-common: libril: Get off my back
-kpick 203303 # Revert "msm8974-common: Use QTI HIDL power HAL"
 
 # device/samsung/klte-common
 kpick 204310 # klte-common: Move ril_{,unsol}_commands_vendor.h to include/
 kpick 204311 # klte-common: Drop libril
-kpick 203304 # klte-common: power: Add legacy qcom HAL compat code
 
 # hardware/qcom/audio-caf/msm8974
 kpick 204892 # audio: revert "remove 5.1 channel mask if SSR is not supported"
