@@ -6,23 +6,7 @@ function kpick() {
 
 source build/envsetup.sh
 
-# device/samsung/msm8974-common
-kpick 204289 # msm8974-common: ril: Import libril from hardware/ril-caf
-kpick 204290 # msm8974-common: ril: Makefile maintenance
-kpick 204291 # msm8974-common: libril: Add Samsung changes
-kpick 204292 # msm8974-common: libril: Fix SMS on certain variants
-kpick 204293 # msm8974-common: libril: fix network operator search
-kpick 204294 # msm8974-common: libril: Add workaround for "ring of death" bug
-kpick 204295 # msm8974-common: libril: Fix RIL_UNSOL_NITZ_TIME_RECEIVED Parcel
-kpick 204296 # msm8974-common: libril: Get off my back
-
-# device/samsung/klte-common
-kpick 204310 # klte-common: Move ril_{,unsol}_commands_vendor.h to include/
-kpick 204311 # klte-common: Drop libril
-
 # device/samsung/hlte-common
-kpick 204313 # hlte-common: Update RIL_REQUEST_QUERY_AVAILABLE_NETWORKS response prop
-kpick 204314 # hlte-common: Override samsung_ril.h
 kpick 205333 # hlte-common: Add hltekor to makefile guards
 
 # hardware/qcom/audio-caf/msm8974
