@@ -20,6 +20,11 @@ kpick 204296 # msm8974-common: libril: Get off my back
 kpick 204310 # klte-common: Move ril_{,unsol}_commands_vendor.h to include/
 kpick 204311 # klte-common: Drop libril
 
+# device/samsung/hlte-common
+kpick 204313 # hlte-common: Update RIL_REQUEST_QUERY_AVAILABLE_NETWORKS response prop
+kpick 204314 # hlte-common: Override samsung_ril.h
+kpick 205333 # hlte-common: Add hltekor to makefile guards
+
 # hardware/qcom/audio-caf/msm8974
 kpick 204892 # audio: revert "remove 5.1 channel mask if SSR is not supported"
 kpick 204893 # policy_hal: Enable Direct PCM for 24 bit PCM playback
