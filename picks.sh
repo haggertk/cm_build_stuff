@@ -9,11 +9,8 @@ source build/envsetup.sh
 # device/samsung/hlte-common
 kpick 205333 # hlte-common: Add hltekor to makefile guards
 
-# hardware/qcom/audio-caf/msm8974
-kpick 204892 # audio: revert "remove 5.1 channel mask if SSR is not supported"
-kpick 204893 # policy_hal: Enable Direct PCM for 24 bit PCM playback
-kpick 204894 # hal: Fix alignement of buffer sent to DSP for multichannel clips
-kpick 204895 # audio: Enable 24 bit packed direct pcm support.
+# device/samsung/msm8974-common
+kpick 205468 # msm8974-common: libril: Fix RIL_Call struct for 64-bit platforms
 
 # system/sepolicy
 kpick 198106 # Add rules required for TARGET_HAS_LEGACY_CAMERA_HAL1
@@ -36,6 +33,12 @@ kpick 203522 # stagefright: ACodec: Resolve empty vendor parameters usage
 kpick 201731 # libstagefright: use 64-bit usage for native_window_set_usage
 kpick 203523 # Camera: fix use after disconnect error
 kpick 198113 # camera/media: Support legacy HALv1 camera in mediaserver
+
+# frameworks/opt/telephony
+kpick 200797 # PhoneFactory: fix creating a cdma phone type
+
+# kernel/samsung/msm8974
+kpick 205073 # fs: proc: Remove Samsung changes to commandline
 
 # packages/apps/Settings
 kpick 199922 # settings: Kill night mode if we have LiveDisplay
