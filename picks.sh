@@ -14,9 +14,6 @@ kpick 205333 # hlte-common: Add hltekor to makefile guards
 # device/samsung/msm8974-common
 kpick 205468 # msm8974-common: libril: Fix RIL_Call struct for 64-bit platforms
 
-# kernel/samsung/msm8974
-kpick 205073 # fs: proc: Remove Samsung changes to commandline
-
 # -------------- PLATFORM STUFF --------------
 
 # frameworks/av
@@ -52,5 +49,8 @@ kpick 206429 # Adapt add_service uses for TARGET_HAS_LEGACY_CAMERA_HAL1
 
 # vendor/lineage
 kpick 206426 # soong_config: Add TARGET_HAS_LEGACY_CAMERA_HAL1 variable
+
+# -------------- TOPIC STUFF --------------
+repopick -t adaptive-icons
 
 exit 0
