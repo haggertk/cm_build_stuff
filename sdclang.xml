@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-
-  <remote name="local_repos" fetch="file:///depot/software/source/my_repos" />
-
-  <project name="android_prebuilts_snapdragon-llvm.git" path="prebuilts/snapdragon-llvm" remote="local_repos" />
-
+  <project name="haggertk/android_prebuilts_snapdragon-llvm" path="prebuilts/snapdragon-llvm" remote="bitbucket" />
 </manifest>

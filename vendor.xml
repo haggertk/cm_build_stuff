@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="TheMuppets/proprietary_vendor_htc" path="vendor/htc" remote="github" />
+  <project name="TheMuppets/proprietary_vendor_lge" path="vendor/lge" remote="github" />
+  <project name="TheMuppets/proprietary_vendor_samsung" path="vendor/samsung" remote="github" />
+</manifest>
