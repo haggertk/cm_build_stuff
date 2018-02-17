@@ -9,12 +9,20 @@ source build/envsetup.sh
 # -------------- DEVICE STUFF --------------
 
 # device/samsung/hlte-common
-kpick 205333 # hlte-common: Add hltekor to makefile guards
+kpick 206692 # hlte-common: Transition to TARGET_LD_SHIM_LIBS
+
+# device/samsung/hlte-common
+kpick 206763 # klte-common: Transition to TARGET_LD_SHIM_LIBS
 
 # device/samsung/msm8974-common
 kpick 205468 # msm8974-common: libril: Fix RIL_Call struct for 64-bit platforms
+kpick 206693 # msm8974-common: Remove noatsecure
+kpick 206810 # msm8974-common: update dexpreopt option
 
 # -------------- PLATFORM STUFF --------------
+
+# bionic
+kpick 206691 # linker: Move shims to TARGET_LD_SHIM_LIBS
 
 # frameworks/av
 kpick 206430 # CameraService: Fix deadlock in binder death cleanup.
@@ -49,6 +57,7 @@ kpick 206429 # Adapt add_service uses for TARGET_HAS_LEGACY_CAMERA_HAL1
 
 # vendor/lineage
 kpick 206426 # soong_config: Add TARGET_HAS_LEGACY_CAMERA_HAL1 variable
+kpick 206690 # lineage: soong: Add var for linker shim libs
 
 # -------------- TOPIC STUFF --------------
 repopick -t adaptive-icons
