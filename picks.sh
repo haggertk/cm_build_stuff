@@ -9,20 +9,27 @@ source build/envsetup.sh
 # -------------- DEVICE STUFF --------------
 
 # device/samsung/hlte-common
-kpick 206692 # hlte-common: Transition to TARGET_LD_SHIM_LIBS
+kpick 207220 # hlte-common: Update kernel exfat flag
 
 # device/samsung/hlte-common
-kpick 206763 # klte-common: Transition to TARGET_LD_SHIM_LIBS
+kpick 207271 # klte-common: Update kernel exfat flag
 
 # device/samsung/msm8974-common
-kpick 205468 # msm8974-common: libril: Fix RIL_Call struct for 64-bit platforms
-kpick 206693 # msm8974-common: Remove noatsecure
-kpick 206810 # msm8974-common: update dexpreopt option
+kpick 207146 # msm8974-common: Remove exfat and ntfs sepolicies
+
+# kernel/samsung/msm8974
+kpick 207142 # fs: Add sdfat
+kpick 207143 # fs: sdfat: Fix compilation on Linux 3.4
+kpick 207144 # fs: exfat: Allow disabling exfat
+kpick 207145 # ARM: configs: lineage_*: Enable sdfat
+kpick 207162 # fs: sdfat: Fix compilation without debugging
+kpick 207163 # fs: sdfat: Allow disabling sdfat
 
 # -------------- PLATFORM STUFF --------------
 
-# bionic
-kpick 206691 # linker: Move shims to TARGET_LD_SHIM_LIBS
+# devide/lineage/sepolicy
+kpick 207148 # sepolicy: Cleanup context labelling for external sdcards
+kpick 207128 # common: Label sdfat as vfat
 
 # frameworks/av
 kpick 206430 # CameraService: Fix deadlock in binder death cleanup.
@@ -54,12 +61,22 @@ cd "$d" || exit 1
 # system/sepolicy
 kpick 206428 # Add rules required for TARGET_HAS_LEGACY_CAMERA_HAL1
 kpick 206429 # Adapt add_service uses for TARGET_HAS_LEGACY_CAMERA_HAL1
+kpick 207219 # Revert "sepolicy: Add missing exfat and fuseblk types"
+kpick 207150 # Revert "sepolicy: Fix up exfat and ntfs support"
+
+# system/vold
+kpick 207151 # vold: Make exfat driver support generic
+kpick 207154 # vold: Don't disable dirsync for exfat
+kpick 207240 # vold: Only include exfat support for devices that specify a driver
 
 # vendor/lineage
 kpick 206426 # soong_config: Add TARGET_HAS_LEGACY_CAMERA_HAL1 variable
-kpick 206690 # lineage: soong: Add var for linker shim libs
+kpick 206996 # soong_config: Add TARGET_USES_MEDIA_EXTENSIONS variable
 
 # -------------- TOPIC STUFF --------------
-repopick -t adaptive-icons
+
+repopick -t advanced-display || exit 1
+repopick -t advanced-display-samsung-8974 || exit 1
+repopick -t oreo-mr1-wallpapers || exit 1
 
 exit 0
