@@ -12,13 +12,14 @@ source build/envsetup.sh
 kpick 207147 # hlte-common: Use sdfat for exfat
 
 # device/samsung/klte-common
+kpick 207881 # Revert "klte-common: HAXX: "Fix" race condition in init"
+kpick 207882 # klte-common: Mount apnhlos and modem in init
+kpick 207883 # klte-common: Use sdfat for exfat
 
 # device/samsung/msm8974-common
 
 # kernel/samsung/msm8974
-kpick 207529 # misc: Import SM-G900F kernel source code
-kpick 207530 # msm: camera_ll: Pick G900FXXU1CRA2 camera_v2 changes
-kpick 207532 # net: wireless: bcmdhd: Drop back to 2930b42b636 state
+kpick 207265 # ARM: configs: lineage_*: Disable exfat and vfat
 
 # -------------- PLATFORM STUFF --------------
 
@@ -49,7 +50,6 @@ kpick 206426 # soong_config: Add TARGET_HAS_LEGACY_CAMERA_HAL1 variable
 kpick 206996 # soong_config: Add TARGET_USES_MEDIA_EXTENSIONS variable
 
 # -------------- TOPIC STUFF --------------
-
-repopick -t oreo-mr1-wallpapers || exit 1
+repopick -t oreo-button-lights-only-when-pressed
 
 exit 0
