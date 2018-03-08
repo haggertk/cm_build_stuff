@@ -17,6 +17,7 @@ kpick 207882 # klte-common: Mount apnhlos and modem in init
 kpick 207883 # klte-common: Use sdfat for exfat
 
 # device/samsung/msm8974-common
+kpick 208723 # msm8974-common: Move XTRA_SERVER entries to overlays
 
 # kernel/samsung/msm8974
 kpick 207265 # ARM: configs: lineage_*: Disable exfat and vfat
