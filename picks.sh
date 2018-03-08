@@ -31,13 +31,7 @@ kpick 206435 # libstagefright: use 64-bit usage for native_window_set_usage
 kpick 206427 # camera/media: Support legacy HALv1 camera in mediaserver
 
 # system/core
-d=`pwd`
-cd system/core || exit 1
-git remote remove blek > /dev/null 2>&1
-git remote add blek https://github.com/invisiblek/android_system_core.git || exit 1
-git fetch blek lineage-15.1_safetynet || exit 1
-git cherry-pick 96c4433e || exit 1 # init: I hate safety net
-cd "$d" || exit 1
+kpick 206119 # init: I hate safety net
 
 # system/sepolicy
 kpick 206428 # Add rules required for TARGET_HAS_LEGACY_CAMERA_HAL1
