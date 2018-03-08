@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <project name="haggertk/cm_build_stuff" path="haggertk" remote="github" />
+  <project name="haggertk/android_device_lge_bullhead4c" path="device/lge/bullhead4c" remote="github" />
 </manifest>
