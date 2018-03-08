@@ -12,12 +12,9 @@ source build/envsetup.sh
 kpick 207147 # hlte-common: Use sdfat for exfat
 
 # device/samsung/klte-common
-kpick 207881 # Revert "klte-common: HAXX: "Fix" race condition in init"
-kpick 207882 # klte-common: Mount apnhlos and modem in init
 kpick 207883 # klte-common: Use sdfat for exfat
 
 # device/samsung/msm8974-common
-kpick 208723 # msm8974-common: Move XTRA_SERVER entries to overlays
 
 # kernel/samsung/msm8974
 kpick 207265 # ARM: configs: lineage_*: Disable exfat and vfat
@@ -51,6 +48,5 @@ kpick 206426 # soong_config: Add TARGET_HAS_LEGACY_CAMERA_HAL1 variable
 kpick 206996 # soong_config: Add TARGET_USES_MEDIA_EXTENSIONS variable
 
 # -------------- TOPIC STUFF --------------
-repopick -t oreo-button-lights-only-when-pressed
 
 exit 0
