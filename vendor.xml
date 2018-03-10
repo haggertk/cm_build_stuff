@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+  <project name="haggertk/android_vendor_extra" path="vendor/extra" remote="github" />
+
   <project name="TheMuppets/proprietary_vendor_essential" path="vendor/essential" remote="github" />
   <project name="TheMuppets/proprietary_vendor_htc" path="vendor/htc" remote="github" />
   <project name="TheMuppets/proprietary_vendor_lge" path="vendor/lge" remote="github" />
