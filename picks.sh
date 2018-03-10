@@ -8,6 +8,10 @@ source build/envsetup.sh
 
 # -------------- DEVICE STUFF --------------
 
+# device/lge/bullhead
+kpick 208979 # bullhead: Update makefile guards to allow child variants
+kpick 208980 # bullhead: Make setup-makefiles imitate a common repository version
+
 # device/samsung/hlte-common
 kpick 207147 # hlte-common: Use sdfat for exfat
 
@@ -20,6 +24,9 @@ kpick 207883 # klte-common: Use sdfat for exfat
 kpick 207265 # ARM: configs: lineage_*: Disable exfat and vfat
 
 # -------------- PLATFORM STUFF --------------
+
+# external/toybox
+kpick 209019 # toybox: Use ISO C/clang compatible __typeof__ in minof/maxof macros
 
 # frameworks/av
 kpick 206430 # CameraService: Fix deadlock in binder death cleanup.
@@ -42,5 +49,6 @@ kpick 206426 # soong_config: Add TARGET_HAS_LEGACY_CAMERA_HAL1 variable
 kpick 206996 # soong_config: Add TARGET_USES_MEDIA_EXTENSIONS variable
 
 # -------------- TOPIC STUFF --------------
+repopick -Q "branch:lineage-15.1+topic:sdclang+status:open"
 
 exit 0
