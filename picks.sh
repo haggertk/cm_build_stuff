@@ -13,23 +13,17 @@ kpick 208979 # bullhead: Update makefile guards to allow child variants
 kpick 208980 # bullhead: Make setup-makefiles imitate a common repository version
 
 # device/samsung/hlte-common
-kpick 209612 # hlte-common: Set BOARD_CUSTOM_BOOTIMG to true
-kpick 207147 # hlte-common: Use sdfat for exfat
 
 # device/samsung/klte-common
-kpick 207883 # klte-common: Use sdfat for exfat
 
 # device/samsung/msm8974-common
+kpick 210313 # msm8974-common: Binderize them all
 
 # kernel/samsung/msm8974
-kpick 209262 # fs: sdfat: Update to version 2.0.6-lineage
-kpick 209263 # fs: sdfat: Fix compilation for 32-bit targets
-kpick 207265 # ARM: configs: lineage_*: Disable exfat and vfat
 
 # mata stuff
 kpick 209367 # mata: fix hbtp_grip script permission
 kpick 204570 # mata: Build textclassifier's smart selection
-kpick 204877 # mata: add ratchet_rat_families carrier config setting
 kpick 206118 # InputMethodManagerService: adjust grip mode for input enable/disable
 #kpick 206121 # [HAX] remove stylus shit from touchscreen input
 
@@ -66,9 +60,7 @@ kpick 206682 # Updater: unbind stale callbacks when reconnecting to A/B
 # vendor/lineage
 kpick 206426 # soong_config: Add TARGET_HAS_LEGACY_CAMERA_HAL1 variable
 kpick 206996 # soong_config: Add TARGET_USES_MEDIA_EXTENSIONS variable
-kpick 206638 # extract_utils: Use vdexExtractor and oatdump for deodexing
 
 # -------------- TOPIC STUFF --------------
-repopick -Q "branch:lineage-15.1+topic:sdclang+status:open"
 
 exit 0
