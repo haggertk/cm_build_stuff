@@ -62,5 +62,6 @@ kpick 206426 # soong_config: Add TARGET_HAS_LEGACY_CAMERA_HAL1 variable
 kpick 206996 # soong_config: Add TARGET_USES_MEDIA_EXTENSIONS variable
 
 # -------------- TOPIC STUFF --------------
+repopick -Q "loscoins+status:open+branch:lineage-15.1"
 
 exit 0
