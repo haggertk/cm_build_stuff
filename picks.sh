@@ -13,10 +13,14 @@ kpick 208979 # bullhead: Update makefile guards to allow child variants
 kpick 208980 # bullhead: Make setup-makefiles imitate a common repository version
 
 # device/samsung/hlte-common
+kpick 213526 # Revert "hlte-common: Enable legacy mediaserver"
 
 # device/samsung/klte-common
+kpick 213525 # Revert "klte-common: Enable legacy mediaserver"
 
 # device/samsung/msm8974-common
+kpick 213523 # msm8974-common: Enable legacy mediaserver
+kpick 213524 # msm8974-common: Enable TARGET_USES_MEDIA_EXTENSIONS
 
 # kernel/samsung/msm8974
 
@@ -31,6 +35,7 @@ kpick 204570 # mata: Build textclassifier's smart selection
 kpick 209019 # toybox: Use ISO C/clang compatible __typeof__ in minof/maxof macros
 
 # frameworks/av
+kpick 213062 # Camera: check metadata type before releasing frame
 
 # system/core
 kpick 206119 # init: I hate safety net
