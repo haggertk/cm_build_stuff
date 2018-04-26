@@ -20,7 +20,6 @@ kpick 213525 # Revert "klte-common: Enable legacy mediaserver"
 
 # device/samsung/msm8974-common
 kpick 213523 # msm8974-common: Enable legacy mediaserver
-kpick 213524 # msm8974-common: Enable TARGET_USES_MEDIA_EXTENSIONS
 
 # kernel/samsung/msm8974
 
