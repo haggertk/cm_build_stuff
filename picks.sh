@@ -21,7 +21,6 @@ kpick 208980 # bullhead: Make setup-makefiles imitate a common repository versio
 # kernel/samsung/msm8974
 
 # mata stuff
-kpick 204570 # mata: Build textclassifier's smart selection
 
 # -------------- PLATFORM STUFF --------------
 
@@ -31,7 +30,6 @@ kpick 204570 # mata: Build textclassifier's smart selection
 kpick 209019 # toybox: Use ISO C/clang compatible __typeof__ in minof/maxof macros
 
 # frameworks/av
-kpick 213062 # Camera: check metadata type before releasing frame
 
 # system/core
 kpick 206119 # init: I hate safety net
