@@ -31,17 +31,15 @@ kpick 209019 # toybox: Use ISO C/clang compatible __typeof__ in minof/maxof macr
 
 # frameworks/av
 
+# frameworks/opt/telephony
+
+# packages/apps/SetupWizard
+
 # system/core
-kpick 206119 # init: I hate safety net
 
 # system/sepolicy
 
 # updater
-kpick 206046 # update_attempter: don't limit the cpu and run in foreground
-kpick 206117 # update_verifier: skip verity to determine successful on lineage builds
-kpick 206128 # common: add update_engine policies
-#kpick 206681 # Updater: fix bad state when opening activity during A/B update
-#kpick 206682 # Updater: unbind stale callbacks when reconnecting to A/B
 
 # vendor/lineage
 
