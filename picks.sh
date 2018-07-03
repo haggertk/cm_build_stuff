@@ -27,7 +27,6 @@ kpick 208980 # bullhead: Make setup-makefiles imitate a common repository versio
 # build
 
 # external/toybox
-kpick 209019 # toybox: Use ISO C/clang compatible __typeof__ in minof/maxof macros
 
 # frameworks/av
 
