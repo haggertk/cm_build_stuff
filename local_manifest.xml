@@ -3,5 +3,4 @@
   <project name="lineageos-infra/auth" path="lineage/infra/auth" remote="github" revision="master" />
   <project name="lineageos-infra/gerrit-config" path="lineage/infra/gerrit-config" remote="github" revision="master" />
   <project name="haggertk/cm_build_stuff" path="haggertk" remote="github" />
-  <project name="haggertk/android_device_lge_bullhead4c" path="device/lge/bullhead4c" remote="github" />
 </manifest>
