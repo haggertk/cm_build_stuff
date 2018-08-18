@@ -4,10 +4,10 @@
 
   <project name="MindTheGapps/vendor_gapps" path="vendor/gapps" remote="github" revision="master" />
 
-  <project name="TheMuppets/proprietary_vendor_essential" path="vendor/essential" remote="github" />
-  <project name="TheMuppets/proprietary_vendor_htc" path="vendor/htc" remote="github" />
-  <project name="TheMuppets/proprietary_vendor_lge" path="vendor/lge" remote="github" />
-  <project name="TheMuppets/proprietary_vendor_oneplus" path="vendor/oneplus" remote="github" />
-  <project name="TheMuppets/proprietary_vendor_oppo" path="vendor/oppo" remote="github" />
+<!--  <project name="TheMuppets/proprietary_vendor_essential" path="vendor/essential" remote="github" /> -->
+<!--  <project name="TheMuppets/proprietary_vendor_htc" path="vendor/htc" remote="github" /> -->
+<!--  <project name="TheMuppets/proprietary_vendor_lge" path="vendor/lge" remote="github" /> -->
+<!--  <project name="TheMuppets/proprietary_vendor_oneplus" path="vendor/oneplus" remote="github" /> -->
+<!--  <project name="TheMuppets/proprietary_vendor_oppo" path="vendor/oppo" remote="github" /> -->
   <project name="TheMuppets/proprietary_vendor_samsung" path="vendor/samsung" remote="github" />
 </manifest>
