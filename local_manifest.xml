@@ -12,13 +12,6 @@
   <!-- Temp stuff until it gets into a real manifest -->
   <project name="LineageOS/android_device_lineage_sepolicy" path="device/lineage/sepolicy" />
   <project path="device/qcom/sepolicy" name="LineageOS/android_device_qcom_sepolicy" />
-  <project path="hardware/qcom/audio-caf/msm8916" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk" revision="lineage-16.0-caf-8916" />
-  <project path="hardware/qcom/audio-caf/msm8952" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk" revision="lineage-16.0-caf-8952" />
-  <project path="hardware/qcom/audio-caf/msm8960" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk" revision="lineage-16.0-caf-8960" />
-  <project path="hardware/qcom/audio-caf/msm8974" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk" revision="lineage-16.0-caf-8974" />
-  <project path="hardware/qcom/audio-caf/msm8996" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk" revision="lineage-16.0-caf-8996" />
-  <project path="hardware/qcom/display-caf/msm8974" name="LineageOS/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" revision="lineage-16.0-caf-8974" />
-  <project path="hardware/qcom/media-caf/msm8974" name="LineageOS/android_hardware_qcom_media" groups="qcom,pdk" revision="lineage-16.0-caf-8974" />
 
   <project path="vendor/qcom/opensource/audio" name="bgcngm/vendor_qcom_opensource_audio" groups="qcom,pdk"/>
 </manifest>
