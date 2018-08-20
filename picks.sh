@@ -144,6 +144,10 @@ repopick 224810 # sepolicy: update policies for sudaemon on O
 repopick 224811 # sepolicy: add sudaemon to ignore list
 repopick 224812 # sepolicy: Allow recovery to write to rootfs
 
+# vendor/qcom/opensource/audio
+repopick 224975 # [TMP] Align with AOSP
+repopick 225028 # policy_hal: Line up default features with audio HAL
+
 # -------------- TOPIC STUFF --------------
 
 repopick -t deprecate-per-SoC-custom-audio-policy-HAL
