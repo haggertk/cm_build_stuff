@@ -23,7 +23,6 @@ repopick 224845 # qcom-common: doze: Set LOCAL_PRIVATE_PLATFORM_APIS
 # -------------- PLATFORM STUFF --------------
 
 # bionic
-repopick 223064 # linker: Make platform text relocations denial optional
 
 # bootable/recovery
 repopick 222993 # Revert "updater: Remove dead make_parents()."
@@ -95,8 +94,15 @@ repopick 223098 # audio_amplifier: add hooks for stream parameter manipulation
 # hardware/libhardware_legacy
 repopick 223521 # Wifi: Add Qpower interface to libhardware_legacy
 
+# hardware/lineage/interfaces
+repopick 223906 # biometrics: fingerprint: add locking to default impl
+repopick 223907 # Use -Werror in hardware/interfaces/biometrics/fingerprint
+repopick 223908 # fpc: keep fpc in system-background
+repopick 224525 # lineage/interfaces: Add basic USB HAL that reports no status change
+
 # hardware/ril
 repopick 224062 # libril: allow board to provide libril
+repopick 224063 # libril: Restore support for RIL v6, v8 and v9 stacks
 
 # hardware/qcom/audio-caf/msm8974
 repopick 223436 # Add -Wno-error to compile with global -Werror.
@@ -108,6 +114,10 @@ repopick 223435 # Add -Wno-error to compile with global -Werror.
 
 # hardware/qcom/media-caf/msm8974
 repopick 223441 # Add -Wno-error to compile with global -Werror.
+
+# hardware/qcom/power
+repopick 223892 # power: Add power hint to set profile
+repopick 223890 # Revert "power: Depend on vendor lineage power HAL"
 
 # hardware/samsung
 repopick 223882 # resolve compiling warnings/errors
@@ -144,6 +154,15 @@ repopick 224810 # sepolicy: update policies for sudaemon on O
 repopick 224811 # sepolicy: add sudaemon to ignore list
 repopick 224812 # sepolicy: Allow recovery to write to rootfs
 
+# vendor/lineage
+repopick 224511 # config/common: Clean up debug packages
+repopick 223980 # lineage: Exclude all lineage overlays from RRO
+repopick 224421 # overlay: Default materials buttons to not all caps
+repopick 224021 # overlay: Fix status bar padding for all devices
+repopick 224893 # overlay: Remove deprecated overlay
+repopick 224649 # overlay: Enable rounded corners for dialogues and buttons
+repopick 224759 # lineage: Ignore neverallows
+
 # vendor/qcom/opensource/audio
 repopick 224975 # [TMP] Align with AOSP
 repopick 225028 # policy_hal: Line up default features with audio HAL
@@ -152,7 +171,9 @@ repopick 225028 # policy_hal: Line up default features with audio HAL
 
 repopick -t deprecate-per-SoC-custom-audio-policy-HAL
 repopick -t pie-mode-bits
-repopick -t pie-AudioFX
+repopick -t pie-flex-update
+#repopick -t pie-AudioFX # *** Wait for SDK ***
 repopick -t pie-FlipFlap
+repopick -t lineagehw-hidl
 
 exit 0
