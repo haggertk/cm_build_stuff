@@ -10,8 +10,8 @@
   <project name="lineageos-infra/gerrit-config" path="lineage/infra/gerrit-config" remote="github" revision="master" />
 
   <!-- Temp stuff until it gets into a real manifest -->
-  <project name="LineageOS/android_device_lineage_sepolicy" path="device/lineage/sepolicy" />
+  <project path="device/lineage/sepolicy" name="LineageOS/android_device_lineage_sepolicy" />
   <project path="device/qcom/sepolicy" name="LineageOS/android_device_qcom_sepolicy" />
 
-  <project path="vendor/qcom/opensource/audio" name="bgcngm/vendor_qcom_opensource_audio" groups="qcom,pdk"/>
+  <project path="vendor/qcom/opensource/audio" name="LineageOS/android_vendor_qcom_opensource_audio" groups="qcom,pdk"/>
 </manifest>
