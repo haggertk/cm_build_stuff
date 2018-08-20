@@ -171,7 +171,7 @@ repopick 225028 # policy_hal: Line up default features with audio HAL
 
 repopick -t deprecate-per-SoC-custom-audio-policy-HAL
 repopick -t pie-mode-bits
-repopick -t pie-flex-update
+#repopick -t pie-flex-update
 #repopick -t pie-AudioFX # *** Wait for SDK ***
 repopick -t pie-FlipFlap
 repopick -t lineagehw-hidl
