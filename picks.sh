@@ -173,7 +173,7 @@ repopick -t deprecate-per-SoC-custom-audio-policy-HAL
 repopick -t pie-mode-bits
 #repopick -t pie-flex-update
 #repopick -t pie-AudioFX # *** Wait for SDK ***
-repopick -t pie-FlipFlap
+#repopick -t pie-FlipFlap
 repopick -t lineagehw-hidl
 
 exit 0
