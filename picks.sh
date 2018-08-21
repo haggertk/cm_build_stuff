@@ -43,7 +43,7 @@ repopick 222809 # DO NOT MERGE: disable inclusion of Lineage sepol
 
 # build/soong
 repopick 222857 # locale: add C.utf8
-repopick 222682 # Use new flex binary
+#repopick 222682 # Use new flex binary
 repopick 224613 # soong: Add LOCAL_AIDL_FLAGS handling
 repopick 223431 # soong: Enforce absolute path if OUT_DIR is set
 
@@ -81,7 +81,7 @@ repopick 224183 # camera/media: Support legacy HALv1 camera in mediaserver
 repopick 224184 # Camera: check metadata type before releasing frame
 
 # frameworks/compile/mclinker
-repopick 222683 -P frameworks/compile/mclinker # Update FlexLinker.h to current version of flex.
+#repopick 222683 # Update FlexLinker.h to current version of flex.
 
 # frameworks/opt/telephony
 repopick 223774 # telephony: Squashed support for simactivation feature
