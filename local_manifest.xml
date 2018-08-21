@@ -2,6 +2,9 @@
 <manifest>
   <project name="haggertk/cm_build_stuff" path="haggertk" remote="github" >
     <linkfile src="picks.sh" dest="picks.sh" />
+    <linkfile src="local_manifest.xml" dest=".repo/local_manifests/z00_local_manifest.xml" />
+    <linkfile src="local_devices.xml" dest=".repo/local_manifests/z01_local_devices.xml" />
+    <linkfile src="vendor.xml" dest=".repo/local_manifests/z02_vendor.xml" />
   </project>
 
   <!-- LineageOS Infrastructure Stuff -->
@@ -15,9 +18,6 @@
 
   <remove-project name="platform/frameworks/compile/mclinker" />
   <project path="frameworks/compile/mclinker" name="LineageOS/android_frameworks_compile_mclinker" groups="pdk" />
-
-  <remove-project name="platform/external/elfutils" />
-  <project path="external/elfutils" name="LineageOS/android_external_elfutils" groups="pdk" />
 
   <project path="hardware/lineage/interfaces" name="LineageOS/android_hardware_lineage_interfaces" />
   <project path="hardware/qcom/power" name="LineageOS/android_hardware_qcom_power" groups="qcom,pdk" />
