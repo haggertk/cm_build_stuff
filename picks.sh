@@ -6,23 +6,47 @@ source build/envsetup.sh
 
 # -------------- DEVICE STUFF --------------
 
-# device/samsung/klte
+# device/samsung/hlte-common
+repopick 225612 # hlte-common: wlan: Update supplicant services for new calling sequence
+repopick 225613 # hlte-common: wifi_supplicant: deprecate entropy.bin
+repopick 225614 # hlte-common: wpa_supplicant: Move control sockets to /data/vendor
+repopick 225615 # hlte-common: Don't start supplicant with interfaces
+repopick 225616 # hlte-common: wpa_supplicant(hidl): Add support for starting HAL lazily
+repopick 225617 # hlte-common: Add p2p_no_group_iface=1 to p2p_supplicant_overlay
+repopick 225618 # hlte-common: Align ril.h to samsung_msm8974-common P libril changes
+repopick 225619 # DO NOT MERGE: hlte-common: Requisite bring-up BS change
 
 # device/samsung/klte-common
-repopick 224852 # klte-common: Import stock Dalvik heap overrides
-repopick 224853 # klte-common: Increase heap start size to 16m to minimize GC with larger bitmaps
+repopick 225186 # klte-common: wlan: Update supplicant services for new calling sequence
+repopick 225187 # klte-common: wifi_supplicant: deprecate entropy.bin
+repopick 225188 # klte-common: wpa_supplicant: Move control sockets to /data/vendor
+repopick 225189 # klte-common: Don't start supplicant with interfaces
+repopick 225190 # klte-common: wpa_supplicant(hidl): Add support for starting HAL lazily
+repopick 225191 # klte-common: Add p2p_no_group_iface=1 to p2p_supplicant_overlay
+repopick 225192 # klte-common: Align ril.h to samsung_msm8974-common P libril changes
 repopick 224917 # DO NOT MERGE: klte-common: Requisite bring-up BS change
 
 # device/samsung/msm8974-common
 repopick 224851 # msm8974-common: config.fs: Add 'VENDOR' prefix to AIDs
-repopick 224916 # DO NOT MERGE: msm8974-common: Disable our and device/qcom sepolicy
-
-# device/samsung/qcom-common
-repopick 224845 # qcom-common: doze: Set LOCAL_PRIVATE_PLATFORM_APIS
+repopick 225249 # msm8974-common: Uprev Wi-Fi HAL to 1.2
+repopick 225250 # msm8974-common: Uprev to supplicant 1.1
+repopick 225251 # msm8974-common: Add hostapd HIDL interface
+repopick 225620 # msm8974-common: Switch to common basic USB HAL
+repopick 225466 # msm8974-common: libril: Remove LOCAL_CLANG
+repopick 225467 # msm8974-common: libril: Fix Const-Correctness for RIL_RadioFunctions
+repopick 225468 # msm8974-common: libril: Remove unused code
+repopick 225469 # msm8974-common: libril: Fix double freeing of memory in SAP service and add null-checks.
+repopick 225470 # msm8974-common: libril: Store the system time when NITZ is received.
+repopick 225471 # msm8974-common: libril: Add DISABLE_RILD_OEM_HOOK.
+repopick 225472 # msm8974-common: libril:  Change rild initial sequence to guarantee non-null function pointer before rild register its hidl service
+repopick 225473 # msm8974-common: libril: Add SIM_ABSENT error
+repopick 224916 # DO NOT MERGE: msm8974-common: sepolicy: Just make it build
 
 # -------------- PLATFORM STUFF --------------
 
 # bionic
+repopick 223065 # linker: Add support for dynamic SHIM libraries
+repopick 223943 # bionic: meh
 
 # bootable/recovery
 repopick 222993 # Revert "updater: Remove dead make_parents()."
@@ -39,7 +63,6 @@ repopick 222750 # edify: bring back SetPermissionsRecursive
 repopick 222761 # Allow finer control over how product variables are inherited.
 repopick 222762 # Revert "Remove the obsolete UnpackPackageDir() in edify generator"
 repopick 222733 # core: Disable vendor restrictions
-repopick 222809 # DO NOT MERGE: disable inclusion of Lineage sepol
 
 # build/soong
 repopick 222857 # locale: add C.utf8
@@ -50,10 +73,12 @@ repopick 223431 # soong: Enforce absolute path if OUT_DIR is set
 # device/lineage/sepolicy
 repopick 224765 # sepol: Remove exfat context
 repopick 224766 # sepol: Remove recovery access to vold_socket
+repopick 225115 # common: Label common basic USB HAL
 
 # device/qcom/sepolicy
 repopick 224767 # sepol: Remove duplicated hal_vehicle attribute
 repopick 224768 # sepol: hostapd is now hal_wifi_hostapd
+repopick 225036 # common: Remove duplicate definition of hostapd data files
 
 # external/tinycompress
 repopick 223008 # tinycompress: squash tinycompress fixes
@@ -123,6 +148,17 @@ repopick 223890 # Revert "power: Depend on vendor lineage power HAL"
 repopick 223882 # resolve compiling warnings/errors
 repopick 223982 # DNM: exclude AdvancedDisplay *** Revisit after SDK ***
 
+# packages/apps/Camera2
+repopick 224752 # Use mCameraAgentNg for getting camera info when available
+repopick 225255 # Camera2: Target API 27
+repopick 225256 # Don't attempt to convert degree to orientation enum twice
+repopick 225257 # Camera2: Only autofocus before a snap if we are actually in "auto" mode.
+repopick 225258 # Camera2: Remove settings preferences only once
+repopick 225259 # Camera2: Stop using GPS when going to background
+repopick 225262 # Camera2: Remove google help preference
+repopick 225263 # Camera2: Fix Undo button behaviour
+repopick 225264 # Fix crash if Exif-Tag buffer-length and component-count are both 0
+
 # packages/apps/Nfc
 repopick 223706 # NFC: Restore legacy NXP stack
 repopick 223707 # nxp: jni: Forward-port the stack sources
@@ -137,8 +173,9 @@ repopick 223703 # nxp: jni: Implement AOSP P abstract methods
 repopick 223099 # Telecomm: Squashed phone_type switch support
 
 # system/bt
+repopick 225422 # Bluetooth: Read BLE vendor capability to proceed on Secure conn
 repopick 223945 # Prevent abort in case of command timeout
-repopick 224813 # bt: osi: undef PROPERTY_VALUE_MAX
+repopick 225423 # Add support to force disable enhanced sco commands
 
 # system/core
 repopick 223085 # adbd: Disable "adb root" by system property (2/3)
@@ -175,5 +212,6 @@ repopick -t pie-mode-bits
 #repopick -t pie-AudioFX # *** Wait for SDK ***
 #repopick -t pie-FlipFlap
 repopick -t lineagehw-hidl
+repopick -t pie-bcm_libbt
 
 exit 0
