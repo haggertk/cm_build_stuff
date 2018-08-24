@@ -19,6 +19,8 @@
   <remove-project name="platform/frameworks/compile/mclinker" />
   <project path="frameworks/compile/mclinker" name="LineageOS/android_frameworks_compile_mclinker" groups="pdk" />
 
+  <project path="hardware/ril-caf" name="LineageOS/android_hardware_ril" revision="lineage-16.0-caf" />
+
   <project path="hardware/lineage/interfaces" name="LineageOS/android_hardware_lineage_interfaces" />
   <project path="hardware/qcom/power" name="LineageOS/android_hardware_qcom_power" groups="qcom,pdk" />
   <project path="hardware/qcom/wlan-caf" name="LineageOS/android_hardware_qcom_wlan" groups="qcom_wlan,pdk" />
