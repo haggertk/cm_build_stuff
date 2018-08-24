@@ -61,16 +61,16 @@ repopick 222996 # Revert "Remove the obsolete package_extract_dir() test"
 repopick 222997 # Revert "updater: Remove some obsoleted functions for file-based OTA."
 repopick 222998 # Revert "Format formattable partitions if mount fails"
 repopick 223781 # Skip BLKDISCARD if not supported by the device
-repopick 224657 # otautil/DirUtil: Fix missing PATH_MAX macro from limits.h
 
 # build/make
 repopick 222750 # edify: bring back SetPermissionsRecursive
 repopick 222761 # Allow finer control over how product variables are inherited.
 repopick 222762 # Revert "Remove the obsolete UnpackPackageDir() in edify generator"
 repopick 222733 # core: Disable vendor restrictions
+repopick 225116 # Revert "releasetools: Replace key values in permission files during re-signing"
+repopick 222733 # core: Disable vendor restrictions
 
 # build/soong
-repopick 222857 # locale: add C.utf8
 #repopick 222682 # Use new flex binary
 repopick 224613 # soong: Add LOCAL_AIDL_FLAGS handling
 repopick 223431 # soong: Enforce absolute path if OUT_DIR is set
@@ -94,12 +94,9 @@ repopick 223012 # audio: compress error propagation
 repopick 223013 # tinycompress: Move [get,set]_metadata to vendor extension
 repopick 223014 # Revert "libtinycompress: Android.mk -> Android.bp"
 repopick 223015 # tinycompress: include kernel headers
-repopick 223016 # tinycompress: Set -Wno-unused functions
 
 # frameworks/av
-repopick 223017 # audiopolicy: make audio policy extensible
 repopick 224174 # nuplayer: Avoid crash when codec fails to load
-repopick 224216 # MTP: Fix crash when no storages are available
 repopick 224176 # camera: Don't segfault if we get a NULL parameter
 repopick 224177 # cameraservice: Resolve message vs start/stop preview races
 repopick 224178 # libstagefright: Support YVU420SemiPlanar camera format
@@ -109,6 +106,19 @@ repopick 224181 # libstagefright: Free buffers on observer died
 repopick 224182 # libstagefright: use 64-bit usage for native_window_set_usage
 repopick 224183 # camera/media: Support legacy HALv1 camera in mediaserver
 repopick 224184 # Camera: check metadata type before releasing frame
+repopick 225530 # camera: Workaround for GCC-compiled HAL3 drivers
+repopick 225531 # soundtrigger: fill in default extras from dsp
+repopick 225532 # Camera: CameraHardwareInterface changes to support Extended FD
+repopick 225533 # camera: Only link and use vendor.qti.hardware.camera.device if specified
+repopick 225534 # libstagefright: encoder must exist when source starting
+repopick 225535 # Camera: Add extensions to CameraClient
+repopick 225536 # Camera: Add support for preview frame fd
+repopick 225537 # libstagefright: Add more sample rates for FLAC
+repopick 225539 # Camera:CameraService: Added lock on mHIDLMemPoolId in QDataCallback..
+repopick 225540 # Camera: CameraHardwareInterface: Releasing mHIDLMemoryMapLock in QdataCallback
+repopick 225541 # OMXNodeInstance: Allow dynamic native handle for shared mem buffer
+repopick 224173 # camera: include: Don't override possible overlayed header
+repopick 224203 # camera: Allow devices to load custom CameraParameter code
 
 # frameworks/compile/mclinker
 #repopick 222683 # Update FlexLinker.h to current version of flex.
@@ -116,12 +126,16 @@ repopick 224184 # Camera: check metadata type before releasing frame
 # frameworks/opt/telephony
 repopick 223774 # telephony: Squashed support for simactivation feature
 
+# hardware/interfaces
+repopick 225506 # Camed HAL extension: Added support in HIDL for Extended FD.
+repopick 225507 # camera: Only link and use vendor.qti.hardware.camera.device if specified
+
 # hardware/libhardware
 repopick 223096 # audio: Add audio amplifier HAL
 repopick 223097 # hardware/libhw: Add display_defs.h to declare custom enums/flags
-repopick 223098 # audio_amplifier: add hooks for stream parameter manipulation
 
 # hardware/libhardware_legacy
+repopick 225716 # Add wifi_add_or_remove_virtual_intf() to the legacy wifi hal
 repopick 223521 # Wifi: Add Qpower interface to libhardware_legacy
 
 # hardware/lineage/interfaces
@@ -129,6 +143,9 @@ repopick 223906 # biometrics: fingerprint: add locking to default impl
 repopick 223907 # Use -Werror in hardware/interfaces/biometrics/fingerprint
 repopick 223908 # fpc: keep fpc in system-background
 repopick 224525 # lineage/interfaces: Add basic USB HAL that reports no status change
+repopick 223374 # interfaces: Add 2.0 livedisplay interfaces
+repopick 223410 # interfaces: Add touch HIDL interface definitions
+repopick 223411 # interfaces: Add id HAL definition
 
 # hardware/ril
 repopick 224063 # libril: Restore support for RIL v6, v8 and v9 stacks
@@ -148,6 +165,16 @@ repopick 223441 # Add -Wno-error to compile with global -Werror.
 repopick 223892 # power: Add power hint to set profile
 repopick 223890 # Revert "power: Depend on vendor lineage power HAL"
 
+# hardware/ril-caf
+repopick 225736 # libril: allow board to provide libril
+repopick 225737 # ril-caf: Add guard makefile
+repopick 225738 # librilutils: Relocate pb-generated objects to their expected path
+repopick 225739 # libril: Restore support for RIL v6, v8 and v9 stacks
+repopick 225740 # libril: Bounds check s_commands
+repopick 225741 # Make RIL command headers overlayable by devices.
+repopick 225742 # libril: Protect against NULL unsolicited response function
+repopick 225743 # Revert "Disable rild from starting at power up"
+
 # hardware/samsung
 repopick 223882 # resolve compiling warnings/errors
 repopick 223982 # DNM: exclude AdvancedDisplay *** Revisit after SDK ***
@@ -159,6 +186,8 @@ repopick 225256 # Don't attempt to convert degree to orientation enum twice
 repopick 225257 # Camera2: Only autofocus before a snap if we are actually in "auto" mode.
 repopick 225258 # Camera2: Remove settings preferences only once
 repopick 225259 # Camera2: Stop using GPS when going to background
+repopick 225260 # Camera: Powerkey shutter (2/2)
+repopick 225261 # Camera2: Add option to set max screen brightness
 repopick 225262 # Camera2: Remove google help preference
 repopick 225263 # Camera2: Fix Undo button behaviour
 repopick 225264 # Fix crash if Exif-Tag buffer-length and component-count are both 0
@@ -190,24 +219,18 @@ privpick system/core refs/changes/19/206119/2 # init: I hate safety net
 repopick 223745 # Allow e2fs to format cache
 repopick 223746 # Add rules required for TARGET_HAS_LEGACY_CAMERA_HAL1
 repopick 223748 # Build sepolicy tools with Android.bp.
-repopick 224808 # sepolicy: We need to declare before referencing
-repopick 224809 # sepolicy: Allow su by apps on userdebug_or_eng
-repopick 224810 # sepolicy: update policies for sudaemon on O
-repopick 224811 # sepolicy: add sudaemon to ignore list
-repopick 224812 # sepolicy: Allow recovery to write to rootfs
+repopick 224808 # sepolicy: Add rules for sudaemon
 
 # vendor/lineage
 repopick 224511 # config/common: Clean up debug packages
 repopick 223980 # lineage: Exclude all lineage overlays from RRO
 repopick 224421 # overlay: Default materials buttons to not all caps
 repopick 224021 # overlay: Fix status bar padding for all devices
-repopick 224893 # overlay: Remove deprecated overlay
+repopick 224893 # overlay: Remove back button panic overlay
 repopick 224649 # overlay: Enable rounded corners for dialogues and buttons
 repopick 224759 # lineage: Ignore neverallows
-
-# vendor/qcom/opensource/audio
-repopick 224975 # [TMP] Align with AOSP
-repopick 225028 # policy_hal: Line up default features with audio HAL
+repopick 225495 # config: Use standard inherit-product-if-exists for vendor/extra
+repopick 225550 # soong_config: Add TARGET_NEEDS_LEGACY_CAMERA_HAL1_DYN_NATIVE_HANDLE
 
 # -------------- TOPIC STUFF --------------
 
