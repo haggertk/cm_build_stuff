@@ -2,50 +2,55 @@
 
 set -e
 
+function privpick() {
+  git -C $1 fetch github $2
+  git -C $1 cherry-pick FETCH_HEAD
+}
+
 source build/envsetup.sh
 
 # -------------- DEVICE STUFF --------------
+# maintained but currently commented-out because on a local branch
 
 # device/samsung/hlte-common
-repopick 225612 # hlte-common: wlan: Update supplicant services for new calling sequence
-repopick 225613 # hlte-common: wifi_supplicant: deprecate entropy.bin
-repopick 225614 # hlte-common: wpa_supplicant: Move control sockets to /data/vendor
-repopick 225615 # hlte-common: Don't start supplicant with interfaces
-repopick 225616 # hlte-common: wpa_supplicant(hidl): Add support for starting HAL lazily
-repopick 225617 # hlte-common: Add p2p_no_group_iface=1 to p2p_supplicant_overlay
-repopick 225618 # hlte-common: Align ril.h to samsung_msm8974-common P libril changes
-repopick 225619 # DO NOT MERGE: hlte-common: Requisite bring-up BS change
+#repopick 225612 # hlte-common: wlan: Update supplicant services for new calling sequence
+#repopick 225613 # hlte-common: wifi_supplicant: deprecate entropy.bin
+#repopick 225614 # hlte-common: wpa_supplicant: Move control sockets to /data/vendor
+#repopick 225615 # hlte-common: Don't start supplicant with interfaces
+#repopick 225616 # hlte-common: wpa_supplicant(hidl): Add support for starting HAL lazily
+#repopick 225617 # hlte-common: Add p2p_no_group_iface=1 to p2p_supplicant_overlay
+#repopick 225618 # hlte-common: Align ril.h to samsung_msm8974-common P libril changes
+#repopick 225619 # DO NOT MERGE: hlte-common: Requisite bring-up BS change
 
 # device/samsung/klte-common
-repopick 225186 # klte-common: wlan: Update supplicant services for new calling sequence
-repopick 225187 # klte-common: wifi_supplicant: deprecate entropy.bin
-repopick 225188 # klte-common: wpa_supplicant: Move control sockets to /data/vendor
-repopick 225189 # klte-common: Don't start supplicant with interfaces
-repopick 225190 # klte-common: wpa_supplicant(hidl): Add support for starting HAL lazily
-repopick 225191 # klte-common: Add p2p_no_group_iface=1 to p2p_supplicant_overlay
-repopick 225192 # klte-common: Align ril.h to samsung_msm8974-common P libril changes
-repopick 224917 # DO NOT MERGE: klte-common: Requisite bring-up BS change
+#repopick 225186 # klte-common: wlan: Update supplicant services for new calling sequence
+#repopick 225187 # klte-common: wifi_supplicant: deprecate entropy.bin
+#repopick 225188 # klte-common: wpa_supplicant: Move control sockets to /data/vendor
+#repopick 225189 # klte-common: Don't start supplicant with interfaces
+#repopick 225190 # klte-common: wpa_supplicant(hidl): Add support for starting HAL lazily
+#repopick 225191 # klte-common: Add p2p_no_group_iface=1 to p2p_supplicant_overlay
+#repopick 225192 # klte-common: Align ril.h to samsung_msm8974-common P libril changes
+#repopick 224917 # DO NOT MERGE: klte-common: Requisite bring-up BS change
 
 # device/samsung/msm8974-common
-repopick 224851 # msm8974-common: config.fs: Add 'VENDOR' prefix to AIDs
-repopick 225249 # msm8974-common: Uprev Wi-Fi HAL to 1.2
-repopick 225250 # msm8974-common: Uprev to supplicant 1.1
-repopick 225251 # msm8974-common: Add hostapd HIDL interface
-repopick 225620 # msm8974-common: Switch to common basic USB HAL
-repopick 225466 # msm8974-common: libril: Remove LOCAL_CLANG
-repopick 225467 # msm8974-common: libril: Fix Const-Correctness for RIL_RadioFunctions
-repopick 225468 # msm8974-common: libril: Remove unused code
-repopick 225469 # msm8974-common: libril: Fix double freeing of memory in SAP service and add null-checks.
-repopick 225470 # msm8974-common: libril: Store the system time when NITZ is received.
-repopick 225471 # msm8974-common: libril: Add DISABLE_RILD_OEM_HOOK.
-repopick 225472 # msm8974-common: libril:  Change rild initial sequence to guarantee non-null function pointer before rild register its hidl service
-repopick 225473 # msm8974-common: libril: Add SIM_ABSENT error
-repopick 224916 # DO NOT MERGE: msm8974-common: sepolicy: Just make it build
+#repopick 224851 # msm8974-common: config.fs: Add 'VENDOR' prefix to AIDs
+#repopick 225249 # msm8974-common: Uprev Wi-Fi HAL to 1.2
+#repopick 225250 # msm8974-common: Uprev to supplicant 1.1
+#repopick 225251 # msm8974-common: Add hostapd HIDL interface
+#repopick 225620 # msm8974-common: Switch to common basic USB HAL
+#repopick 225466 # msm8974-common: libril: Remove LOCAL_CLANG
+#repopick 225467 # msm8974-common: libril: Fix Const-Correctness for RIL_RadioFunctions
+#repopick 225468 # msm8974-common: libril: Remove unused code
+#repopick 225469 # msm8974-common: libril: Fix double freeing of memory in SAP service and add null-checks.
+#repopick 225470 # msm8974-common: libril: Store the system time when NITZ is received.
+#repopick 225471 # msm8974-common: libril: Add DISABLE_RILD_OEM_HOOK.
+#repopick 225472 # msm8974-common: libril:  Change rild initial sequence to guarantee non-null function pointer before rild register its hidl service
+#repopick 225473 # msm8974-common: libril: Add SIM_ABSENT error
+#repopick 224916 # DO NOT MERGE: msm8974-common: sepolicy: Just make it build
 
 # -------------- PLATFORM STUFF --------------
 
 # bionic
-repopick 223065 # linker: Add support for dynamic SHIM libraries
 repopick 223943 # bionic: meh
 
 # bootable/recovery
@@ -126,7 +131,6 @@ repopick 223908 # fpc: keep fpc in system-background
 repopick 224525 # lineage/interfaces: Add basic USB HAL that reports no status change
 
 # hardware/ril
-repopick 224062 # libril: allow board to provide libril
 repopick 224063 # libril: Restore support for RIL v6, v8 and v9 stacks
 
 # hardware/qcom/audio-caf/msm8974
@@ -178,8 +182,9 @@ repopick 223945 # Prevent abort in case of command timeout
 repopick 225423 # Add support to force disable enhanced sco commands
 
 # system/core
-repopick 223085 # adbd: Disable "adb root" by system property (2/3)
+#repopick 223085 # adbd: Disable "adb root" by system property (2/3)
 repopick 223147 # init: don't skip starting a service with no domain if permissive
+privpick system/core refs/changes/19/206119/2 # init: I hate safety net
 
 # system/sepolicy
 repopick 223745 # Allow e2fs to format cache
