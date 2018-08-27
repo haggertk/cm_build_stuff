@@ -19,6 +19,8 @@ source build/envsetup.sh
 #repopick 225615 # hlte-common: Don't start supplicant with interfaces
 #repopick 225616 # hlte-common: wpa_supplicant(hidl): Add support for starting HAL lazily
 #repopick 225617 # hlte-common: Add p2p_no_group_iface=1 to p2p_supplicant_overlay
+#repopick 225866 # hlte-common: Update prefixes for audio system properties
+#repopick 225867 # hlte-common: Allow additional gralloc 1.0 buffer usage bits
 #repopick 225618 # hlte-common: Align ril.h to samsung_msm8974-common P libril changes
 #repopick 225619 # DO NOT MERGE: hlte-common: Requisite bring-up BS change
 
@@ -29,6 +31,7 @@ source build/envsetup.sh
 #repopick 225189 # klte-common: Don't start supplicant with interfaces
 #repopick 225190 # klte-common: wpa_supplicant(hidl): Add support for starting HAL lazily
 #repopick 225191 # klte-common: Add p2p_no_group_iface=1 to p2p_supplicant_overlay
+#repopick 225761 # klte-common: Update prefixes for audio system properties
 #repopick 225192 # klte-common: Align ril.h to samsung_msm8974-common P libril changes
 #repopick 224917 # DO NOT MERGE: klte-common: Requisite bring-up BS change
 
@@ -46,11 +49,14 @@ source build/envsetup.sh
 #repopick 225471 # msm8974-common: libril: Add DISABLE_RILD_OEM_HOOK.
 #repopick 225472 # msm8974-common: libril:  Change rild initial sequence to guarantee non-null function pointer before rild register its hidl service
 #repopick 225473 # msm8974-common: libril: Add SIM_ABSENT error
+#repopick 225759 # msm8974-common: libril: Replace strncpy with strlcpy.
+#repopick 225760 # msm8974-common: libril: FR51015: Tuning of Binder buffer for rild.
 #repopick 224916 # DO NOT MERGE: msm8974-common: sepolicy: Just make it build
 
 # -------------- PLATFORM STUFF --------------
 
 # bionic
+repopick 225940 # Allow whitelisted processes to use destroyed mutex
 repopick 223943 # bionic: meh
 
 # bootable/recovery
@@ -74,10 +80,9 @@ repopick 222733 # core: Disable vendor restrictions
 #repopick 222682 # Use new flex binary
 repopick 224613 # soong: Add LOCAL_AIDL_FLAGS handling
 repopick 223431 # soong: Enforce absolute path if OUT_DIR is set
+repopick 224204 # soong: Add function to return camera parameters library name
 
 # device/lineage/sepolicy
-repopick 224765 # sepol: Remove exfat context
-repopick 224766 # sepol: Remove recovery access to vold_socket
 repopick 225115 # common: Label common basic USB HAL
 
 # device/qcom/sepolicy
@@ -86,14 +91,9 @@ repopick 224768 # sepol: hostapd is now hal_wifi_hostapd
 repopick 225036 # common: Remove duplicate definition of hostapd data files
 
 # external/tinycompress
-repopick 223008 # tinycompress: squash tinycompress fixes
-repopick 223009 # tinycompress: Add get_metadata() and set_metadata() API support
-repopick 223010 # tinycompress: Generate vendor specifc tinycompress
-repopick 223011 # tinycompress: Fix compilation on old targets
-repopick 223012 # audio: compress error propagation
-repopick 223013 # tinycompress: Move [get,set]_metadata to vendor extension
-repopick 223014 # Revert "libtinycompress: Android.mk -> Android.bp"
-repopick 223015 # tinycompress: include kernel headers
+repopick 225762 # tinycompress: enable libtinycompress_vendor
+repopick 225763 # tinycompress: Use sanitized headers generated from kernel source
+repopick 223008 # tinycompress: tinycompress fixes
 
 # frameworks/av
 repopick 224174 # nuplayer: Avoid crash when codec fails to load
@@ -119,9 +119,13 @@ repopick 225540 # Camera: CameraHardwareInterface: Releasing mHIDLMemoryMapLock 
 repopick 225541 # OMXNodeInstance: Allow dynamic native handle for shared mem buffer
 repopick 224173 # camera: include: Don't override possible overlayed header
 repopick 224203 # camera: Allow devices to load custom CameraParameter code
+repopick 225798 # libcameraservice: Disable external provider for legacy HAL1
 
 # frameworks/compile/mclinker
 #repopick 222683 # Update FlexLinker.h to current version of flex.
+
+# franeworks/native
+repopick 225827 # libui: Allow extension of valid gralloc 1.0 buffer usage bits
 
 # frameworks/opt/telephony
 repopick 223774 # telephony: Squashed support for simactivation feature
@@ -152,11 +156,15 @@ repopick 224063 # libril: Restore support for RIL v6, v8 and v9 stacks
 
 # hardware/qcom/audio-caf/msm8974
 repopick 223436 # Add -Wno-error to compile with global -Werror.
+repopick 225193 # hal: Update prefixes for audio system properties
 
 # hardware/qcom/display-caf/msm8974
 repopick 223433 # Use libhwui.so instead of libskia.so
 repopick 223434 # Include what we use.
 repopick 223435 # Add -Wno-error to compile with global -Werror.
+
+# hardware/qcom/display-caf/msm8998
+repopick 225757 # display: Define soong namespace
 
 # hardware/qcom/media-caf/msm8974
 repopick 223441 # Add -Wno-error to compile with global -Werror.
@@ -166,8 +174,6 @@ repopick 223892 # power: Add power hint to set profile
 repopick 223890 # Revert "power: Depend on vendor lineage power HAL"
 
 # hardware/ril-caf
-repopick 225736 # libril: allow board to provide libril
-repopick 225737 # ril-caf: Add guard makefile
 repopick 225738 # librilutils: Relocate pb-generated objects to their expected path
 repopick 225739 # libril: Restore support for RIL v6, v8 and v9 stacks
 repopick 225740 # libril: Bounds check s_commands
@@ -177,7 +183,7 @@ repopick 225743 # Revert "Disable rild from starting at power up"
 
 # hardware/samsung
 repopick 223882 # resolve compiling warnings/errors
-repopick 223982 # DNM: exclude AdvancedDisplay *** Revisit after SDK ***
+repopick -f 223982 # DNM: exclude AdvancedDisplay *** Revisit after SDK ***
 
 # packages/apps/Camera2
 repopick 224752 # Use mCameraAgentNg for getting camera info when available
@@ -186,8 +192,8 @@ repopick 225256 # Don't attempt to convert degree to orientation enum twice
 repopick 225257 # Camera2: Only autofocus before a snap if we are actually in "auto" mode.
 repopick 225258 # Camera2: Remove settings preferences only once
 repopick 225259 # Camera2: Stop using GPS when going to background
-repopick 225260 # Camera: Powerkey shutter (2/2)
-repopick 225261 # Camera2: Add option to set max screen brightness
+#repopick 225260 # Camera: Powerkey shutter (2/2)
+#repopick 225261 # Camera2: Add option to set max screen brightness
 repopick 225262 # Camera2: Remove google help preference
 repopick 225263 # Camera2: Fix Undo button behaviour
 repopick 225264 # Fix crash if Exif-Tag buffer-length and component-count are both 0
@@ -216,25 +222,20 @@ repopick 223147 # init: don't skip starting a service with no domain if permissi
 privpick system/core refs/changes/19/206119/2 # init: I hate safety net
 
 # system/sepolicy
-repopick 223745 # Allow e2fs to format cache
 repopick 223746 # Add rules required for TARGET_HAS_LEGACY_CAMERA_HAL1
 repopick 223748 # Build sepolicy tools with Android.bp.
-repopick 224808 # sepolicy: Add rules for sudaemon
 
 # vendor/lineage
-repopick 224511 # config/common: Clean up debug packages
-repopick 223980 # lineage: Exclude all lineage overlays from RRO
-repopick 224421 # overlay: Default materials buttons to not all caps
-repopick 224021 # overlay: Fix status bar padding for all devices
-repopick 224893 # overlay: Remove back button panic overlay
-repopick 224649 # overlay: Enable rounded corners for dialogues and buttons
-repopick 224759 # lineage: Ignore neverallows
 repopick 225495 # config: Use standard inherit-product-if-exists for vendor/extra
+repopick 225978 # soong_config: Remove extra spacing
 repopick 225550 # soong_config: Add TARGET_NEEDS_LEGACY_CAMERA_HAL1_DYN_NATIVE_HANDLE
+repopick 225801 # lineage: Move qcom board variables earlier
+repopick 225758 # qcom: Declare PRODUCT_SOONG_NAMESPACES for HALs
+repopick 225865 # soong_config: Allow extension of valid gralloc 1.0 buffer usage bits
+repopick 225942 # soong_config: Allow whitelisted processes to use destroyed mutex
 
 # -------------- TOPIC STUFF --------------
 
-repopick -t deprecate-per-SoC-custom-audio-policy-HAL
 repopick -t pie-mode-bits
 #repopick -t pie-flex-update
 #repopick -t pie-AudioFX # *** Wait for SDK ***
