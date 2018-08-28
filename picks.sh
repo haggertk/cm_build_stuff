@@ -20,7 +20,6 @@ source build/envsetup.sh
 #repopick 225616 # hlte-common: wpa_supplicant(hidl): Add support for starting HAL lazily
 #repopick 225617 # hlte-common: Add p2p_no_group_iface=1 to p2p_supplicant_overlay
 #repopick 225866 # hlte-common: Update prefixes for audio system properties
-#repopick 225867 # hlte-common: Allow additional gralloc 1.0 buffer usage bits
 #repopick 225618 # hlte-common: Align ril.h to samsung_msm8974-common P libril changes
 #repopick 225619 # DO NOT MERGE: hlte-common: Requisite bring-up BS change
 
@@ -41,6 +40,7 @@ source build/envsetup.sh
 #repopick 225250 # msm8974-common: Uprev to supplicant 1.1
 #repopick 225251 # msm8974-common: Add hostapd HIDL interface
 #repopick 225620 # msm8974-common: Switch to common basic USB HAL
+#repopick 226070 # msm8974-common: Allow additional gralloc 1.0 buffer usage bits
 #repopick 225466 # msm8974-common: libril: Remove LOCAL_CLANG
 #repopick 225467 # msm8974-common: libril: Fix Const-Correctness for RIL_RadioFunctions
 #repopick 225468 # msm8974-common: libril: Remove unused code
@@ -116,7 +116,7 @@ repopick 225536 # Camera: Add support for preview frame fd
 repopick 225537 # libstagefright: Add more sample rates for FLAC
 repopick 225539 # Camera:CameraService: Added lock on mHIDLMemPoolId in QDataCallback..
 repopick 225540 # Camera: CameraHardwareInterface: Releasing mHIDLMemoryMapLock in QdataCallback
-repopick 225541 # OMXNodeInstance: Allow dynamic native handle for shared mem buffer
+#repopick 225541 # OMXNodeInstance: Allow dynamic native handle for shared mem buffer
 repopick 224173 # camera: include: Don't override possible overlayed header
 repopick 224203 # camera: Allow devices to load custom CameraParameter code
 repopick 225798 # libcameraservice: Disable external provider for legacy HAL1
@@ -159,7 +159,6 @@ repopick 223436 # Add -Wno-error to compile with global -Werror.
 repopick 225193 # hal: Update prefixes for audio system properties
 
 # hardware/qcom/display-caf/msm8974
-repopick 223433 # Use libhwui.so instead of libskia.so
 repopick 223434 # Include what we use.
 repopick 223435 # Add -Wno-error to compile with global -Werror.
 
@@ -226,12 +225,10 @@ repopick 223746 # Add rules required for TARGET_HAS_LEGACY_CAMERA_HAL1
 repopick 223748 # Build sepolicy tools with Android.bp.
 
 # vendor/lineage
-repopick 225495 # config: Use standard inherit-product-if-exists for vendor/extra
-repopick 225978 # soong_config: Remove extra spacing
 repopick 225550 # soong_config: Add TARGET_NEEDS_LEGACY_CAMERA_HAL1_DYN_NATIVE_HANDLE
+repopick 225865 # soong_config: Allow extension of valid gralloc 1.0 buffer usage bits
 repopick 225801 # lineage: Move qcom board variables earlier
 repopick 225758 # qcom: Declare PRODUCT_SOONG_NAMESPACES for HALs
-repopick 225865 # soong_config: Allow extension of valid gralloc 1.0 buffer usage bits
 repopick 225942 # soong_config: Allow whitelisted processes to use destroyed mutex
 
 # -------------- TOPIC STUFF --------------
