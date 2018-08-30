@@ -59,28 +59,12 @@ source build/envsetup.sh
 repopick 225940 # Allow whitelisted processes to use destroyed mutex
 repopick 223943 # bionic: meh
 
-# bootable/recovery
-repopick 222993 # Revert "updater: Remove dead make_parents()."
-repopick 222994 # Revert "otautil: Delete dirUnlinkHierarchy()."
-repopick 222995 # Revert "kill package_extract_dir"
-repopick 222996 # Revert "Remove the obsolete package_extract_dir() test"
-repopick 222997 # Revert "updater: Remove some obsoleted functions for file-based OTA."
-repopick 222998 # Revert "Format formattable partitions if mount fails"
-repopick 223781 # Skip BLKDISCARD if not supported by the device
-
 # build/make
 repopick 222733 # core: Disable vendor restrictions
-repopick 222761 # Allow finer control over how product variables are inherited.
 repopick 222760 # Add LOCAL_AIDL_FLAGS
-repopick 222750 # edify: bring back SetPermissionsRecursive
-repopick 222762 # Revert "Remove the obsolete UnpackPackageDir() in edify generator"
 repopick 222742 # build: Use project pathmap for recovery
-repopick 223138 # build/target: Include Lineage platform jars in system server.
-repopick 223139 # build: Make sure we're building our secondary resource package as dependency.
-repopick 225116 # Revert "releasetools: Replace key values in permission files during re-signing"
 
 # build/soong
-repopick 223315 # soong: Special case Lineage SDK
 repopick 224613 # soong: Add LOCAL_AIDL_FLAGS handling
 repopick 223431 # soong: Enforce absolute path if OUT_DIR is set
 repopick 224204 # soong: Add function to return camera parameters library name
@@ -113,7 +97,6 @@ repopick 225536 # Camera: Add support for preview frame fd
 repopick 225537 # libstagefright: Add more sample rates for FLAC
 repopick 225539 # Camera:CameraService: Added lock on mHIDLMemPoolId in QDataCallback..
 repopick 225540 # Camera: CameraHardwareInterface: Releasing mHIDLMemoryMapLock in QdataCallback
-#repopick 225541 # OMXNodeInstance: Allow dynamic native handle for shared mem buffer
 repopick 224203 # camera: Allow devices to load custom CameraParameter code
 repopick 225798 # libcameraservice: Disable external provider for legacy HAL1
 
@@ -122,15 +105,6 @@ repopick 224446 # SystemUI: Make tablets great again
 repopick 224513 # SystemUI: Disable config_keyguardUserSwitcher on sw600dp
 repopick 225582 # [TEMP]: Revert "OMS: harden permission checks"
 repopick 225859 # storage: Do not notify for volumes on non-removable disks
-repopick 222961 # androidfw: Squash of declare and load lineage sdk resource package w/ id
-repopick 222962 # Add lineage sdk resource APK to Zygote FD whitelist
-repopick 222963 # services: Kick off to LineageSystemServer for external service init.
-repopick 222964 # Add Profiles.
-repopick 222966 # services: Include org.lineageos.platform.internal
-repopick 222967 # SystemUI: Add lineage-sdk dep
-repopick 225425 # SettingsLib: Add LineageParts settings to tile list
-repopick 226174 # perf: Add support for HIDL Lineage power HAL
-repopick 224919 # Allow lid to send a generic COVER_CHANGED broadcast
 repopick 222955 # frameworks/base: Battery and Notification Lights
 repopick 222956 # frameworks/base: Lights notifications brightness support
 repopick 225572 # SystemUI: Allow using tuner API for LineageSettings
@@ -178,14 +152,12 @@ repopick 225729 # Framework: Forward port Long press back to kill app (2/2)
 repopick 225734 # Allow screen unpinning on devices without navbar
 repopick 225754 # SystemUI: Berry styles
 repopick 225766 # Add an option to force pre-O apps to use full screen aspect ratio
-repopick 225776 # SystemUI: disable tuner
 repopick 225778 # SystemUI: Port brightness slider changes
 repopick 225779 # SystemUI: Port statusbar brightness control
 repopick 225789 # SystemUI: Add visualizer feature
 repopick 225790 # base: Allow to disable Lockscreen Media Art [1/3]
 repopick 225861 # [2/3] NetworkManagement : Add ability to restrict app data/wifi usage
 repopick 225878 # Download: Add support to manually pause/resume download
-repopick 225915 # UpdateEngine: Add perf mode binder interface
 repopick 225919 # PackageManager: allow build-time disabling of components
 repopick 225980 # Screenshot: append app name to filename
 repopick 226081 # fingerprint: notify client when cancelling succeeded
@@ -193,10 +165,7 @@ repopick 226083 # Keyguard: Allow disabling fingerprint wake-and-unlock
 repopick 226084 # fingerprint: handle PerformanceStats NULL pointers
 #repopick 222965 # Allow adjusting progress on touch events.
 
-# frameworks/compile/mclinker
-#repopick 222683 # Update FlexLinker.h to current version of flex.
-
-# franeworks/native
+# frameworks/native
 repopick 224443 # libbinder: Don't log call trace when waiting for vendor service on non-eng builds
 repopick 225545 # Forward port 'Swap volume buttons' (2/3)
 repopick 225546 # AppOpsManager: Update with the new ops
@@ -230,7 +199,6 @@ repopick 223411 # interfaces: Add id HAL definition
 
 # hardware/ril
 repopick 224063 # libril: Restore support for RIL v6, v8 and v9 stacks
-repopick 225247 # libril: Protect against NULL unsolicited response function
 
 # hardware/qcom/audio-caf/msm8974
 repopick 223436 # Add -Wno-error to compile with global -Werror.
@@ -252,7 +220,6 @@ repopick 223890 # Revert "power: Depend on vendor lineage power HAL"
 
 # hardware/ril-caf
 repopick 225739 # libril: Restore support for RIL v6, v8 and v9 stacks
-repopick 225742 # libril: Protect against NULL unsolicited response function
 
 # hardware/qcom/fm
 repopick 223678 # libfm_jni: use proper nativehelper headers
@@ -270,14 +237,11 @@ repopick 223892 # power: Add power hint to set profile
 
 # hardware/samsung
 repopick 226072 # liblights: remove unused variable
-#repopick -f 223982 # DNM: exclude AdvancedDisplay *** Revisit after SDK ***
 
 # lineage-sdk
-repopick 224047 # lineage-sdk: Android.mk -> Android.bp
 repopick 225687 # PowerMenuConstants: Add new global action
 repopick 225581 # lineage-sdk: Make styles init at system services ready
 repopick 225914 # lineage-sdk: Rewrite Lineage preference classes used in about phone view
-repopick 226177 # ActionUtils: Rework for removed getRecentTasksForUser
 
 # packages/apps/Camera2
 repopick 224752 # Use mCameraAgentNg for getting camera info when available
@@ -300,7 +264,6 @@ repopick 226131 # DeskClock: Add support of power off alarm feature
 repopick 225280 # Make new menu entry to link to cLock widget settings.
 
 # packages/apps/LineageParts
-repopick 223153 # LineageParts: Comment out unbuildable code
 repopick 226145 # LineageParts: Reenable buttons related settings
 
 # packages/apps/Messaging
@@ -331,9 +294,7 @@ repopick 223701 # NFC: Clean duplicated and unknown permissions
 repopick 223703 # nxp: jni: Implement AOSP P abstract methods
 
 # packages/apps/Settings
-repopick 225856 # One does not simply become a Developer
 repopick 225858 # storage: Do not allow eject for volumes on non-removable disks
-repopick 224970 # Settings: depend on lineage platform library
 repopick 223151 # Settings: Add back battery and notification lights settings
 repopick 225570 # Settings: Add LineageParts charging sound settings preference
 repopick 225571 # Settings: Add double tap to sleep preference
@@ -398,24 +359,19 @@ repopick 225429 # [3/3] NetD : Allow passing in interface names for wifi/data ap
 repopick 223746 # Add rules required for TARGET_HAS_LEGACY_CAMERA_HAL1
 repopick 223748 # Build sepolicy tools with Android.bp.
 
-# system/update_engine
-repopick 225431 # update_engine: Add performance mode
-
 # vendor/lineage
 repopick 225801 # lineage: Move QC board variables earlier
 repopick 225758 # qcom: Declare PRODUCT_SOONG_NAMESPACES for HALs
 repopick 226155 # soong_config: Add add_json_str_omitempty function
 repopick 225865 # soong_config: Allow extension of valid gralloc 1.0 buffer usage bits
 repopick 225942 # soong_config: Allow whitelisted processes to use destroyed mutex
-#repopick 225550 # soong_config: Add TARGET_NEEDS_LEGACY_CAMERA_HAL1_DYN_NATIVE_HANDLE
 repopick 225921 # overlay: Update list of GSF/GMS activities
 repopick 225922 # overlay: Hide "System update" in settings
+repopick 226252 # Add rules for non platform apps that use hidden APIs
 
 # -------------- TOPIC STUFF --------------
 
 repopick -t pie-mode-bits
-#repopick -t pie-AudioFX # *** Wait for SDK ***
-#repopick -t pie-FlipFlap
 repopick -t pie-bcm_libbt
 
 exit 0
