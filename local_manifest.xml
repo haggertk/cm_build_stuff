@@ -19,6 +19,11 @@
   <project path="hardware/qcom/fm" name="LineageOS/android_hardware_qcom_fm" groups="qcom,qcom_fm" />
   <project path="hardware/qcom/power" name="LineageOS/android_hardware_qcom_power" groups="qcom,pdk" />
   <project path="hardware/qcom/wlan-caf" name="LineageOS/android_hardware_qcom_wlan" groups="qcom_wlan,pdk" />
+  <project path="packages/apps/AudioFX" name="LineageOS/android_packages_apps_AudioFX" />
+  <project path="packages/apps/Eleven" name="LineageOS/android_packages_apps_Eleven" />
+  <project path="packages/apps/Jelly" name="LineageOS/android_packages_apps_Jelly" />
+  <project path="packages/apps/Recorder" name="LineageOS/android_packages_apps_Recorder" />
+  <project path="packages/apps/Updater" name="LineageOS/android_packages_apps_Updater" />
   <project path="vendor/qcom/opensource/dataservices" name="haggertk/android_vendor_qcom_opensource_dataservices" revision="lineage-16.0_LA.UM.7.4.r1-02800-8x98.0_rebase" />
 
 </manifest>
