@@ -72,7 +72,6 @@ repopick 223781 # Skip BLKDISCARD if not supported by the device
 repopick 222733 # core: Disable vendor restrictions
 repopick 222761 # Allow finer control over how product variables are inherited.
 repopick 222760 # Add LOCAL_AIDL_FLAGS
-repopick 222754 # build/core: Create means of ignoring subdir layer for packages.
 repopick 222750 # edify: bring back SetPermissionsRecursive
 repopick 222762 # Revert "Remove the obsolete UnpackPackageDir() in edify generator"
 repopick 222742 # build: Use project pathmap for recovery
@@ -104,16 +103,6 @@ repopick 225763 # tinycompress: Use sanitized headers generated from kernel sour
 repopick 223008 # tinycompress: tinycompress fixes
 
 # frameworks/av
-repopick 224174 # nuplayer: Avoid crash when codec fails to load
-repopick 224176 # camera: Don't segfault if we get a NULL parameter
-repopick 224177 # cameraservice: Resolve message vs start/stop preview races
-repopick 224178 # libstagefright: Support YVU420SemiPlanar camera format
-repopick 224179 # stagefright: omx: Don't signal dataspace change on legacy QCOM
-repopick 224180 # stagefright: ACodec: Resolve empty vendor parameters usage
-repopick 224181 # libstagefright: Free buffers on observer died
-repopick 224182 # libstagefright: use 64-bit usage for native_window_set_usage
-repopick 224183 # camera/media: Support legacy HALv1 camera in mediaserver
-repopick 224184 # Camera: check metadata type before releasing frame
 repopick 225530 # camera: Workaround for GCC-compiled HAL3 drivers
 repopick 225531 # soundtrigger: fill in default extras from dsp
 repopick 225532 # Camera: CameraHardwareInterface changes to support Extended FD
@@ -125,7 +114,6 @@ repopick 225537 # libstagefright: Add more sample rates for FLAC
 repopick 225539 # Camera:CameraService: Added lock on mHIDLMemPoolId in QDataCallback..
 repopick 225540 # Camera: CameraHardwareInterface: Releasing mHIDLMemoryMapLock in QdataCallback
 #repopick 225541 # OMXNodeInstance: Allow dynamic native handle for shared mem buffer
-repopick 224173 # camera: include: Don't override possible overlayed header
 repopick 224203 # camera: Allow devices to load custom CameraParameter code
 repopick 225798 # libcameraservice: Disable external provider for legacy HAL1
 
@@ -240,9 +228,6 @@ repopick 223374 # interfaces: Add 2.0 livedisplay interfaces
 repopick 223410 # interfaces: Add touch HIDL interface definitions
 repopick 223411 # interfaces: Add id HAL definition
 
-# hardware/lineage/lineagehw
-repopick 224046 # lineagehw: Convert to Android.bp and use only common classes
-
 # hardware/ril
 repopick 224063 # libril: Restore support for RIL v6, v8 and v9 stacks
 repopick 225247 # libril: Protect against NULL unsolicited response function
@@ -288,8 +273,6 @@ repopick 226072 # liblights: remove unused variable
 #repopick -f 223982 # DNM: exclude AdvancedDisplay *** Revisit after SDK ***
 
 # lineage-sdk
-repopick 223137 # [TEMP] lineage-sdk: Comment out LineageAudioService
-repopick 224608 # [TEMP] LineageSettingsProvider: Don't access system settings during startup
 repopick 224047 # lineage-sdk: Android.mk -> Android.bp
 repopick 225687 # PowerMenuConstants: Add new global action
 repopick 225581 # lineage-sdk: Make styles init at system services ready
@@ -350,8 +333,6 @@ repopick 223703 # nxp: jni: Implement AOSP P abstract methods
 # packages/apps/Settings
 repopick 225856 # One does not simply become a Developer
 repopick 225858 # storage: Do not allow eject for volumes on non-removable disks
-repopick 223398 # Disable notification channel warnings by default
-repopick 225857 # Settings: adaptive icon
 repopick 224970 # Settings: depend on lineage platform library
 repopick 223151 # Settings: Add back battery and notification lights settings
 repopick 225570 # Settings: Add LineageParts charging sound settings preference
@@ -426,7 +407,7 @@ repopick 225758 # qcom: Declare PRODUCT_SOONG_NAMESPACES for HALs
 repopick 226155 # soong_config: Add add_json_str_omitempty function
 repopick 225865 # soong_config: Allow extension of valid gralloc 1.0 buffer usage bits
 repopick 225942 # soong_config: Allow whitelisted processes to use destroyed mutex
-repopick 225550 # soong_config: Add TARGET_NEEDS_LEGACY_CAMERA_HAL1_DYN_NATIVE_HANDLE
+#repopick 225550 # soong_config: Add TARGET_NEEDS_LEGACY_CAMERA_HAL1_DYN_NATIVE_HANDLE
 repopick 225921 # overlay: Update list of GSF/GMS activities
 repopick 225922 # overlay: Hide "System update" in settings
 
