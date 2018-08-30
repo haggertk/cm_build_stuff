@@ -26,6 +26,6 @@
   <project path="hardware/qcom/wlan-caf" name="LineageOS/android_hardware_qcom_wlan" groups="qcom_wlan,pdk" />
   <project path="lineage-sdk" name="LineageOS/android_lineage-sdk" />
   <project path="packages/apps/LineageParts" name="LineageOS/android_packages_apps_LineageParts" />
-  <project path="vendor/qcom/opensource/dataservices" name="LineageOS/android_vendor_qcom_opensource_dataservices" />
+  <project path="vendor/qcom/opensource/dataservices" name="haggertk/android_vendor_qcom_opensource_dataservices" revision="lineage-16.0_LA.UM.7.4.r1-02800-8x98.0_rebase" />
 
 </manifest>
