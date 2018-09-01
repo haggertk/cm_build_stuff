@@ -66,8 +66,6 @@ repopick 222742 # build: Use project pathmap for recovery
 
 # build/soong
 repopick 224613 # soong: Add LOCAL_AIDL_FLAGS handling
-repopick 223431 # soong: Enforce absolute path if OUT_DIR is set
-repopick 224204 # soong: Add function to return camera parameters library name
 
 # dalvik
 repopick 225475 # dexdeps: Add option for --include-lineage-classes.
@@ -97,19 +95,9 @@ repopick 225536 # Camera: Add support for preview frame fd
 repopick 225537 # libstagefright: Add more sample rates for FLAC
 repopick 225539 # Camera:CameraService: Added lock on mHIDLMemPoolId in QDataCallback..
 repopick 225540 # Camera: CameraHardwareInterface: Releasing mHIDLMemoryMapLock in QdataCallback
-repopick 224203 # camera: Allow devices to load custom CameraParameter code
-repopick 225798 # libcameraservice: Disable external provider for legacy HAL1
 
 # frameworks/base
-repopick 224446 # SystemUI: Make tablets great again
-repopick 224513 # SystemUI: Disable config_keyguardUserSwitcher on sw600dp
-repopick 225582 # [TEMP]: Revert "OMS: harden permission checks"
-repopick 225859 # storage: Do not notify for volumes on non-removable disks
-repopick 222955 # frameworks/base: Battery and Notification Lights
-repopick 222956 # frameworks/base: Lights notifications brightness support
-repopick 225572 # SystemUI: Allow using tuner API for LineageSettings
-repopick 225573 # SystemUI: add quick settings pull down with one finger
-repopick 225574 # SystemUI: add double tap to sleep gesture
+repopick 225685 # frameworks: Power menu customizations
 repopick 225590 # Reintroduce button-backlight (and respective inactivity timeout)
 repopick 225591 # power: Disable keyboard/button lights while dozing/dreaming
 repopick 225592 # PowerManager: Re-integrate button brightness
@@ -117,10 +105,10 @@ repopick 225593 # PowerManager: Add proximity check on wake
 repopick 225598 # PowerManagerService: Allow to light up buttons only when pressed
 repopick 225599 # PowerManager: Allow to distinguish different keypresses
 repopick 225600 # PowerManagerService: Wake on plug (1/2)
-repopick 225594 # SystemUI: Bringup tuner navbar and statusbar changes
 repopick 225983 # Runtime toggle of navbar
-repopick 225643 # Support for device specific key handlers
-repopick 225650 # Configurable 0, 90, 180 and 270 degree rotation
+eepopick 225650 # Configurable 0, 90, 180 and 270 degree rotation
+repopick 226252 # Add rules for non platform apps that use hidden APIs
+repopick 225799 # SystemUI: fix toggling lockscreen rotation [1/3]
 repopick 226133 # Port ADB over network and ability to hide the notification
 repopick 225651 # SystemUI: enable NFC tile
 repopick 225652 # SystemUI: add caffeine qs tile
@@ -134,7 +122,6 @@ repopick 225659 # SystemUI: LiveDisplay tile
 repopick 225661 # SystemUI: Reading mode tile
 repopick 225679 # Keyguard: Add option to scramble pin layout when unlocking (2/2).
 repopick 225680 # SystemUI: Allow overlaying max notification icons
-repopick 225685 # frameworks: Power menu customizations
 repopick 225682 # Framework: Volume key cursor control
 repopick 225683 # PhoneWindowManager: add LineageButtons volumekey hook
 repopick 225684 # Long-press power while display is off for torch
@@ -144,6 +131,7 @@ repopick 225693 # SystemUI: add left and right virtual buttons while typing
 repopick 225606 # Forward port 'Swap volume buttons' (1/3)
 repopick 225702 # Camera: allow camera to use power key as shutter
 repopick 225721 # Reimplement hardware keys custom rebinding
+repopick 226249 # fw/b: Allow customisation of navbar app switch long press action
 repopick 225722 # Reimplement device hardware wake keys support
 repopick 225726 # PhoneWindowManager: Tap volume buttons to answer call
 repopick 225727 # PhoneWindowManager: Implement press home to answer call
@@ -152,18 +140,18 @@ repopick 225729 # Framework: Forward port Long press back to kill app (2/2)
 repopick 225734 # Allow screen unpinning on devices without navbar
 repopick 225754 # SystemUI: Berry styles
 repopick 225766 # Add an option to force pre-O apps to use full screen aspect ratio
-repopick 225778 # SystemUI: Port brightness slider changes
-repopick 225779 # SystemUI: Port statusbar brightness control
-repopick 225789 # SystemUI: Add visualizer feature
-repopick 225790 # base: Allow to disable Lockscreen Media Art [1/3]
 repopick 225861 # [2/3] NetworkManagement : Add ability to restrict app data/wifi usage
-repopick 225878 # Download: Add support to manually pause/resume download
 repopick 225919 # PackageManager: allow build-time disabling of components
-repopick 225980 # Screenshot: append app name to filename
+repopick 226236 # SystemUI: add navbar button layout inversion tuning
+repopick 225859 # storage: Do not notify for volumes on non-removable disks
 repopick 226081 # fingerprint: notify client when cancelling succeeded
 repopick 226083 # Keyguard: Allow disabling fingerprint wake-and-unlock
 repopick 226084 # fingerprint: handle PerformanceStats NULL pointers
-#repopick 222965 # Allow adjusting progress on touch events.
+repopick 226276 # power: Re-introduce custom charging sounds
+repopick 224844 # lockscreen: Add option for showing unlock screen directly
+repopick 225582 # [TEMP]: Revert "OMS: harden permission checks"
+repopick 224446 # SystemUI: Make tablets great again
+repopick 224513 # SystemUI: Disable config_keyguardUserSwitcher on sw600dp
 
 # frameworks/native
 repopick 224443 # libbinder: Don't log call trace when waiting for vendor service on non-eng builds
@@ -181,12 +169,7 @@ repopick 225506 # Camed HAL extension: Added support in HIDL for Extended FD.
 repopick 225507 # camera: Only link and use vendor.qti.hardware.camera.device if specified
 
 # hardware/libhardware
-repopick 223096 # audio: Add audio amplifier HAL
 repopick 223097 # hardware/libhw: Add display_defs.h to declare custom enums/flags
-
-# hardware/libhardware_legacy
-repopick 225716 # Add wifi_add_or_remove_virtual_intf() to the legacy wifi hal
-repopick 223521 # Wifi: Add Qpower interface to libhardware_legacy
 
 # hardware/lineage/interfaces
 repopick 223906 # biometrics: fingerprint: add locking to default impl
@@ -196,9 +179,6 @@ repopick 224525 # lineage/interfaces: Add basic USB HAL that reports no status c
 repopick 223374 # interfaces: Add 2.0 livedisplay interfaces
 repopick 223410 # interfaces: Add touch HIDL interface definitions
 repopick 223411 # interfaces: Add id HAL definition
-
-# hardware/ril
-repopick 224063 # libril: Restore support for RIL v6, v8 and v9 stacks
 
 # hardware/qcom/audio-caf/msm8974
 repopick 223436 # Add -Wno-error to compile with global -Werror.
@@ -217,9 +197,6 @@ repopick 223441 # Add -Wno-error to compile with global -Werror.
 # hardware/qcom/power
 repopick 223892 # power: Add power hint to set profile
 repopick 223890 # Revert "power: Depend on vendor lineage power HAL"
-
-# hardware/ril-caf
-repopick 225739 # libril: Restore support for RIL v6, v8 and v9 stacks
 
 # hardware/qcom/fm
 repopick 223678 # libfm_jni: use proper nativehelper headers
@@ -294,34 +271,32 @@ repopick 223701 # NFC: Clean duplicated and unknown permissions
 repopick 223703 # nxp: jni: Implement AOSP P abstract methods
 
 # packages/apps/Settings
-repopick 225858 # storage: Do not allow eject for volumes on non-removable disks
-repopick 223151 # Settings: Add back battery and notification lights settings
-repopick 225570 # Settings: Add LineageParts charging sound settings preference
-repopick 225571 # Settings: Add double tap to sleep preference
+repopick 226278 # Settings: Add LineageOS entries into device info
+repopick 225917 # Settings: Add contributors cloud to device info
 repopick 225596 # Settings: Add proximity check on wake preference
 repopick 225601 # Settings: display: Add wake on plug switch
 repopick 224973 # Settings: gesture: Add LineageParts touchscreen gesture settings
 repopick 224974 # Settings: Allow devices to provide remote gesture preferences
-repopick 225642 # Expose option to change the device hostname.
+repopick 226134 # Settings: Implement ADB notification and ADB over network
 repopick 225678 # Settings: Add option to scramble pin layout when unlocking (1/2).
 repopick 225686 # Settings: Add advanced restart switch
 repopick 225730 # Settings: Add kill app back button toggle
-repopick 225755 # Settings: Hide AOSP theme-related controllers
-repopick 225756 # Settings: fix dark style issues
 repopick 225768 # Settings: Add an option to force pre-O apps to use full screen aspect ratio
-repopick 225787 # Settings: Add lockscreen visualizer toggle
-repopick 225788 # Settings: Add toggle for Lockscreen Media Art [2/3]
 repopick 225800 # Settings: Add rotation settings
-repopick 225819 # Settings: Add a RemotePreference for device-specific doze settings
 repopick 225860 # [1/3] Settings: per-app cellular data and wifi restrictions
-repopick 225912 # Settings: Add LineageOS version, API level and build date to device info
-repopick 225913 # [1/2] Add vendor security patch level to device info
-repopick 225917 # Settings: Add contributors cloud to device info
-repopick 225918 # Settings: Add LineageOS updates to device info
-repopick 225979 # Settings: Add package name to installed app details
-repopick 226134 # Settings: Implement ADB notification and ADB over network
 repopick 226142 # Settings: Add developer setting for root access
 repopick 226146 # Settings: battery: Add LineageParts perf profiles
+repopick 226148 # Settings: "Security & location" -> "Security & privacy"
+repopick 226149 # Settings: Add LineageOS legal info
+repopick 226150 # Settings: add Trust interface hook
+repopick 226151 # Settings: show Trust brading in confirm_lock_password UI
+repopick 225570 # Settings: Add LineageParts charging sound settings preference
+repopick 226279 # Settings: Add back increasing ring feature (2/3).
+repopick 225755 # Settings: Hide AOSP theme-related controllers
+repopick 225756 # Settings: fix dark style issues
+repopick 226154 # fingerprint: Allow devices to configure sensor location
+repopick 225858 # storage: Do not allow eject for volumes on non-removable disks
+repopick 226391 # Settings: Hide lockdown in lockscreen settings
 
 # packages/apps/WallpaperPicker
 repopick 225363 # WallpaperPicker: bump gradle
@@ -331,10 +306,6 @@ repopick 225370 # WallpaperPicker: add a "No Wallpaper" option
 repopick 225369 # WallpaperPicker: Add icon near dialog items
 repopick 225371 # WallpaperPicker: Move strings for translation
 repopick 225372 # WallpaperPicker: 15.1 wallpapers
-
-# packages/providers/DownloadProvider
-repopick 225410 # DownloadProvider: Display download speed in notification
-repopick 225411 # DownloadProvider: Add support for manual pause/resume
 
 # packages/services/Telecomm
 repopick 223099 # Telecomm: Squashed phone_type switch support
@@ -366,8 +337,6 @@ repopick 226155 # soong_config: Add add_json_str_omitempty function
 repopick 225865 # soong_config: Allow extension of valid gralloc 1.0 buffer usage bits
 repopick 225942 # soong_config: Allow whitelisted processes to use destroyed mutex
 repopick 225921 # overlay: Update list of GSF/GMS activities
-repopick 225922 # overlay: Hide "System update" in settings
-repopick 226252 # Add rules for non platform apps that use hidden APIs
 
 # -------------- TOPIC STUFF --------------
 
