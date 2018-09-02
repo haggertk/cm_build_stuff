@@ -106,7 +106,7 @@ repopick 225598 # PowerManagerService: Allow to light up buttons only when press
 repopick 225599 # PowerManager: Allow to distinguish different keypresses
 repopick 225600 # PowerManagerService: Wake on plug (1/2)
 repopick 225983 # Runtime toggle of navbar
-eepopick 225650 # Configurable 0, 90, 180 and 270 degree rotation
+repopick 225650 # Configurable 0, 90, 180 and 270 degree rotation
 repopick 226252 # Add rules for non platform apps that use hidden APIs
 repopick 225799 # SystemUI: fix toggling lockscreen rotation [1/3]
 repopick 226133 # Port ADB over network and ability to hide the notification
