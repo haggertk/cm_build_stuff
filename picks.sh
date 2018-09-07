@@ -56,7 +56,6 @@ source build/envsetup.sh
 # -------------- PLATFORM STUFF --------------
 
 # bionic
-repopick 225940 # Allow whitelisted processes to use destroyed mutex
 repopick 223943 # bionic: meh
 
 # build/make
@@ -77,7 +76,6 @@ repopick 225115 # common: Label common basic USB HAL
 # device/qcom/sepolicy
 repopick 224767 # sepol: Remove duplicated hal_vehicle attribute
 repopick 224768 # sepol: hostapd is now hal_wifi_hostapd
-repopick 225036 # common: Remove duplicate definition of hostapd data files
 
 # external/tinycompress
 repopick 225762 # tinycompress: enable libtinycompress_vendor
@@ -98,29 +96,9 @@ repopick 225540 # Camera: CameraHardwareInterface: Releasing mHIDLMemoryMapLock 
 
 # frameworks/base
 repopick 225685 # frameworks: Power menu customizations
-repopick 225590 # Reintroduce button-backlight (and respective inactivity timeout)
-repopick 225591 # power: Disable keyboard/button lights while dozing/dreaming
-repopick 225592 # PowerManager: Re-integrate button brightness
-repopick 225593 # PowerManager: Add proximity check on wake
-repopick 225598 # PowerManagerService: Allow to light up buttons only when pressed
-repopick 225599 # PowerManager: Allow to distinguish different keypresses
-repopick 225600 # PowerManagerService: Wake on plug (1/2)
 repopick 225983 # Runtime toggle of navbar
 repopick 225650 # Configurable 0, 90, 180 and 270 degree rotation
-repopick 226252 # Add rules for non platform apps that use hidden APIs
 repopick 225799 # SystemUI: fix toggling lockscreen rotation [1/3]
-repopick 226133 # Port ADB over network and ability to hide the notification
-repopick 225651 # SystemUI: enable NFC tile
-repopick 225652 # SystemUI: add caffeine qs tile
-repopick 225653 # SystemUI: Add heads up tile
-repopick 225654 # QS: add Sync tile
-repopick 225655 # Added show volume panel tile to QS
-repopick 225656 # SystemUI: ADB over network tile
-repopick 225657 # SystemUI: AmbientDisplay tile
-repopick 225658 # SystemUI: USB Tether tile
-repopick 225659 # SystemUI: LiveDisplay tile
-repopick 225661 # SystemUI: Reading mode tile
-repopick 225679 # Keyguard: Add option to scramble pin layout when unlocking (2/2).
 repopick 225680 # SystemUI: Allow overlaying max notification icons
 repopick 225682 # Framework: Volume key cursor control
 repopick 225683 # PhoneWindowManager: add LineageButtons volumekey hook
@@ -139,14 +117,8 @@ repopick 225728 # Camera button support
 repopick 225729 # Framework: Forward port Long press back to kill app (2/2)
 repopick 225734 # Allow screen unpinning on devices without navbar
 repopick 225754 # SystemUI: Berry styles
-repopick 225766 # Add an option to force pre-O apps to use full screen aspect ratio
-repopick 225861 # [2/3] NetworkManagement : Add ability to restrict app data/wifi usage
-repopick 225919 # PackageManager: allow build-time disabling of components
 repopick 226236 # SystemUI: add navbar button layout inversion tuning
 repopick 225859 # storage: Do not notify for volumes on non-removable disks
-repopick 226081 # fingerprint: notify client when cancelling succeeded
-repopick 226083 # Keyguard: Allow disabling fingerprint wake-and-unlock
-repopick 226084 # fingerprint: handle PerformanceStats NULL pointers
 repopick 226276 # power: Re-introduce custom charging sounds
 repopick 224844 # lockscreen: Add option for showing unlock screen directly
 repopick 225582 # [TEMP]: Revert "OMS: harden permission checks"
@@ -157,8 +129,6 @@ repopick 224513 # SystemUI: Disable config_keyguardUserSwitcher on sw600dp
 repopick 224443 # libbinder: Don't log call trace when waiting for vendor service on non-eng builds
 repopick 225545 # Forward port 'Swap volume buttons' (2/3)
 repopick 225546 # AppOpsManager: Update with the new ops
-repopick 225547 # PowerManager.h: Define USER_ACTIVITY_FLAG values
-repopick 225548 # InputDispatcher: On keypress, deliver keycode to pokeUserActivity
 repopick 225827 # libui: Allow extension of valid gralloc 1.0 buffer usage bits
 
 # frameworks/opt/telephony
@@ -172,45 +142,97 @@ repopick 225507 # camera: Only link and use vendor.qti.hardware.camera.device if
 repopick 223097 # hardware/libhw: Add display_defs.h to declare custom enums/flags
 
 # hardware/lineage/interfaces
-repopick 223906 # biometrics: fingerprint: add locking to default impl
-repopick 223907 # Use -Werror in hardware/interfaces/biometrics/fingerprint
-repopick 223908 # fpc: keep fpc in system-background
-repopick 224525 # lineage/interfaces: Add basic USB HAL that reports no status change
 repopick 223374 # interfaces: Add 2.0 livedisplay interfaces
 repopick 223410 # interfaces: Add touch HIDL interface definitions
 repopick 223411 # interfaces: Add id HAL definition
 
 # hardware/qcom/audio-caf/msm8974
-repopick 223436 # Add -Wno-error to compile with global -Werror.
 repopick 225193 # hal: Update prefixes for audio system properties
+repopick 223436 # Add -Wno-error to compile with global -Werror.
 
 # hardware/qcom/display-caf/msm8974
 repopick 223434 # Include what we use.
-repopick 223435 # Add -Wno-error to compile with global -Werror.
-
-# hardware/qcom/display-caf/msm8998
-repopick 225757 # display: Define soong namespace
+repopick 226481 # display: remove compile time warnings
+repopick 226482 # display: Enable clang for all display modules
 
 # hardware/qcom/media-caf/msm8974
 repopick 223441 # Add -Wno-error to compile with global -Werror.
 
-# hardware/qcom/power
-repopick 223892 # power: Add power hint to set profile
-repopick 223890 # Revert "power: Depend on vendor lineage power HAL"
-
 # hardware/qcom/fm
+repopick 226683 # Partially revert "FM: QSSI changes"
+repopick 226684 # Drop BOARD_HAVE_QCOM_FM flag
+repopick 226685 # jni: fix calibration data path for legacy fm_qsoc_patches
+repopick 226686 # libfm_jni: Skip loading FM firmware if requested
+repopick 226687 # libfm_jni: Do not come here unless QCOM_HARDWARE is in use
+repopick 226688 # libfm_jni: Add support for internal antenna hardware
+repopick 226689 # libfm_jni: Improve and fix FM jni logs
+repopick 226690 # libfm_jni: Confine the firmware-load skipping to the actual loading
+repopick 226691 # jni: Skip loading FM firmware if requested
+repopick 226692 # jni: Confine the firmware-load skipping to the actual loading
+repopick 226693 # Allow library to be used by apps directly
+repopick 226694 # Break bootclasspath dependency
+repopick 226695 # fmapp2: new launcher icon by LeopardSurd
+repopick 226696 # FMRadio : Re-vamp UI
+repopick 226697 # Fm : Restore seek arrows
+repopick 226698 # Fm : Make default country an overlay
+repopick 226699 # FmRadio : Re-add RDS fields to UI
+repopick 226700 # Scanned frequencies are saved in ascending ordering
+repopick 226701 # FMRadio : Call unregister in onPause
+repopick 226702 # FMRadio : Switch file extension to aac
+repopick 226703 # FM: Add property to force use internal antenna
+repopick 226704 # FM: Cleanup resources
+repopick 226705 # FMRadio: add Indonesia
+repopick 226706 # New Material icon
+repopick 226707 # FM: fixup strings
+repopick 226708 # FM2: materialize
+repopick 226709 # FM: retune last frequency when resume after call
+repopick 226710 # FM: always use overlay default country
+repopick 226711 # FM: Store tag num/value in sequence
+repopick 226712 # FM: reenable radio text visibility after station info updated
+repopick 226713 # FMRadio : Launch station list automatically after scan
+repopick 226714 # FM: respect hw.fm.internal_antenna
+repopick 226715 # FM: fix mRadioTextScroller usage in transmitter activity
+repopick 226716 # Fix status text to reflect when FM is enabled.
+repopick 226717 # FM: The collect channel disappear when quit FM
+repopick 226718 # FMRadio : Ensure scan state is kept in sync
+repopick 226719 # FMRadio : Keep track of scanned frequencies in service
+repopick 226720 # FMRadio : Select band based on country
+repopick 226721 # FMRadio : cleaned up band selection code
+repopick 226722 # FMRadio : improved band selection
+repopick 226723 # FMRadio : Localization of band types
+repopick 226724 # FMRadio : Fix settings UI bugs
+repopick 226725 # FMRadio : Fix headphone icon
+repopick 226726 # Fm : Update India bands
+repopick 226727 # fmapp2: String improvements
+repopick 226728 # fmapp2: Allow value for the default fm recording duration to be overlayed.
+repopick 226729 # Convert regional band arrays to string references
+repopick 226730 # Revert "Disable libfm_jni"
+repopick 226731 # Use BOARD_HAVE_QCOM_FM flag
+repopick 226732 # FM: Use some sane colors
+repopick 226733 # FM: Fix helium hal build
+repopick 226734 # FM: Fix KHz->kHz
+repopick 226735 # FM2: Convert FM transmitter notifications to use NotificationChannel
+repopick 226736 # FM2: Revamp notifications
+repopick 226737 # libfm_jni: Fix strchr implicit char* typecast in ConfFileParser
+repopick 226738 # libfm_jni: Add jni core headers dependency
+repopick 226739 # Do not link to android.hidl.base@1.0
+repopick 226740 # FM: adaptive icon
+repopick 226741 # fm: Resolve required dependency qcom.fmradio.xml linkage
+repopick 226742 # libfm_jni: Remove unused variables
+repopick 226743 # libfm_jni: Resolve fread assignment to condition cast
+repopick 223685 # libfm_jni: Resolve FM_DEVICE_PATH R/O open flag
+repopick 226744 # libfm_jni: Ignore unused parameters from APIs
+repopick 226745 # fm_hci/helium: Exclude from OSS builds
 repopick 223678 # libfm_jni: use proper nativehelper headers
 repopick 223683 # jni: Remove unused variables
 repopick 223684 # jni: Resolve equality comparisons with extraneous parentheses
-repopick 223685 # jni: Resolve FM_DEVICE_PATH R/O open flag
+repopick 226862 # jni: Resolve FM_DEVICE_PATH R/O open flag
 repopick 223686 # jni: Ignore unused parameters from APIs
 repopick 223687 # jni: Resolve V4L2_CID_AUDIO_MUTE redefinitions
 repopick 223692 # jni: Resolve -Wwritable-strings warnings in helium FW library variables
 repopick 223688 # fmapp2: Set LOCAL_PRIVATE_PLATFORM_APIS
-
-# hardware/qcom/power
-repopick 223890 # Revert "power: Depend on vendor lineage power HAL"
-repopick 223892 # power: Add power hint to set profile
+repopick 224246 # jni: Resolve unused and uninitialized variable errors
+repopick 224386 # libfm_jni: Resolve unused and uninitialized variable errors
 
 # hardware/samsung
 repopick 226072 # liblights: remove unused variable
@@ -218,7 +240,6 @@ repopick 226072 # liblights: remove unused variable
 # lineage-sdk
 repopick 225687 # PowerMenuConstants: Add new global action
 repopick 225581 # lineage-sdk: Make styles init at system services ready
-repopick 225914 # lineage-sdk: Rewrite Lineage preference classes used in about phone view
 
 # packages/apps/Camera2
 repopick 224752 # Use mCameraAgentNg for getting camera info when available
@@ -261,37 +282,19 @@ repopick 225332 # Messaging: fix bad recycle on sending two mms in a row
 repopick 225333 # MediaPicker: Check for NPE
 
 # packages/apps/Nfc
-repopick 223706 # NFC: Restore legacy NXP stack
-repopick 223707 # nxp: jni: Forward-port the stack sources
-repopick 223697 # nxp: NativeNfcManager: Implement missing inherited abstract methods
-repopick 223698 # nxp: jni: use proper nativehelper headers
-repopick 223699 # nxp: jni: Remove unused variables and functions
 repopick 223700 # NFC: Adding new vendor specific interface to NFC Service
-repopick 223701 # NFC: Clean duplicated and unknown permissions
-repopick 223703 # nxp: jni: Implement AOSP P abstract methods
 
 # packages/apps/Settings
-repopick 226278 # Settings: Add LineageOS entries into device info
-repopick 225917 # Settings: Add contributors cloud to device info
-repopick 225596 # Settings: Add proximity check on wake preference
-repopick 225601 # Settings: display: Add wake on plug switch
 repopick 224973 # Settings: gesture: Add LineageParts touchscreen gesture settings
 repopick 224974 # Settings: Allow devices to provide remote gesture preferences
-repopick 226134 # Settings: Implement ADB notification and ADB over network
-repopick 225678 # Settings: Add option to scramble pin layout when unlocking (1/2).
 repopick 225686 # Settings: Add advanced restart switch
 repopick 225730 # Settings: Add kill app back button toggle
-repopick 225768 # Settings: Add an option to force pre-O apps to use full screen aspect ratio
 repopick 225800 # Settings: Add rotation settings
-repopick 225860 # [1/3] Settings: per-app cellular data and wifi restrictions
 repopick 226142 # Settings: Add developer setting for root access
-repopick 226146 # Settings: battery: Add LineageParts perf profiles
 repopick 226148 # Settings: "Security & location" -> "Security & privacy"
-repopick 226149 # Settings: Add LineageOS legal info
 repopick 226150 # Settings: add Trust interface hook
 repopick 226151 # Settings: show Trust brading in confirm_lock_password UI
 repopick 225570 # Settings: Add LineageParts charging sound settings preference
-repopick 226279 # Settings: Add back increasing ring feature (2/3).
 repopick 225755 # Settings: Hide AOSP theme-related controllers
 repopick 225756 # Settings: fix dark style issues
 repopick 226154 # fingerprint: Allow devices to configure sensor location
@@ -307,10 +310,6 @@ repopick 225369 # WallpaperPicker: Add icon near dialog items
 repopick 225371 # WallpaperPicker: Move strings for translation
 repopick 225372 # WallpaperPicker: 15.1 wallpapers
 
-# packages/services/Telecomm
-repopick 223099 # Telecomm: Squashed phone_type switch support
-repopick 225708 # Add back increasing ring feature (3/3).
-
 # packages/services/Telephony
 repopick 225418 # Telephony: Add ERI configuration for U.S. Cellular
 repopick 225420 # Use proper summary for network select list preference on dsds/dsda/tsts
@@ -323,19 +322,12 @@ repopick 225423 # Add support to force disable enhanced sco commands
 # system/core
 privpick system/core refs/changes/19/206119/2 # init: I hate safety net
 
-# system/netd
-repopick 225429 # [3/3] NetD : Allow passing in interface names for wifi/data app restriction
-
 # system/sepolicy
 repopick 223746 # Add rules required for TARGET_HAS_LEGACY_CAMERA_HAL1
 repopick 223748 # Build sepolicy tools with Android.bp.
 
 # vendor/lineage
-repopick 225801 # lineage: Move QC board variables earlier
-repopick 225758 # qcom: Declare PRODUCT_SOONG_NAMESPACES for HALs
-repopick 226155 # soong_config: Add add_json_str_omitempty function
 repopick 225865 # soong_config: Allow extension of valid gralloc 1.0 buffer usage bits
-repopick 225942 # soong_config: Allow whitelisted processes to use destroyed mutex
 repopick 225921 # overlay: Update list of GSF/GMS activities
 
 # -------------- TOPIC STUFF --------------
