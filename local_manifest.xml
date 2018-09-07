@@ -14,6 +14,7 @@
 
   <!-- Temp stuff until it gets into a real manifest -->
   <project path="device/qcom/sepolicy" name="LineageOS/android_device_qcom_sepolicy" />
+  <project path="device/qcom/sepolicy-legacy" name="Rashed97/android_device_qcom_sepolicy-legacy" />
 
   <project path="hardware/qcom/fm" name="LineageOS/android_hardware_qcom_fm" groups="qcom,qcom_fm" />
   <project path="hardware/qcom/wlan-caf" name="LineageOS/android_hardware_qcom_wlan" groups="qcom_wlan,pdk" />
