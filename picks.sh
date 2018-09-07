@@ -13,33 +13,17 @@ source build/envsetup.sh
 # maintained but currently commented-out because on a local branch
 
 # device/samsung/hlte-common
-#repopick 225612 # hlte-common: wlan: Update supplicant services for new calling sequence
-#repopick 225613 # hlte-common: wifi_supplicant: deprecate entropy.bin
-#repopick 225614 # hlte-common: wpa_supplicant: Move control sockets to /data/vendor
-#repopick 225615 # hlte-common: Don't start supplicant with interfaces
-#repopick 225616 # hlte-common: wpa_supplicant(hidl): Add support for starting HAL lazily
-#repopick 225617 # hlte-common: Add p2p_no_group_iface=1 to p2p_supplicant_overlay
-#repopick 225866 # hlte-common: Update prefixes for audio system properties
 #repopick 225618 # hlte-common: Align ril.h to samsung_msm8974-common P libril changes
 #repopick 225619 # DO NOT MERGE: hlte-common: Requisite bring-up BS change
 
 # device/samsung/klte-common
-#repopick 225186 # klte-common: wlan: Update supplicant services for new calling sequence
-#repopick 225187 # klte-common: wifi_supplicant: deprecate entropy.bin
-#repopick 225188 # klte-common: wpa_supplicant: Move control sockets to /data/vendor
-#repopick 225189 # klte-common: Don't start supplicant with interfaces
-#repopick 225190 # klte-common: wpa_supplicant(hidl): Add support for starting HAL lazily
-#repopick 225191 # klte-common: Add p2p_no_group_iface=1 to p2p_supplicant_overlay
-#repopick 225761 # klte-common: Update prefixes for audio system properties
+#repopick 227610 # klte-common: Remove irrelevant BOARD_HAVE_NEW_QCOM_CSDCLIENT flag
+#repopick 227611 # klte-common: Renamed config_dozeAfterScreenOff
 #repopick 225192 # klte-common: Align ril.h to samsung_msm8974-common P libril changes
 #repopick 224917 # DO NOT MERGE: klte-common: Requisite bring-up BS change
 
 # device/samsung/msm8974-common
-#repopick 224851 # msm8974-common: config.fs: Add 'VENDOR' prefix to AIDs
-#repopick 225249 # msm8974-common: Uprev Wi-Fi HAL to 1.2
-#repopick 225250 # msm8974-common: Uprev to supplicant 1.1
-#repopick 225251 # msm8974-common: Add hostapd HIDL interface
-#repopick 225620 # msm8974-common: Switch to common basic USB HAL
+#repopick 227609 # msm8974-common: Explicitly set all used audio features
 #repopick 226070 # msm8974-common: Allow additional gralloc 1.0 buffer usage bits
 #repopick 225466 # msm8974-common: libril: Remove LOCAL_CLANG
 #repopick 225467 # msm8974-common: libril: Fix Const-Correctness for RIL_RadioFunctions
