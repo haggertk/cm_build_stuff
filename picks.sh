@@ -131,11 +131,9 @@ repopick 223410 # interfaces: Add touch HIDL interface definitions
 repopick 223411 # interfaces: Add id HAL definition
 
 # hardware/qcom/audio-caf/msm8974
-repopick 225193 # hal: Update prefixes for audio system properties
 repopick 223436 # Add -Wno-error to compile with global -Werror.
 
 # hardware/qcom/display-caf/msm8974
-repopick 223434 # Include what we use.
 repopick 226481 # display: remove compile time warnings
 repopick 226482 # display: Enable clang for all display modules
 
@@ -217,9 +215,6 @@ repopick 223692 # jni: Resolve -Wwritable-strings warnings in helium FW library 
 repopick 223688 # fmapp2: Set LOCAL_PRIVATE_PLATFORM_APIS
 repopick 224246 # jni: Resolve unused and uninitialized variable errors
 repopick 224386 # libfm_jni: Resolve unused and uninitialized variable errors
-
-# hardware/samsung
-repopick 226072 # liblights: remove unused variable
 
 # lineage-sdk
 repopick 225687 # PowerMenuConstants: Add new global action
