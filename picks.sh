@@ -42,6 +42,9 @@ source build/envsetup.sh
 # bionic
 repopick 223943 # bionic: meh
 
+# build/kati
+repopick 225213 # Do not limit threads upon calling legacy GNU make
+
 # build/make
 repopick 222733 # core: Disable vendor restrictions
 repopick 222760 # Add LOCAL_AIDL_FLAGS
@@ -77,6 +80,7 @@ repopick 225536 # Camera: Add support for preview frame fd
 repopick 225537 # libstagefright: Add more sample rates for FLAC
 repopick 225539 # Camera:CameraService: Added lock on mHIDLMemPoolId in QDataCallback..
 repopick 225540 # Camera: CameraHardwareInterface: Releasing mHIDLMemoryMapLock in QdataCallback
+repopick 227430 # Revert "libcameraservice: Disable external provider for legacy HAL1"
 
 # frameworks/base
 repopick 225685 # frameworks: Power menu customizations
@@ -132,6 +136,7 @@ repopick 223411 # interfaces: Add id HAL definition
 
 # hardware/qcom/audio-caf/msm8974
 repopick 223436 # Add -Wno-error to compile with global -Werror.
+repopick 227340 # audio: Use normal tinycompress
 
 # hardware/qcom/display-caf/msm8974
 repopick 226481 # display: remove compile time warnings
@@ -264,9 +269,9 @@ repopick 225333 # MediaPicker: Check for NPE
 repopick 223700 # NFC: Adding new vendor specific interface to NFC Service
 
 # packages/apps/Settings
+repopick 225686 # Settings: Add advanced restart switch
 repopick 224973 # Settings: gesture: Add LineageParts touchscreen gesture settings
 repopick 224974 # Settings: Allow devices to provide remote gesture preferences
-repopick 225686 # Settings: Add advanced restart switch
 repopick 225730 # Settings: Add kill app back button toggle
 repopick 225800 # Settings: Add rotation settings
 repopick 226142 # Settings: Add developer setting for root access
@@ -279,6 +284,16 @@ repopick 225756 # Settings: fix dark style issues
 repopick 226154 # fingerprint: Allow devices to configure sensor location
 repopick 225858 # storage: Do not allow eject for volumes on non-removable disks
 repopick 226391 # Settings: Hide lockdown in lockscreen settings
+repopick 227120 # Settings: Check interfaces before enabling ADB over network
+repopick 226602 # UsbDetailsDataRoleController: Add ability to hide host mode
+
+# packages/apps/SetupWizard
+repopick 225432 # SetupWizard: Migrate to the currently maintained setup wizard lib
+repopick 225433 # SetupWizard: Set LOCAL_PRIVATE_PLATFORM_APIS
+repopick 225434 # SetupWizard: Build with AAPT2
+repopick 225435 # SetupWizard: Remove bogus Lineage SDK dependency
+repopick 225477 # SetupWizardTests: Properly depend on Lineage SDK
+repopick 226626 # LocationSettingsActivity: Send broadcast as user
 
 # packages/apps/WallpaperPicker
 repopick 225363 # WallpaperPicker: bump gradle
