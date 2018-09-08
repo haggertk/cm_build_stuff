@@ -13,18 +13,23 @@ source build/envsetup.sh
 # maintained but currently commented-out because on a local branch
 
 # device/samsung/hlte-common
+#repopick 227742 # hlte-common: Renamed config_dozeAfterScreenOff
+#repopick 227743 # hlte-common: Make the external camera provider ignore internal cameras
 #repopick 225618 # hlte-common: Align ril.h to samsung_msm8974-common P libril changes
 #repopick 225619 # DO NOT MERGE: hlte-common: Requisite bring-up BS change
 
 # device/samsung/klte-common
 #repopick 227610 # klte-common: Remove irrelevant BOARD_HAVE_NEW_QCOM_CSDCLIENT flag
 #repopick 227611 # klte-common: Renamed config_dozeAfterScreenOff
+#repopick 227732 # klte-common: Make the external camera provider ignore internal cameras
 #repopick 225192 # klte-common: Align ril.h to samsung_msm8974-common P libril changes
 #repopick 224917 # DO NOT MERGE: klte-common: Requisite bring-up BS change
 
 # device/samsung/msm8974-common
 #repopick 227609 # msm8974-common: Explicitly set all used audio features
 #repopick 226070 # msm8974-common: Allow additional gralloc 1.0 buffer usage bits
+#repopick 227730 # msm8974-common: Disable USB host mode
+#repopick 227731 # msm8974-common: Use Lineage overlays too
 #repopick 225466 # msm8974-common: libril: Remove LOCAL_CLANG
 #repopick 225467 # msm8974-common: libril: Fix Const-Correctness for RIL_RadioFunctions
 #repopick 225468 # msm8974-common: libril: Remove unused code
