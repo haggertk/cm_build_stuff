@@ -73,8 +73,25 @@ repopick 225476 # dexdeps: Ignore static initializers on analysis.
 repopick 225115 # common: Label common basic USB HAL
 
 # device/qcom/sepolicy
-repopick 224767 # sepol: Remove duplicated hal_vehicle attribute
-repopick 224768 # sepol: hostapd is now hal_wifi_hostapd
+repopick 228566 # qcom: Label vendor files with (vendor|system/vendor) instead of vendor
+repopick 228569 # Use set_prop() macro for property sets
+repopick 228570 # sepolicy: Allow wcnss_service to set wlan.driver properties
+repopick 228571 # sepolicy: allow system_server to read alarm boot prop
+repopick 228572 # sepolicy: Allow system_server to 'read' qti_debugfs
+repopick 228573 # sepolicy: Add libsdm-disp-vndapis and libsdmutils to SP-HALs
+repopick 228574 # sepolicy: Allow thermal-engine to read sysfs_uio[_file]
+repopick 228575 # sepolicy: Add libcryptfs_hw to SP HALs
+repopick 228576 # sepolicy: Label mpctl_socket as data_file_type
+repopick 228578 # sepolicy: rules to allow camera daemon access to app buffer
+repopick 228579 # sepolicy : add secontext for eMMC blocks
+repopick 228580 # hal_gnss_default: Do not log udp socket failures
+repopick 228582 # sepolicy: qti_init_shell needs to read dir too
+repopick 228583 # sepolicy: allow vold to read persist dirs
+repopick 228584 # sepolicy: Fix video4linux "name" node labeling
+repopick 228585 # sepolicy: Allow mm-qcamerad to access v4L "name" node
+repopick 228586 # common: Fix labelling of lcd-backlight
+repopick 228587 # sepolicy: Allow perf HAL to set freq props
+repopick 228588 # sepolicy: Fix ` breakage
 
 # external/tinycompress
 repopick 225762 # tinycompress: enable libtinycompress_vendor
@@ -92,7 +109,6 @@ repopick 225536 # Camera: Add support for preview frame fd
 repopick 225537 # libstagefright: Add more sample rates for FLAC
 repopick 225539 # Camera:CameraService: Added lock on mHIDLMemPoolId in QDataCallback..
 repopick 225540 # Camera: CameraHardwareInterface: Releasing mHIDLMemoryMapLock in QdataCallback
-repopick 227430 # Revert "libcameraservice: Disable external provider for legacy HAL1"
 
 # frameworks/base
 repopick 225685 # frameworks: Power menu customizations
@@ -129,17 +145,10 @@ repopick 224513 # SystemUI: Disable config_keyguardUserSwitcher on sw600dp
 repopick 224443 # libbinder: Don't log call trace when waiting for vendor service on non-eng builds
 repopick 225545 # Forward port 'Swap volume buttons' (2/3)
 repopick 225546 # AppOpsManager: Update with the new ops
-repopick 225827 # libui: Allow extension of valid gralloc 1.0 buffer usage bits
-
-# frameworks/opt/telephony
-repopick 223774 # telephony: Squashed support for simactivation feature
 
 # hardware/interfaces
 repopick 225506 # Camed HAL extension: Added support in HIDL for Extended FD.
 repopick 225507 # camera: Only link and use vendor.qti.hardware.camera.device if specified
-
-# hardware/libhardware
-repopick 223097 # hardware/libhw: Add display_defs.h to declare custom enums/flags
 
 # hardware/lineage/interfaces
 repopick 223374 # interfaces: Add 2.0 livedisplay interfaces
@@ -261,30 +270,11 @@ repopick 225280 # Make new menu entry to link to cLock widget settings.
 # packages/apps/LineageParts
 repopick 226145 # LineageParts: Reenable buttons related settings
 
-# packages/apps/Messaging
-repopick 225317 # Messaging: Implement option for swipe to delete.
-repopick 225318 # Messaging: change Avatar fontFamily to sans-serif-medium
-repopick 225319 # MessageQueue: Process pending messages per subscription
-repopick 225321 # Messaging: Toggable keyboard emoticons access
-repopick 225323 # Fix menu item highlight color.
-repopick 225324 # Messaging App is crashing when storage memory is full
-repopick 225325 # Messaging: bring back accent color
-repopick 225326 # Messaging: Implement saved video attachments in MMS
-repopick 225327 # Play an audible notification on receiving a class zero message.
-repopick 225328 # Added support for video and audio mms attachments
-repopick 225329 # Fixed storage permission issue for attachments
-repopick 225330 # Messaging app crashes after a few MMS
-repopick 225331 # Use app settings for conversation settings if no custom set
-repopick 225332 # Messaging: fix bad recycle on sending two mms in a row
-repopick 225333 # MediaPicker: Check for NPE
-
 # packages/apps/Nfc
 repopick 223700 # NFC: Adding new vendor specific interface to NFC Service
 
 # packages/apps/Settings
 repopick 225686 # Settings: Add advanced restart switch
-repopick 224973 # Settings: gesture: Add LineageParts touchscreen gesture settings
-repopick 224974 # Settings: Allow devices to provide remote gesture preferences
 repopick 225730 # Settings: Add kill app back button toggle
 repopick 225800 # Settings: Add rotation settings
 repopick 226142 # Settings: Add developer setting for root access
@@ -298,19 +288,9 @@ repopick 226154 # fingerprint: Allow devices to configure sensor location
 repopick 225858 # storage: Do not allow eject for volumes on non-removable disks
 repopick 226391 # Settings: Hide lockdown in lockscreen settings
 repopick 227120 # Settings: Check interfaces before enabling ADB over network
-repopick 227795 # Settings: Hide unsupported USB modes automatically
 
 # packages/apps/SetupWizard
 repopick 226626 # LocationSettingsActivity: Send broadcast as user
-
-# packages/apps/WallpaperPicker
-repopick 225363 # WallpaperPicker: bump gradle
-repopick 225365 # WallpaperPicker: materialize delete icon
-repopick 225367 # WallpaperPicker: Update for wallpaper API changes
-repopick 225370 # WallpaperPicker: add a "No Wallpaper" option
-repopick 225369 # WallpaperPicker: Add icon near dialog items
-repopick 225371 # WallpaperPicker: Move strings for translation
-repopick 225372 # WallpaperPicker: 15.1 wallpapers
 
 # packages/services/Telephony
 repopick 225418 # Telephony: Add ERI configuration for U.S. Cellular
@@ -329,7 +309,6 @@ repopick 223746 # Add rules required for TARGET_HAS_LEGACY_CAMERA_HAL1
 repopick 223748 # Build sepolicy tools with Android.bp.
 
 # vendor/lineage
-repopick 225865 # soong_config: Allow extension of valid gralloc 1.0 buffer usage bits
 repopick 225921 # overlay: Update list of GSF/GMS activities
 
 # -------------- TOPIC STUFF --------------
