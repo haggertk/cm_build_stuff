@@ -73,6 +73,7 @@ repopick 225476 # dexdeps: Ignore static initializers on analysis.
 repopick 225115 # common: Label common basic USB HAL
 
 # device/qcom/sepolicy
+repopick 228563 # sepolicy: Move definitions from Android.mk to make opt-in
 repopick 228566 # qcom: Label vendor files with (vendor|system/vendor) instead of vendor
 repopick 228569 # Use set_prop() macro for property sets
 repopick 228570 # sepolicy: Allow wcnss_service to set wlan.driver properties
