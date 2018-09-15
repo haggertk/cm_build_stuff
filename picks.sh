@@ -18,22 +18,19 @@ if [ $USER != haggertk ]; then
 
 # device/samsung/hlte-common
 if [ -d device/samsung/hlte-common ] ; then
-  repopick 227743 # hlte-common: Make the external camera provider ignore internal cameras
   repopick 225618 # hlte-common: Align ril.h to samsung_msm8974-common P libril changes
   repopick 225619 # DO NOT MERGE: hlte-common: Requisite bring-up BS change
 fi
 
 # device/samsung/klte-common
 if [ -d device/samsung/klte-common ] ; then
-  repopick 227732 # klte-common: Make the external camera provider ignore internal cameras
   repopick 225192 # klte-common: Align ril.h to samsung_msm8974-common P libril changes
   repopick 224917 # DO NOT MERGE: klte-common: Requisite bring-up BS change
 fi
 
 # device/samsung/msm8974-common
 if [ -d device/samsung/msm8974-common ] ; then
-  repopick 227609 # msm8974-common: Explicitly set all used audio features
-  repopick 226070 # msm8974-common: Allow additional gralloc 1.0 buffer usage bits
+  repopick 228677 # msm8974-common: Make the external camera provider ignore internal cameras
   repopick 225466 # msm8974-common: libril: Remove LOCAL_CLANG
   repopick 225467 # msm8974-common: libril: Fix Const-Correctness for RIL_RadioFunctions
   repopick 225468 # msm8974-common: libril: Remove unused code
