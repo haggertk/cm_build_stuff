@@ -66,11 +66,7 @@ repopick 224613 # soong: Add LOCAL_AIDL_FLAGS handling
 repopick 225475 # dexdeps: Add option for --include-lineage-classes.
 repopick 225476 # dexdeps: Ignore static initializers on analysis.
 
-# device/lineage/sepolicy
-repopick 225115 # common: Label common basic USB HAL
-
 # device/qcom/sepolicy
-repopick 228563 # sepolicy: Move definitions from Android.mk to make opt-in
 repopick 228566 # qcom: Label vendor files with (vendor|system/vendor) instead of vendor
 repopick 228569 # Use set_prop() macro for property sets
 repopick 228570 # sepolicy: Allow wcnss_service to set wlan.driver properties
@@ -81,7 +77,6 @@ repopick 228574 # sepolicy: Allow thermal-engine to read sysfs_uio[_file]
 repopick 228575 # sepolicy: Add libcryptfs_hw to SP HALs
 repopick 228576 # sepolicy: Label mpctl_socket as data_file_type
 repopick 228578 # sepolicy: rules to allow camera daemon access to app buffer
-repopick 228579 # sepolicy : add secontext for eMMC blocks
 repopick 228580 # hal_gnss_default: Do not log udp socket failures
 repopick 228582 # sepolicy: qti_init_shell needs to read dir too
 repopick 228583 # sepolicy: allow vold to read persist dirs
@@ -89,7 +84,6 @@ repopick 228584 # sepolicy: Fix video4linux "name" node labeling
 repopick 228585 # sepolicy: Allow mm-qcamerad to access v4L "name" node
 repopick 228586 # common: Fix labelling of lcd-backlight
 repopick 228587 # sepolicy: Allow perf HAL to set freq props
-repopick 228588 # sepolicy: Fix ` breakage
 
 # external/tinycompress
 repopick 225762 # tinycompress: enable libtinycompress_vendor
@@ -109,16 +103,10 @@ repopick 225539 # Camera:CameraService: Added lock on mHIDLMemPoolId in QDataCal
 repopick 225540 # Camera: CameraHardwareInterface: Releasing mHIDLMemoryMapLock in QdataCallback
 
 # frameworks/base
-repopick 225685 # frameworks: Power menu customizations
 repopick 225983 # Runtime toggle of navbar
-repopick 225650 # Configurable 0, 90, 180 and 270 degree rotation
-repopick 225799 # SystemUI: fix toggling lockscreen rotation [1/3]
-repopick 225680 # SystemUI: Allow overlaying max notification icons
 repopick 225682 # Framework: Volume key cursor control
 repopick 225683 # PhoneWindowManager: add LineageButtons volumekey hook
 repopick 225684 # Long-press power while display is off for torch
-repopick 225691 # SystemUI: Don't vibrate on touchscreen camera gesture
-repopick 225692 # framework: move device key handler logic, fix gesture camera launch
 repopick 225693 # SystemUI: add left and right virtual buttons while typing
 repopick 225606 # Forward port 'Swap volume buttons' (1/3)
 repopick 225702 # Camera: allow camera to use power key as shutter
@@ -156,6 +144,9 @@ repopick 223411 # interfaces: Add id HAL definition
 # hardware/qcom/audio-caf/msm8974
 repopick 223436 # Add -Wno-error to compile with global -Werror.
 repopick 227340 # audio: Use normal tinycompress
+
+# hardware/qcom/bt-caf
+repopick 226658 # Don't build libbt-hidlclient for OSS builds
 
 # hardware/qcom/display-caf/msm8974
 repopick 226481 # display: remove compile time warnings
@@ -242,7 +233,6 @@ repopick 224246 # jni: Resolve unused and uninitialized variable errors
 repopick 224386 # libfm_jni: Resolve unused and uninitialized variable errors
 
 # lineage-sdk
-repopick 225687 # PowerMenuConstants: Add new global action
 repopick 225581 # lineage-sdk: Make styles init at system services ready
 
 # packages/apps/Camera2
@@ -272,9 +262,7 @@ repopick 226145 # LineageParts: Reenable buttons related settings
 repopick 223700 # NFC: Adding new vendor specific interface to NFC Service
 
 # packages/apps/Settings
-repopick 225686 # Settings: Add advanced restart switch
 repopick 225730 # Settings: Add kill app back button toggle
-repopick 225800 # Settings: Add rotation settings
 repopick 226142 # Settings: Add developer setting for root access
 repopick 226148 # Settings: "Security & location" -> "Security & privacy"
 repopick 226150 # Settings: add Trust interface hook
@@ -284,7 +272,6 @@ repopick 225755 # Settings: Hide AOSP theme-related controllers
 repopick 225756 # Settings: fix dark style issues
 repopick 226154 # fingerprint: Allow devices to configure sensor location
 repopick 225858 # storage: Do not allow eject for volumes on non-removable disks
-repopick 226391 # Settings: Hide lockdown in lockscreen settings
 repopick 227120 # Settings: Check interfaces before enabling ADB over network
 
 # packages/apps/SetupWizard
