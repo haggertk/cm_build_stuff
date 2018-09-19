@@ -13,8 +13,6 @@
   <project name="lineageos-infra/gerrit-config" path="lineage/infra/gerrit-config" remote="github" revision="master" />
 
   <!-- Temp stuff until it gets into a real manifest -->
-  <project path="external/exfat" name="LineageOS/android_external_exfat" />
-
   <project path="hardware/qcom/fm" name="LineageOS/android_hardware_qcom_fm" groups="qcom,qcom_fm" />
 
   <remove-project name="LineageOS/android_packages_apps_Gallery2" />
