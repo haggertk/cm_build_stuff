@@ -285,10 +285,6 @@ repopick 227120 # Settings: Check interfaces before enabling ADB over network
 # packages/apps/SetupWizard
 repopick 226626 # LocationSettingsActivity: Send broadcast as user
 
-# packages/services/Telephony
-repopick 225418 # Telephony: Add ERI configuration for U.S. Cellular
-repopick 225420 # Use proper summary for network select list preference on dsds/dsda/tsts
-
 # system/bt
 repopick 225422 # Bluetooth: Read BLE vendor capability to proceed on Secure conn
 repopick 223945 # Prevent abort in case of command timeout
