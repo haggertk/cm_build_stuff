@@ -103,27 +103,35 @@ repopick 225539 # Camera:CameraService: Added lock on mHIDLMemPoolId in QDataCal
 repopick 225540 # Camera: CameraHardwareInterface: Releasing mHIDLMemoryMapLock in QdataCallback
 
 # frameworks/base
-repopick 225983 # Runtime toggle of navbar
+repopick 229255 # TunerServiceImpl: Add support for Lineage global settings
+repopick 229256 # Add support for runtime toggle of navbar
 repopick 225682 # Framework: Volume key cursor control
 repopick 225683 # PhoneWindowManager: add LineageButtons volumekey hook
 repopick 225684 # Long-press power while display is off for torch
-repopick 225693 # SystemUI: add left and right virtual buttons while typing
-repopick 225606 # Forward port 'Swap volume buttons' (1/3)
-repopick 225702 # Camera: allow camera to use power key as shutter
 repopick 225721 # Reimplement hardware keys custom rebinding
-repopick 226249 # fw/b: Allow customisation of navbar app switch long press action
 repopick 225722 # Reimplement device hardware wake keys support
 repopick 225726 # PhoneWindowManager: Tap volume buttons to answer call
 repopick 225727 # PhoneWindowManager: Implement press home to answer call
 repopick 225728 # Camera button support
+repopick 227820 # PhoneWindowManager: Allow torch and track skip during ambient display
+repopick 229254 # SystemUI: handle camera launch gesture from keyhandler
+repopick 225693 # SystemUI: add left and right virtual buttons while typing
+repopick 225606 # Forward port 'Swap volume buttons' (1/3)
+repopick 225702 # Camera: allow camera to use power key as shutter
+repopick 226249 # fw/b: Allow customisation of navbar app switch long press action
 repopick 225729 # Framework: Forward port Long press back to kill app (2/2)
 repopick 225734 # Allow screen unpinning on devices without navbar
-repopick 225754 # SystemUI: Berry styles
 repopick 226236 # SystemUI: add navbar button layout inversion tuning
 repopick 225859 # storage: Do not notify for volumes on non-removable disks
 repopick 226276 # power: Re-introduce custom charging sounds
 repopick 224844 # lockscreen: Add option for showing unlock screen directly
+repopick 225754 # SystemUI: Berry styles
 repopick 225582 # [TEMP]: Revert "OMS: harden permission checks"
+repopick 227108 # SystemUI: Fix several issues in the ADB over Network tile
+repopick 226615 # NavigationBarView: Avoid NPE before mPanelView is created
+repopick 227821 # GlobalScreenshot: Fix screenshot not saved when appending appname with some languages
+repopick 228405 # Forward port CM Screen Security settings (1/2)
+repopick 229230 # SystemUI: allow the power menu to be relocated
 repopick 224446 # SystemUI: Make tablets great again
 repopick 224513 # SystemUI: Disable config_keyguardUserSwitcher on sw600dp
 
