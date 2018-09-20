@@ -264,7 +264,10 @@ repopick 226131 # DeskClock: Add support of power off alarm feature
 repopick 225280 # Make new menu entry to link to cLock widget settings.
 
 # packages/apps/LineageParts
+repopick 229305 # ButtonSettings: Adapt for dropped needsNavigationBar method
 repopick 226145 # LineageParts: Reenable buttons related settings
+repopick 226863 # LineageParts: Drop `Control ringtone volume` setting
+repopick 226392 # LineageParts: Set proper default value for charging sounds
 
 # packages/apps/Nfc
 repopick 223700 # NFC: Adding new vendor specific interface to NFC Service
@@ -284,6 +287,7 @@ repopick 227120 # Settings: Check interfaces before enabling ADB over network
 
 # packages/apps/SetupWizard
 repopick 226626 # LocationSettingsActivity: Send broadcast as user
+repopick 229297 # LineageSettingsActivity: Remove useless check for navbar toggle
 
 # system/bt
 repopick 225422 # Bluetooth: Read BLE vendor capability to proceed on Secure conn
