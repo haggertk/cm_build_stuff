@@ -284,6 +284,9 @@ repopick 225756 # Settings: fix dark style issues
 repopick 226154 # fingerprint: Allow devices to configure sensor location
 repopick 225858 # storage: Do not allow eject for volumes on non-removable disks
 repopick 227120 # Settings: Check interfaces before enabling ADB over network
+repopick 228403 # Settings: forward port lock pattern grid size (2/2)
+repopick 228404 # Forward port pattern visibility settings (2/2)
+repopick 229384 # Settings: Add high touch sensitivity and touchscreen hovering toggles
 
 # packages/apps/SetupWizard
 repopick 226626 # LocationSettingsActivity: Send broadcast as user
