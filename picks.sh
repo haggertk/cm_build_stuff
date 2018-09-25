@@ -18,28 +18,18 @@ if [ $USER != haggertk ]; then
 
 # device/samsung/hlte-common
 if [ -d device/samsung/hlte-common ] ; then
-  repopick 229569 # hlte-common: Stop building sensors.msm8974
-  repopick 229570 # hlte-common: Set SDK API level for required executables
   repopick 225618 # hlte-common: Align ril.h to samsung_msm8974-common P libril changes
   repopick 225619 # DO NOT MERGE: hlte-common: Requisite bring-up BS change
 fi
 
 # device/samsung/klte-common
 if [ -d device/samsung/klte-common ] ; then
-  repopick 229486 # klte-common: Set SDK API level for required executables
-  repopick 229571 # klte-common: Stop building sensors.msm8974
   repopick 225192 # klte-common: Align ril.h to samsung_msm8974-common P libril changes
   repopick 224917 # DO NOT MERGE: klte-common: Requisite bring-up BS change
 fi
 
 # device/samsung/msm8974-common
 if [ -d device/samsung/msm8974-common ] ; then
-  repopick 229563 # msm8974-common: sensors: Resolve unused parameter warnings
-  repopick 229564 # msm8974-common: sensors: Update multihal with P changes
-  repopick 229565 # msm8974-common: sensors: Import default service and impl from hardware/interfaces
-  repopick 229566 # msm8974-common: sensors: Convert to samsung8974 target
-  repopick 229567 # msm8974-common: sensors: Add input group to sensor service
-  repopick 229568 # msm8974-common: Build binderized samsung8974 sensors service
   repopick 228677 # msm8974-common: Make the external camera provider ignore internal cameras
   repopick 225466 # msm8974-common: libril: Remove LOCAL_CLANG
   repopick 225467 # msm8974-common: libril: Fix Const-Correctness for RIL_RadioFunctions
@@ -59,7 +49,6 @@ fi # [ $USER != haggertk ]
 # -------------- PLATFORM STUFF --------------
 
 # bionic
-repopick 226183 # Implement per-process target SDK version override.
 repopick 229488 # Revert "linker: Make platform text relocations denial optional"
 
 # build/kati
@@ -316,9 +305,7 @@ repopick 223746 # Add rules required for TARGET_HAS_LEGACY_CAMERA_HAL1
 repopick 223748 # Build sepolicy tools with Android.bp.
 
 # vendor/lineage
-repopick 226184 # soong_config: Allow process-specific override of target SDK version
 repopick 229506 # Revert "soong_config: Add TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS"
-repopick 229507 # lineage: Use add_json_str_omitempty directive for TARGET_LD_SHIM_LIBS
 repopick 225921 # overlay: Update list of GSF/GMS activities
 
 # -------------- TOPIC STUFF --------------
