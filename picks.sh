@@ -85,25 +85,7 @@ repopick 228585 # sepolicy: Allow mm-qcamerad to access v4L "name" node
 repopick 228586 # common: Fix labelling of lcd-backlight
 repopick 228587 # sepolicy: Allow perf HAL to set freq props
 
-# external/tinycompress
-repopick 225762 # tinycompress: enable libtinycompress_vendor
-repopick 225763 # tinycompress: Use sanitized headers generated from kernel source
-repopick 223008 # tinycompress: tinycompress fixes
-
-# frameworks/av
-repopick 225530 # camera: Workaround for GCC-compiled HAL3 drivers
-repopick 225531 # soundtrigger: fill in default extras from dsp
-repopick 225532 # Camera: CameraHardwareInterface changes to support Extended FD
-repopick 225533 # camera: Only link and use vendor.qti.hardware.camera.device if specified
-repopick 225534 # libstagefright: encoder must exist when source starting
-repopick 225535 # Camera: Add extensions to CameraClient
-repopick 225536 # Camera: Add support for preview frame fd
-repopick 225537 # libstagefright: Add more sample rates for FLAC
-repopick 225539 # Camera:CameraService: Added lock on mHIDLMemPoolId in QDataCallback..
-repopick 225540 # Camera: CameraHardwareInterface: Releasing mHIDLMemoryMapLock in QdataCallback
-
 # frameworks/base
-repopick 229255 # TunerServiceImpl: Add support for Lineage global settings
 repopick 229256 # Add support for runtime toggle of navbar
 repopick 225682 # Framework: Volume key cursor control
 repopick 225683 # PhoneWindowManager: add LineageButtons volumekey hook
@@ -151,7 +133,6 @@ repopick 223411 # interfaces: Add id HAL definition
 
 # hardware/qcom/audio-caf/msm8974
 repopick 223436 # Add -Wno-error to compile with global -Werror.
-repopick 227340 # audio: Use normal tinycompress
 
 # hardware/qcom/bt-caf
 repopick 226658 # Don't build libbt-hidlclient for OSS builds
@@ -245,11 +226,6 @@ repopick 225581 # lineage-sdk: Make styles init at system services ready
 
 # packages/apps/Camera2
 repopick 224752 # Use mCameraAgentNg for getting camera info when available
-repopick 225255 # Camera2: Target API 27
-repopick 225256 # Don't attempt to convert degree to orientation enum twice
-repopick 225257 # Camera2: Only autofocus before a snap if we are actually in "auto" mode.
-repopick 225258 # Camera2: Remove settings preferences only once
-repopick 225259 # Camera2: Stop using GPS when going to background
 repopick 225260 # Camera: Powerkey shutter (2/2)
 repopick 225261 # Camera2: Add option to set max screen brightness
 repopick 225262 # Camera2: Remove google help preference
@@ -258,10 +234,7 @@ repopick 225264 # Fix crash if Exif-Tag buffer-length and component-count are bo
 repopick 225265 # Add Storage preference (1/2)
 
 # packages/apps/DeskClock
-repopick 225281 # DeskClock: Add back flip and shake actions
-repopick 225284 # Provide upgrade path for cm-14.1 -> lineage-15.1
 repopick 226131 # DeskClock: Add support of power off alarm feature
-repopick 225280 # Make new menu entry to link to cLock widget settings.
 
 # packages/apps/LineageParts
 repopick 229305 # ButtonSettings: Adapt for dropped needsNavigationBar method
@@ -287,10 +260,6 @@ repopick 227120 # Settings: Check interfaces before enabling ADB over network
 repopick 228403 # Settings: forward port lock pattern grid size (2/2)
 repopick 228404 # Forward port pattern visibility settings (2/2)
 repopick 229384 # Settings: Add high touch sensitivity and touchscreen hovering toggles
-
-# packages/apps/SetupWizard
-repopick 226626 # LocationSettingsActivity: Send broadcast as user
-repopick 229297 # LineageSettingsActivity: Remove useless check for navbar toggle
 
 # system/bt
 repopick 225422 # Bluetooth: Read BLE vendor capability to proceed on Secure conn
