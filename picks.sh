@@ -86,25 +86,9 @@ repopick 228586 # common: Fix labelling of lcd-backlight
 repopick 228587 # sepolicy: Allow perf HAL to set freq props
 
 # frameworks/base
-repopick 229256 # Add support for runtime toggle of navbar
-repopick 225682 # Framework: Volume key cursor control
-repopick 225683 # PhoneWindowManager: add LineageButtons volumekey hook
-repopick 225684 # Long-press power while display is off for torch
-repopick 225721 # Reimplement hardware keys custom rebinding
-repopick 225722 # Reimplement device hardware wake keys support
-repopick 225726 # PhoneWindowManager: Tap volume buttons to answer call
-repopick 225727 # PhoneWindowManager: Implement press home to answer call
 repopick 225728 # Camera button support
-repopick 227820 # PhoneWindowManager: Allow torch and track skip during ambient display
 repopick 229254 # SystemUI: handle camera launch gesture from keyhandler
-repopick 225693 # SystemUI: add left and right virtual buttons while typing
-repopick 225606 # Forward port 'Swap volume buttons' (1/3)
-repopick 225702 # Camera: allow camera to use power key as shutter
-repopick 226249 # fw/b: Allow customisation of navbar app switch long press action
-repopick 225729 # Framework: Forward port Long press back to kill app (2/2)
-repopick 225734 # Allow screen unpinning on devices without navbar
 repopick 226236 # SystemUI: add navbar button layout inversion tuning
-repopick 225859 # storage: Do not notify for volumes on non-removable disks
 repopick 226276 # power: Re-introduce custom charging sounds
 repopick 224844 # lockscreen: Add option for showing unlock screen directly
 repopick 225754 # SystemUI: Berry styles
@@ -119,7 +103,6 @@ repopick 224513 # SystemUI: Disable config_keyguardUserSwitcher on sw600dp
 
 # frameworks/native
 repopick 224443 # libbinder: Don't log call trace when waiting for vendor service on non-eng builds
-repopick 225545 # Forward port 'Swap volume buttons' (2/3)
 repopick 225546 # AppOpsManager: Update with the new ops
 
 # hardware/interfaces
@@ -226,27 +209,16 @@ repopick 225581 # lineage-sdk: Make styles init at system services ready
 
 # packages/apps/Camera2
 repopick 224752 # Use mCameraAgentNg for getting camera info when available
-repopick 225260 # Camera: Powerkey shutter (2/2)
-repopick 225261 # Camera2: Add option to set max screen brightness
-repopick 225262 # Camera2: Remove google help preference
-repopick 225263 # Camera2: Fix Undo button behaviour
-repopick 225264 # Fix crash if Exif-Tag buffer-length and component-count are both 0
 repopick 225265 # Add Storage preference (1/2)
 
 # packages/apps/DeskClock
 repopick 226131 # DeskClock: Add support of power off alarm feature
 
 # packages/apps/LineageParts
-repopick 229305 # ButtonSettings: Adapt for dropped needsNavigationBar method
-repopick 226145 # LineageParts: Reenable buttons related settings
 repopick 226863 # LineageParts: Drop `Control ringtone volume` setting
 repopick 226392 # LineageParts: Set proper default value for charging sounds
 
-# packages/apps/Nfc
-repopick 223700 # NFC: Adding new vendor specific interface to NFC Service
-
 # packages/apps/Settings
-repopick 225730 # Settings: Add kill app back button toggle
 repopick 226142 # Settings: Add developer setting for root access
 repopick 226148 # Settings: "Security & location" -> "Security & privacy"
 repopick 226150 # Settings: add Trust interface hook
@@ -255,7 +227,6 @@ repopick 225570 # Settings: Add LineageParts charging sound settings preference
 repopick 225755 # Settings: Hide AOSP theme-related controllers
 repopick 225756 # Settings: fix dark style issues
 repopick 226154 # fingerprint: Allow devices to configure sensor location
-repopick 225858 # storage: Do not allow eject for volumes on non-removable disks
 repopick 227120 # Settings: Check interfaces before enabling ADB over network
 repopick 228403 # Settings: forward port lock pattern grid size (2/2)
 repopick 228404 # Forward port pattern visibility settings (2/2)
