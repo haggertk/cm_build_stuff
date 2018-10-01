@@ -86,10 +86,7 @@ repopick 228586 # common: Fix labelling of lcd-backlight
 repopick 228587 # sepolicy: Allow perf HAL to set freq props
 
 # frameworks/base
-repopick 225728 # Camera button support
-repopick 229254 # SystemUI: handle camera launch gesture from keyhandler
 repopick 226236 # SystemUI: add navbar button layout inversion tuning
-repopick 226276 # power: Re-introduce custom charging sounds
 repopick 224844 # lockscreen: Add option for showing unlock screen directly
 repopick 225754 # SystemUI: Berry styles
 repopick 225582 # [TEMP]: Revert "OMS: harden permission checks"
@@ -216,21 +213,18 @@ repopick 226131 # DeskClock: Add support of power off alarm feature
 
 # packages/apps/LineageParts
 repopick 226863 # LineageParts: Drop `Control ringtone volume` setting
-repopick 226392 # LineageParts: Set proper default value for charging sounds
 
 # packages/apps/Settings
 repopick 226142 # Settings: Add developer setting for root access
 repopick 226148 # Settings: "Security & location" -> "Security & privacy"
 repopick 226150 # Settings: add Trust interface hook
 repopick 226151 # Settings: show Trust brading in confirm_lock_password UI
-repopick 225570 # Settings: Add LineageParts charging sound settings preference
 repopick 225755 # Settings: Hide AOSP theme-related controllers
 repopick 225756 # Settings: fix dark style issues
 repopick 226154 # fingerprint: Allow devices to configure sensor location
 repopick 227120 # Settings: Check interfaces before enabling ADB over network
 repopick 228403 # Settings: forward port lock pattern grid size (2/2)
 repopick 228404 # Forward port pattern visibility settings (2/2)
-repopick 229384 # Settings: Add high touch sensitivity and touchscreen hovering toggles
 
 # system/bt
 repopick 225422 # Bluetooth: Read BLE vendor capability to proceed on Secure conn
