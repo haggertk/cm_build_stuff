@@ -50,6 +50,7 @@ fi # [ $USER != haggertk ]
 
 # bionic
 repopick 229488 # Revert "linker: Make platform text relocations denial optional"
+repopick 230099 # Actually restore pre-P mutex behavior
 
 # build/kati
 repopick 225213 # Do not limit threads upon calling legacy GNU make
@@ -58,9 +59,11 @@ repopick 225213 # Do not limit threads upon calling legacy GNU make
 repopick 222733 # core: Disable vendor restrictions
 repopick 222760 # Add LOCAL_AIDL_FLAGS
 repopick 222742 # build: Use project pathmap for recovery
+repopick 229491 # build: Automatically replace old-style kernel header includes with new header lib
 
 # build/soong
 repopick 224613 # soong: Add LOCAL_AIDL_FLAGS handling
+repopick 229411 # soong sbox: Add option to allow copying all generated output
 
 # dalvik
 repopick 225475 # dexdeps: Add option for --include-lineage-classes.
@@ -84,6 +87,9 @@ repopick 228584 # sepolicy: Fix video4linux "name" node labeling
 repopick 228585 # sepolicy: Allow mm-qcamerad to access v4L "name" node
 repopick 228586 # common: Fix labelling of lcd-backlight
 repopick 228587 # sepolicy: Allow perf HAL to set freq props
+
+# external/tinycompress
+repopick 229414 # tinycompress: Use generated kernel headers
 
 # frameworks/base
 repopick 226236 # SystemUI: add navbar button layout inversion tuning
@@ -111,6 +117,9 @@ repopick 223374 # interfaces: Add 2.0 livedisplay interfaces
 repopick 223410 # interfaces: Add touch HIDL interface definitions
 repopick 223411 # interfaces: Add id HAL definition
 
+# hardware/qcom/audio
+repopick 230749 # audio: Use generated kernel headers
+
 # hardware/qcom/audio-caf/msm8974
 repopick 223436 # Add -Wno-error to compile with global -Werror.
 
@@ -121,85 +130,65 @@ repopick 226658 # Don't build libbt-hidlclient for OSS builds
 repopick 226481 # display: remove compile time warnings
 repopick 226482 # display: Enable clang for all display modules
 
+# hardware/qcom/media
+repopick 230750 # media: Use generated kernel headers
+
 # hardware/qcom/media-caf/msm8974
 repopick 223441 # Add -Wno-error to compile with global -Werror.
 repopick 227823 # mm-video-v4l2: Protect buffer access and increase input buffer size
 
 # hardware/qcom/fm
-repopick 226683 # Partially revert "FM: QSSI changes"
-repopick 226684 # Drop BOARD_HAVE_QCOM_FM flag
-repopick 226685 # jni: fix calibration data path for legacy fm_qsoc_patches
-repopick 226686 # libfm_jni: Skip loading FM firmware if requested
+repopick 226731 # Use BOARD_HAVE_QCOM_FM flag
+repopick 226745 # fm_hci/helium: Exclude from OSS builds
+repopick 226683 # Bring back libfm_jni for devices using AOSP FM app
+repopick 226685 # jni/libfm_jni: fix calibration data path for legacy fm_qsoc_patches
+repopick 226692 # jni/libfm_jni: Skip loading FM firmware if requested
 repopick 226687 # libfm_jni: Do not come here unless QCOM_HARDWARE is in use
 repopick 226688 # libfm_jni: Add support for internal antenna hardware
 repopick 226689 # libfm_jni: Improve and fix FM jni logs
-repopick 226690 # libfm_jni: Confine the firmware-load skipping to the actual loading
-repopick 226691 # jni: Skip loading FM firmware if requested
-repopick 226692 # jni: Confine the firmware-load skipping to the actual loading
-repopick 226693 # Allow library to be used by apps directly
-repopick 226694 # Break bootclasspath dependency
-repopick 226695 # fmapp2: new launcher icon by LeopardSurd
-repopick 226696 # FMRadio : Re-vamp UI
-repopick 226697 # Fm : Restore seek arrows
-repopick 226698 # Fm : Make default country an overlay
-repopick 226699 # FmRadio : Re-add RDS fields to UI
-repopick 226700 # Scanned frequencies are saved in ascending ordering
-repopick 226701 # FMRadio : Call unregister in onPause
-repopick 226702 # FMRadio : Switch file extension to aac
-repopick 226703 # FM: Add property to force use internal antenna
-repopick 226704 # FM: Cleanup resources
-repopick 226705 # FMRadio: add Indonesia
-repopick 226706 # New Material icon
-repopick 226707 # FM: fixup strings
-repopick 226708 # FM2: materialize
-repopick 226709 # FM: retune last frequency when resume after call
-repopick 226710 # FM: always use overlay default country
-repopick 226711 # FM: Store tag num/value in sequence
-repopick 226712 # FM: reenable radio text visibility after station info updated
-repopick 226713 # FMRadio : Launch station list automatically after scan
-repopick 226714 # FM: respect hw.fm.internal_antenna
-repopick 226715 # FM: fix mRadioTextScroller usage in transmitter activity
-repopick 226716 # Fix status text to reflect when FM is enabled.
-repopick 226717 # FM: The collect channel disappear when quit FM
-repopick 226718 # FMRadio : Ensure scan state is kept in sync
-repopick 226719 # FMRadio : Keep track of scanned frequencies in service
-repopick 226720 # FMRadio : Select band based on country
-repopick 226721 # FMRadio : cleaned up band selection code
-repopick 226722 # FMRadio : improved band selection
-repopick 226723 # FMRadio : Localization of band types
-repopick 226724 # FMRadio : Fix settings UI bugs
-repopick 226725 # FMRadio : Fix headphone icon
-repopick 226726 # Fm : Update India bands
-repopick 226727 # fmapp2: String improvements
-repopick 226728 # fmapp2: Allow value for the default fm recording duration to be overlayed.
-repopick 226729 # Convert regional band arrays to string references
-repopick 226730 # Revert "Disable libfm_jni"
-repopick 226731 # Use BOARD_HAVE_QCOM_FM flag
-repopick 226732 # FM: Use some sane colors
-repopick 226733 # FM: Fix helium hal build
-repopick 226734 # FM: Fix KHz->kHz
-repopick 226735 # FM2: Convert FM transmitter notifications to use NotificationChannel
-repopick 226736 # FM2: Revamp notifications
 repopick 226737 # libfm_jni: Fix strchr implicit char* typecast in ConfFileParser
 repopick 226738 # libfm_jni: Add jni core headers dependency
-repopick 226739 # Do not link to android.hidl.base@1.0
-repopick 226740 # FM: adaptive icon
-repopick 226741 # fm: Resolve required dependency qcom.fmradio.xml linkage
-repopick 226742 # libfm_jni: Remove unused variables
+repopick 226742 # jni/libfm_jni: Remove unused variables
 repopick 226743 # libfm_jni: Resolve fread assignment to condition cast
-repopick 223685 # libfm_jni: Resolve FM_DEVICE_PATH R/O open flag
-repopick 226744 # libfm_jni: Ignore unused parameters from APIs
-repopick 226745 # fm_hci/helium: Exclude from OSS builds
+repopick 223685 # jni/libfm_jni: Resolve FM_DEVICE_PATH R/O open flag
+repopick 226744 # jni/libfm_jni: Ignore unused parameters from APIs
 repopick 223678 # libfm_jni: use proper nativehelper headers
-repopick 223683 # jni: Remove unused variables
 repopick 223684 # jni: Resolve equality comparisons with extraneous parentheses
-repopick 226862 # jni: Resolve FM_DEVICE_PATH R/O open flag
-repopick 223686 # jni: Ignore unused parameters from APIs
 repopick 223687 # jni: Resolve V4L2_CID_AUDIO_MUTE redefinitions
 repopick 223692 # jni: Resolve -Wwritable-strings warnings in helium FW library variables
-repopick 223688 # fmapp2: Set LOCAL_PRIVATE_PLATFORM_APIS
-repopick 224246 # jni: Resolve unused and uninitialized variable errors
-repopick 224386 # libfm_jni: Resolve unused and uninitialized variable errors
+repopick 226741 # Allow library to be used by apps directly
+repopick 226694 # FM: Break bootclasspath dependency
+repopick 226696 # FM: Re-vamp UI
+repopick 226697 # FM: Restore seek arrows
+repopick 226710 # FM: Make default country an overlay
+repopick 226699 # FM: Re-add RDS fields to UI
+repopick 226700 # FM: Scanned frequencies are saved in ascending ordering
+repopick 226701 # FM: Call unregister in onPause
+repopick 226702 # FM: Switch file extension to aac
+repopick 226714 # FM: Add property to force use internal antenna
+repopick 226727 # FM: Cleanup resources
+repopick 226705 # FM: add Indonesia
+repopick 226732 # FM: materialize
+repopick 226709 # FM: retune last frequency when resume after call
+repopick 226711 # FM: Store tag num/value in sequence
+repopick 226712 # FM: reenable radio text visibility after station info updated
+repopick 226713 # FM: Launch station list automatically after scan
+repopick 226715 # FM: fix mRadioTextScroller usage in transmitter activity
+repopick 226716 # FM: Fix status text to reflect when FM is enabled.
+repopick 226717 # FM: The collect channel disappear when quit FM
+repopick 226718 # FM: Ensure scan state is kept in sync
+repopick 226719 # FM: Keep track of scanned frequencies in service
+repopick 226721 # FM: Select band based on country
+repopick 226722 # FM: improved band selection
+repopick 226723 # FM: Localization of band types
+repopick 226724 # FM: Fix settings UI bugs
+repopick 226725 # FM: Fix headphone icon
+repopick 226726 # FM: Update India bands
+repopick 226729 # FM: Convert regional band arrays to string references
+repopick 226734 # FM: Fix KHz->kHz
+repopick 226735 # FM: Convert FM transmitter notifications to use NotificationChannel
+repopick 226736 # FM: Revamp notifications
+repopick 226740 # FM: adaptive icon
 
 # lineage-sdk
 repopick 225581 # lineage-sdk: Make styles init at system services ready
@@ -241,6 +230,13 @@ repopick 223748 # Build sepolicy tools with Android.bp.
 # vendor/lineage
 repopick 229506 # Revert "soong_config: Add TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS"
 repopick 225921 # overlay: Update list of GSF/GMS activities
+repopick 229508 # lineage: Move kernel variable configuration to BoardConfigKernel
+repopick 229412 # vendor/lineage: Add soong generator module type
+repopick 229415 # lineage: Dynamically generate kernel headers using lineage generator
+repopick 229505 # vendor/lineage: Remove kernel.mk headers generation
+
+# vendor/qcom/opensource/cryptfs_hw
+repopick 230271 # cryptfs_hw: Use generated kernel headers
 
 # -------------- TOPIC STUFF --------------
 
