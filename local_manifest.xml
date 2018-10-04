@@ -22,4 +22,6 @@
 
   <remove-project name="platform/packages/apps/Launcher3" />
   <project path="packages/apps/Trebuchet" name="arco/android_packages_apps_Trebuchet" />
+
+  <project path="vendor/qcom/opensource/cryptfs_hw" name="LineageOS/android_vendor_qcom_opensource_cryptfs_hw" />
 </manifest>
