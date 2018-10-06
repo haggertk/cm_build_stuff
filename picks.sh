@@ -18,12 +18,14 @@ if [ $USER != haggertk ]; then
 
 # device/samsung/hlte-common
 if [ -d device/samsung/hlte-common ] ; then
+  repopick 231030 # hlte-common: Set SDK API level for rild
   repopick 225618 # hlte-common: Align ril.h to samsung_msm8974-common P libril changes
   repopick 225619 # DO NOT MERGE: hlte-common: Requisite bring-up BS change
 fi
 
 # device/samsung/klte-common
 if [ -d device/samsung/klte-common ] ; then
+  repopick 231029 # klte-common: Set SDK API level for rild
   repopick 225192 # klte-common: Align ril.h to samsung_msm8974-common P libril changes
   repopick 224917 # DO NOT MERGE: klte-common: Requisite bring-up BS change
 fi
@@ -51,6 +53,7 @@ fi # [ $USER != haggertk ]
 # bionic
 repopick 229488 # Revert "linker: Make platform text relocations denial optional"
 repopick 230099 # Actually restore pre-P mutex behavior
+repopick 230762 # bionic: Fix more mutex breakage
 
 # build/kati
 repopick 225213 # Do not limit threads upon calling legacy GNU make
