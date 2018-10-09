@@ -229,6 +229,9 @@ repopick 225423 # Add support to force disable enhanced sco commands
 # system/core
 privpick system/core refs/changes/19/206119/2 # init: I hate safety net
 
+# system/netd
+repopick 231201 # Revert "Don't look up the main table any more."
+
 # system/sepolicy
 repopick 223746 # Add rules required for TARGET_HAS_LEGACY_CAMERA_HAL1
 repopick 223748 # Build sepolicy tools with Android.bp.
