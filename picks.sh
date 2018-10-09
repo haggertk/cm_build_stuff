@@ -253,6 +253,5 @@ repopick 230271 # cryptfs_hw: Use generated kernel headers
 # -------------- TOPIC STUFF --------------
 
 repopick -t pie-mode-bits
-repopick -t pie-bcm_libbt
 
 exit 0
