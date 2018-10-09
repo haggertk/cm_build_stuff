@@ -233,10 +233,13 @@ repopick 223748 # Build sepolicy tools with Android.bp.
 # vendor/lineage
 repopick 229506 # Revert "soong_config: Add TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS"
 repopick 225921 # overlay: Update list of GSF/GMS activities
+repopick 231218 # kernel: Correct CROSS_COMPILE_ARM32 toolchain
 repopick 229508 # lineage: Move kernel variable configuration to BoardConfigKernel
 repopick 229412 # vendor/lineage: Add soong generator module type
 repopick 229415 # lineage: Dynamically generate kernel headers using lineage generator
 repopick 229505 # vendor/lineage: Remove kernel.mk headers generation
+repopick 231219 # kernel: Remove deprecated flag errors
+repopick 231220 # kernel: Remove kernel{x}config
 
 # vendor/qcom/opensource/cryptfs_hw
 repopick 230271 # cryptfs_hw: Use generated kernel headers
