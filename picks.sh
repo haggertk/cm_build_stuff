@@ -26,6 +26,9 @@ fi
 # device/samsung/klte-common
 if [ -d device/samsung/klte-common ] ; then
   repopick 231029 # klte-common: Set SDK API level for rild
+  repopick 231207 # klte-common: Rename libnfc-brcm.conf -> libnfc-nci.conf
+  repopick 231208 # klte-common: nfc: remove unsupported MAX_RF_DATA_CREDITS config
+  repopick 231209 # klte-common: nfc: pn547: Use prebuilt NFC HAL from 15.1
   repopick 225192 # klte-common: Align ril.h to samsung_msm8974-common P libril changes
   repopick 224917 # DO NOT MERGE: klte-common: Requisite bring-up BS change
 fi
