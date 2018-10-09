@@ -9,5 +9,5 @@
 <!--  <project name="TheMuppets/proprietary_vendor_lge" path="vendor/lge" remote="github" /> -->
 <!--  <project name="TheMuppets/proprietary_vendor_oneplus" path="vendor/oneplus" remote="github" /> -->
 <!--  <project name="TheMuppets/proprietary_vendor_oppo" path="vendor/oppo" remote="github" /> -->
-  <project name="TheMuppets/proprietary_vendor_samsung" path="vendor/samsung" remote="github" />
+  <project name="haggertk/proprietary_vendor_samsung" path="vendor/samsung" remote="github" />
 </manifest>
