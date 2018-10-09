@@ -36,16 +36,6 @@ fi
 # device/samsung/msm8974-common
 if [ -d device/samsung/msm8974-common ] ; then
   repopick 228677 # msm8974-common: Make the external camera provider ignore internal cameras
-  repopick 225466 # msm8974-common: libril: Remove LOCAL_CLANG
-  repopick 225467 # msm8974-common: libril: Fix Const-Correctness for RIL_RadioFunctions
-  repopick 225468 # msm8974-common: libril: Remove unused code
-  repopick 225469 # msm8974-common: libril: Fix double freeing of memory in SAP service and add null-checks.
-  repopick 225470 # msm8974-common: libril: Store the system time when NITZ is received.
-  repopick 225471 # msm8974-common: libril: Add DISABLE_RILD_OEM_HOOK.
-  repopick 225472 # msm8974-common: libril:  Change rild initial sequence to guarantee non-null function pointer before rild register its hidl service
-  repopick 225473 # msm8974-common: libril: Add SIM_ABSENT error
-  repopick 225759 # msm8974-common: libril: Replace strncpy with strlcpy.
-  repopick 225760 # msm8974-common: libril: FR51015: Tuning of Binder buffer for rild.
   repopick 224916 # DO NOT MERGE: msm8974-common: sepolicy: Just make it build
 fi
 
