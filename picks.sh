@@ -35,6 +35,7 @@ fi
 
 # device/samsung/msm8974-common
 if [ -d device/samsung/msm8974-common ] ; then
+  repopick 231350 # msm8974-common: Set TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE to true
   repopick 228677 # msm8974-common: Make the external camera provider ignore internal cameras
   repopick 224916 # DO NOT MERGE: msm8974-common: sepolicy: Just make it build
 fi
