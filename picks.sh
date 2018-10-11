@@ -189,6 +189,7 @@ repopick 226740 # FM: adaptive icon
 
 # lineage-sdk
 repopick 225581 # lineage-sdk: Make styles init at system services ready
+repopick 230856 # sdk: Don't clear calling identify when calling IOverlayManager.setEnabled()
 
 # packages/apps/Camera2
 repopick 224752 # Use mCameraAgentNg for getting camera info when available
@@ -196,6 +197,9 @@ repopick 225265 # Add Storage preference (1/2)
 
 # packages/apps/DeskClock
 repopick 226131 # DeskClock: Add support of power off alarm feature
+
+# packages/apps/DocumentsUI
+repopick 225289 # DocumentsUI: support night mode
 
 # packages/apps/LineageParts
 repopick 226863 # LineageParts: Drop `Control ringtone volume` setting
@@ -211,6 +215,9 @@ repopick 226154 # fingerprint: Allow devices to configure sensor location
 repopick 227120 # Settings: Check interfaces before enabling ADB over network
 repopick 228403 # Settings: forward port lock pattern grid size (2/2)
 repopick 228404 # Forward port pattern visibility settings (2/2)
+
+# packages/apps/SettingsIntelligence
+repopick 230519 # Fix dark style issues
 
 # system/bt
 repopick 225422 # Bluetooth: Read BLE vendor capability to proceed on Secure conn
