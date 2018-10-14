@@ -45,7 +45,6 @@ fi # [ $USER != haggertk ]
 # bionic
 repopick 229488 # Revert "linker: Make platform text relocations denial optional"
 repopick 230099 # Actually restore pre-P mutex behavior
-repopick 230762 # bionic: Fix more mutex breakage
 
 # build/kati
 repopick 225213 # Do not limit threads upon calling legacy GNU make
@@ -115,22 +114,11 @@ repopick 223411 # interfaces: Add id HAL definition
 # hardware/qcom/audio
 repopick 230749 # audio: Use generated kernel headers
 
-# hardware/qcom/audio-caf/msm8974
-repopick 223436 # Add -Wno-error to compile with global -Werror.
-
 # hardware/qcom/bt-caf
 repopick 226658 # Don't build libbt-hidlclient for OSS builds
 
-# hardware/qcom/display-caf/msm8974
-repopick 226481 # display: remove compile time warnings
-repopick 226482 # display: Enable clang for all display modules
-
 # hardware/qcom/media
 repopick 230750 # media: Use generated kernel headers
-
-# hardware/qcom/media-caf/msm8974
-repopick 223441 # Add -Wno-error to compile with global -Werror.
-repopick 227823 # mm-video-v4l2: Protect buffer access and increase input buffer size
 
 # hardware/qcom/fm
 repopick 226731 # Use BOARD_HAVE_QCOM_FM flag
@@ -199,9 +187,6 @@ repopick 226131 # DeskClock: Add support of power off alarm feature
 # packages/apps/DocumentsUI
 repopick 225289 # DocumentsUI: support night mode
 
-# packages/apps/LineageParts
-repopick 226863 # LineageParts: Drop `Control ringtone volume` setting
-
 # packages/apps/Settings
 repopick 226154 # fingerprint: Allow devices to configure sensor location
 repopick 226148 # Settings: "Security & location" -> "Security & privacy"
@@ -232,13 +217,11 @@ privpick system/core refs/changes/19/206119/2 # init: I hate safety net
 repopick 231201 # Revert "Don't look up the main table any more."
 
 # system/sepolicy
-repopick 223746 # Add rules required for TARGET_HAS_LEGACY_CAMERA_HAL1
 repopick 223748 # Build sepolicy tools with Android.bp.
 
 # vendor/lineage
 repopick 229506 # Revert "soong_config: Add TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS"
 repopick 225921 # overlay: Update list of GSF/GMS activities
-repopick 231218 # kernel: Correct CROSS_COMPILE_ARM32 toolchain
 repopick 229508 # lineage: Move kernel variable configuration to BoardConfigKernel
 repopick 229412 # vendor/lineage: Add soong generator module type
 repopick 229415 # lineage: Dynamically generate kernel headers using lineage generator
