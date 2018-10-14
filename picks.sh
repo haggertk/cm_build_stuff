@@ -203,16 +203,19 @@ repopick 225289 # DocumentsUI: support night mode
 repopick 226863 # LineageParts: Drop `Control ringtone volume` setting
 
 # packages/apps/Settings
-repopick 226142 # Settings: Add developer setting for root access
+repopick 226154 # fingerprint: Allow devices to configure sensor location
 repopick 226148 # Settings: "Security & location" -> "Security & privacy"
+repopick 226142 # Settings: Add developer setting for root access
 repopick 226150 # Settings: add Trust interface hook
 repopick 226151 # Settings: show Trust brading in confirm_lock_password UI
 repopick 225755 # Settings: Hide AOSP theme-related controllers
 repopick 225756 # Settings: fix dark style issues
-repopick 226154 # fingerprint: Allow devices to configure sensor location
 repopick 227120 # Settings: Check interfaces before enabling ADB over network
 repopick 228403 # Settings: forward port lock pattern grid size (2/2)
 repopick 228404 # Forward port pattern visibility settings (2/2)
+repopick 229479 # Settings: Improve phone number preference ordering
+repopick 231590 # SimSettings: Add manual SIM provisioning support
+repopick 227929 # Settings: Remove battery percentage switch
 
 # packages/apps/SettingsIntelligence
 repopick 230519 # Fix dark style issues
