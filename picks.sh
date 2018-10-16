@@ -113,6 +113,8 @@ repopick 228405 # Forward port CM Screen Security settings (1/2)
 repopick 229230 # SystemUI: allow the power menu to be relocated
 repopick 224446 # SystemUI: Make tablets great again
 repopick 224513 # SystemUI: Disable config_keyguardUserSwitcher on sw600dp
+repopick 224266 # SystemUI: Add Lineage statusbar item holder
+repopick 224267 # SystemUI: Network Traffic [1/3]
 
 # frameworks/native
 repopick 224443 # libbinder: Don't log call trace when waiting for vendor service on non-eng builds
@@ -217,6 +219,9 @@ repopick 227929 # Settings: Remove battery percentage switch
 
 # packages/apps/SettingsIntelligence
 repopick 230519 # Fix dark style issues
+repopick 231538 # SettingsIntelligence: Match Settings style
+repopick 231539 # SettingsIntelligence: Regen database on build version change
+repopick 231825 # Increase time limit of search task
 
 # system/bt
 repopick 225422 # Bluetooth: Read BLE vendor capability to proceed on Secure conn
