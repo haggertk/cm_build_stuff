@@ -45,6 +45,7 @@ fi # [ $USER != haggertk ]
 # bionic
 repopick 229488 # Revert "linker: Make platform text relocations denial optional"
 repopick 230099 # Actually restore pre-P mutex behavior
+repopick 223067 # libc fortify: Ignore open() O_TMPFILE mode bits warning
 
 # build/kati
 repopick 225213 # Do not limit threads upon calling legacy GNU make
@@ -82,6 +83,21 @@ repopick 228585 # sepolicy: Allow mm-qcamerad to access v4L "name" node
 repopick 228586 # common: Fix labelling of lcd-backlight
 repopick 228587 # sepolicy: Allow perf HAL to set freq props
 
+# device/qcom/sepolicy-legacy
+repopick 228608 # sepolicy-legacy: Treat BT vendor properties like non-vendor ones.
+repopick 230828 # legacy: Label more power_supply sysfs
+repopick 230829 # legacy: Resolve hal_gnss_default denial
+repopick 230830 # legacy: Resolve hal_bluetooth_default denial
+repopick 230831 # sepolicy: Allow android service to write on tombstones
+repopick 230833 # legacy: Correctly label display.qservice
+repopick 230834 # legacy: allow init to read /proc/device-tree
+repopick 230832 # Revert "sepol: hostapd is now hal_wifi_hostapd"
+repopick 231049 # Change to compile due to hostapd.te removal
+repopick 231054 # NFC: Add nfc data file context and rename property
+
+# external/perfetto
+repopick 223413 # perfetto_cmd: Resolve missing O_CREAT mode
+
 # external/tinycompress
 repopick 229414 # tinycompress: Use generated kernel headers
 
@@ -113,9 +129,6 @@ repopick 223411 # interfaces: Add id HAL definition
 
 # hardware/qcom/audio
 repopick 230749 # audio: Use generated kernel headers
-
-# hardware/qcom/bt-caf
-repopick 226658 # Don't build libbt-hidlclient for OSS builds
 
 # hardware/qcom/media
 repopick 230750 # media: Use generated kernel headers
@@ -212,6 +225,7 @@ repopick 225423 # Add support to force disable enhanced sco commands
 
 # system/core
 privpick system/core refs/changes/19/206119/2 # init: I hate safety net
+repopick 224264 # debuggerd: Resolve tombstoned missing O_CREAT mode
 
 # system/netd
 repopick 231201 # Revert "Don't look up the main table any more."
@@ -233,7 +247,5 @@ repopick 231220 # kernel: Remove kernel{x}config
 repopick 230271 # cryptfs_hw: Use generated kernel headers
 
 # -------------- TOPIC STUFF --------------
-
-repopick -t pie-mode-bits
 
 exit 0
