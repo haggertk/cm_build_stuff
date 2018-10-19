@@ -67,7 +67,6 @@ repopick 225476 # dexdeps: Ignore static initializers on analysis.
 repopick 228566 # qcom: Label vendor files with (vendor|system/vendor) instead of vendor
 repopick 228569 # Use set_prop() macro for property sets
 repopick 228570 # sepolicy: Allow wcnss_service to set wlan.driver properties
-repopick 228571 # sepolicy: allow system_server to read alarm boot prop
 repopick 228572 # sepolicy: Allow system_server to 'read' qti_debugfs
 repopick 228573 # sepolicy: Add libsdm-disp-vndapis and libsdmutils to SP-HALs
 repopick 228574 # sepolicy: Allow thermal-engine to read sysfs_uio[_file]
