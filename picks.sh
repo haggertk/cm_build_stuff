@@ -43,7 +43,6 @@ fi # [ $USER != haggertk ]
 # -------------- PLATFORM STUFF --------------
 
 # bionic
-repopick 229488 # Revert "linker: Make platform text relocations denial optional"
 repopick 230099 # Actually restore pre-P mutex behavior
 repopick 223067 # libc fortify: Ignore open() O_TMPFILE mode bits warning
 
@@ -109,12 +108,12 @@ repopick 225582 # [TEMP]: Revert "OMS: harden permission checks"
 repopick 227108 # SystemUI: Fix several issues in the ADB over Network tile
 repopick 226615 # NavigationBarView: Avoid NPE before mPanelView is created
 repopick 227821 # GlobalScreenshot: Fix screenshot not saved when appending appname with some languages
-repopick 228405 # Forward port CM Screen Security settings (1/2)
 repopick 229230 # SystemUI: allow the power menu to be relocated
 repopick 224446 # SystemUI: Make tablets great again
 repopick 224513 # SystemUI: Disable config_keyguardUserSwitcher on sw600dp
 repopick 224266 # SystemUI: Add Lineage statusbar item holder
 repopick 224267 # SystemUI: Network Traffic [1/3]
+repopick 226343 # CameraServiceProxy: Loosen UID check
 
 # frameworks/native
 repopick 224443 # libbinder: Don't log call trace when waiting for vendor service on non-eng builds
@@ -158,8 +157,6 @@ repopick 226151 # Settings: show Trust brading in confirm_lock_password UI
 repopick 225755 # Settings: Hide AOSP theme-related controllers
 repopick 225756 # Settings: fix dark style issues
 repopick 227120 # Settings: Check interfaces before enabling ADB over network
-repopick 228403 # Settings: forward port lock pattern grid size (2/2)
-repopick 228404 # Forward port pattern visibility settings (2/2)
 repopick 229479 # Settings: Improve phone number preference ordering
 repopick 231590 # SimSettings: Add manual SIM provisioning support
 repopick 227929 # Settings: Remove battery percentage switch
@@ -186,7 +183,6 @@ repopick 231201 # Revert "Don't look up the main table any more."
 repopick 223748 # Build sepolicy tools with Android.bp.
 
 # vendor/lineage
-repopick 229506 # Revert "soong_config: Add TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS"
 repopick 225921 # overlay: Update list of GSF/GMS activities
 repopick 229508 # lineage: Move kernel variable configuration to BoardConfigKernel
 repopick 229412 # vendor/lineage: Add soong generator module type
