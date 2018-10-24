@@ -53,11 +53,9 @@ repopick 225213 # Do not limit threads upon calling legacy GNU make
 repopick 222733 # core: Disable vendor restrictions
 repopick 222760 # Add LOCAL_AIDL_FLAGS
 repopick 222742 # build: Use project pathmap for recovery
-repopick 229491 # build: Automatically replace old-style kernel header includes with new header lib
 
 # build/soong
 repopick 224613 # soong: Add LOCAL_AIDL_FLAGS handling
-repopick 229411 # soong sbox: Add option to allow copying all generated output
 
 # dalvik
 repopick 225475 # dexdeps: Add option for --include-lineage-classes.
@@ -92,16 +90,13 @@ repopick 230834 # legacy: allow init to read /proc/device-tree
 repopick 230832 # Revert "sepol: hostapd is now hal_wifi_hostapd"
 repopick 231049 # Change to compile due to hostapd.te removal
 repopick 231054 # NFC: Add nfc data file context and rename property
+repopick 230235 # common: grant DRM HIDL HAL ownership access to /data/{misc,vendor}/media/
 
 # external/perfetto
 repopick 223413 # perfetto_cmd: Resolve missing O_CREAT mode
 
-# external/tinycompress
-repopick 229414 # tinycompress: Use generated kernel headers
-
 # frameworks/base
 repopick 226236 # SystemUI: add navbar button layout inversion tuning
-repopick 224844 # lockscreen: Add option for showing unlock screen directly
 repopick 225754 # SystemUI: Berry styles
 repopick 225582 # [TEMP]: Revert "OMS: harden permission checks"
 repopick 227108 # SystemUI: Fix several issues in the ADB over Network tile
@@ -127,12 +122,6 @@ repopick 223374 # interfaces: Add 2.0 livedisplay interfaces
 repopick 223410 # interfaces: Add touch HIDL interface definitions
 repopick 223411 # interfaces: Add id HAL definition
 
-# hardware/qcom/audio
-repopick 230749 # audio: Use generated kernel headers
-
-# hardware/qcom/media
-repopick 230750 # media: Use generated kernel headers
-
 # lineage-sdk
 repopick 225581 # lineage-sdk: Make styles init at system services ready
 repopick 230856 # sdk: Don't clear calling identify when calling IOverlayManager.setEnabled()
@@ -148,11 +137,11 @@ repopick 226131 # DeskClock: Add support of power off alarm feature
 repopick 225289 # DocumentsUI: support night mode
 
 # packages/apps/Settings
-repopick 226154 # fingerprint: Allow devices to configure sensor location
 repopick 226148 # Settings: "Security & location" -> "Security & privacy"
 repopick 226142 # Settings: Add developer setting for root access
 repopick 226150 # Settings: add Trust interface hook
 repopick 226151 # Settings: show Trust brading in confirm_lock_password UI
+repopick 226154 # fingerprint: Allow devices to configure sensor location
 repopick 225755 # Settings: Hide AOSP theme-related controllers
 repopick 225756 # Settings: fix dark style issues
 repopick 227120 # Settings: Check interfaces before enabling ADB over network
@@ -180,18 +169,10 @@ repopick 231201 # Revert "Don't look up the main table any more."
 
 # system/sepolicy
 repopick 223748 # Build sepolicy tools with Android.bp.
+repopick 230151 # Fix storaged access to /sys/block/mmcblk0/stat after c936223c
 
 # vendor/lineage
 repopick 225921 # overlay: Update list of GSF/GMS activities
-repopick 229508 # lineage: Move kernel variable configuration to BoardConfigKernel
-repopick 229412 # vendor/lineage: Add soong generator module type
-repopick 229415 # lineage: Dynamically generate kernel headers using lineage generator
-repopick 229505 # vendor/lineage: Remove kernel.mk headers generation
-repopick 231219 # kernel: Remove deprecated flag errors
-repopick 231220 # kernel: Remove kernel{x}config
-
-# vendor/qcom/opensource/cryptfs_hw
-repopick 230271 # cryptfs_hw: Use generated kernel headers
 
 # -------------- TOPIC STUFF --------------
 
