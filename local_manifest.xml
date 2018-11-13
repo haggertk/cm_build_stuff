@@ -14,9 +14,9 @@
 
   <!-- Temp stuff until it gets into a real manifest -->
   <remove-project name="LineageOS/android_packages_apps_Gallery2" />
-  <project path="packages/apps/Gallery2" name="LineageOS/android_packages_apps_Gallery2" />
+  <project path="packages/apps/Gallery2" name="arco/android_packages_apps_Gallery2" />
 
-  <project path="packages/apps/Snap" name="LineageOS/android_packages_apps_Snap" />
+  <project path="packages/apps/Snap" name="arco/android_packages_apps_Snap" />
 
   <remove-project name="platform/packages/apps/Launcher3" />
   <project path="packages/apps/Trebuchet" name="LineageOS/android_packages_apps_Trebuchet" />
