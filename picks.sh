@@ -18,14 +18,13 @@ if [ $USER != haggertk ]; then
 
 # device/samsung/hlte-common
 if [ -d device/samsung/hlte-common ] ; then
-  repopick 231691 # hlte-common: Rename libnfc-brcm.conf -> libnfc-nci.conf
-  repopick 231692 # hlte-common: nfc: remove unsupported MAX_RF_DATA_CREDITS config
   repopick 225618 # hlte-common: Align ril.h to samsung_msm8974-common P libril changes
   repopick 225619 # DO NOT MERGE: hlte-common: Requisite bring-up BS change
 fi
 
 # device/samsung/klte-common
 if [ -d device/samsung/klte-common ] ; then
+  repopick 234490 # klte-common: restorecon I/O scheduler tunables before touching them
   repopick 231209 # klte-common: nfc: pn547: Use prebuilt NFC HAL from 15.1
   repopick 225192 # klte-common: Align ril.h to samsung_msm8974-common P libril changes
   repopick 224917 # DO NOT MERGE: klte-common: Requisite bring-up BS change
@@ -33,9 +32,16 @@ fi
 
 # device/samsung/msm8974-common
 if [ -d device/samsung/msm8974-common ] ; then
+  repopick 234520 # msm8974-common: sepolicy: Label sysfs_graphics nodes
+  repopick 234521 # msm8974-common: sepolicy: Label sysfs_iio nodes
+  repopick 234522 # msm8974-common: sepolicy: Label sysfs_input nodes
+  repopick 234523 # msm8974-common: sepolicy: Resolve hal_sensors_default denials
+  repopick 234527 # msm8974-common: sepolicy: Label our custom sensors service
+  repopick 234524 # msm8974-common: sepolicy: Resolve rild denials
+  repopick 234525 # msm8974-common: sepolicy: Resolve surfaceflinger denials
+  repopick 234526 # msm8974-common: sepolicy: Resolve mediaserver denials
   repopick 231350 # msm8974-common: Set TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE to true
-  repopick 228677 # msm8974-common: Make the external camera provider ignore internal cameras
-  repopick 224916 # DO NOT MERGE: msm8974-common: sepolicy: Just make it build
+  repopick 234191 # msm8974-common: Disable netd active FTP helper
 fi
 
 fi # [ $USER != haggertk ]
@@ -60,13 +66,15 @@ repopick 224613 # soong: Add LOCAL_AIDL_FLAGS handling
 repopick 225475 # dexdeps: Add option for --include-lineage-classes.
 repopick 225476 # dexdeps: Ignore static initializers on analysis.
 
+# device/lineage/sepolicy
+repopick 234487 # common: Label and allow init to write to I/O sched tuning nodes
+
 # device/qcom/sepolicy
 repopick 228566 # qcom: Label vendor files with (vendor|system/vendor) instead of vendor
 repopick 228569 # Use set_prop() macro for property sets
 repopick 228570 # sepolicy: Allow wcnss_service to set wlan.driver properties
 repopick 228572 # sepolicy: Allow system_server to 'read' qti_debugfs
 repopick 228573 # sepolicy: Add libsdm-disp-vndapis and libsdmutils to SP-HALs
-repopick 228574 # sepolicy: Allow thermal-engine to read sysfs_uio[_file]
 repopick 228575 # sepolicy: Add libcryptfs_hw to SP HALs
 repopick 228576 # sepolicy: Label mpctl_socket as data_file_type
 repopick 228578 # sepolicy: rules to allow camera daemon access to app buffer
@@ -78,6 +86,7 @@ repopick 228585 # sepolicy: Allow mm-qcamerad to access v4L "name" node
 repopick 228586 # common: Fix labelling of lcd-backlight
 
 # device/qcom/sepolicy-legacy
+repopick 234248 # sepolicy : set write permissions for sysfs_boot_adsp.
 repopick 230828 # legacy: Label more power_supply sysfs
 repopick 230829 # legacy: Resolve hal_gnss_default denial
 repopick 230830 # legacy: Resolve hal_bluetooth_default denial
@@ -90,13 +99,9 @@ repopick 223413 # perfetto_cmd: Resolve missing O_CREAT mode
 
 # frameworks/base
 repopick 226236 # SystemUI: add navbar button layout inversion tuning
-repopick 225754 # SystemUI: Berry styles
-repopick 225582 # [TEMP]: Revert "OMS: harden permission checks"
 repopick 227108 # SystemUI: Fix several issues in the ADB over Network tile
-repopick 226615 # NavigationBarView: Avoid NPE before mPanelView is created
 repopick 227821 # GlobalScreenshot: Fix screenshot not saved when appending appname with some languages
 repopick 229230 # SystemUI: allow the power menu to be relocated
-repopick 224446 # SystemUI: Make tablets great again
 repopick 224513 # SystemUI: Disable config_keyguardUserSwitcher on sw600dp
 repopick 224266 # SystemUI: Add Lineage statusbar item holder
 repopick 224267 # SystemUI: Network Traffic [1/3]
@@ -113,50 +118,34 @@ repopick 225507 # camera: Only link and use vendor.qti.hardware.camera.device if
 # hardware/lineage/interfaces
 repopick 223374 # interfaces: Add 2.0 livedisplay interfaces
 repopick 223410 # interfaces: Add touch HIDL interface definitions
-repopick 223411 # interfaces: Add id HAL definition
-
-# lineage-sdk
-repopick 225581 # lineage-sdk: Make styles init at system services ready
-repopick 230856 # sdk: Don't clear calling identify when calling IOverlayManager.setEnabled()
 
 # packages/apps/Camera2
 repopick 224752 # Use mCameraAgentNg for getting camera info when available
 repopick 225265 # Add Storage preference (1/2)
 
-# packages/apps/DeskClock
-repopick 226131 # DeskClock: Add support of power off alarm feature
-
-# packages/apps/DocumentsUI
-repopick 225289 # DocumentsUI: support night mode
-
 # packages/apps/Settings
 repopick 226148 # Settings: "Security & location" -> "Security & privacy"
 repopick 226142 # Settings: Add developer setting for root access
-repopick 226150 # Settings: add Trust interface hook
 repopick 226151 # Settings: show Trust brading in confirm_lock_password UI
 repopick 226154 # fingerprint: Allow devices to configure sensor location
-repopick 225755 # Settings: Hide AOSP theme-related controllers
-repopick 225756 # Settings: fix dark style issues
 repopick 227120 # Settings: Check interfaces before enabling ADB over network
 repopick 231590 # SimSettings: Add manual SIM provisioning support
-repopick 227929 # Settings: Remove battery percentage switch
-
-# packages/apps/SettingsIntelligence
-repopick 230519 # Fix dark style issues
 
 # system/core
 privpick system/core refs/changes/19/206119/2 # init: I hate safety net
 repopick 224264 # debuggerd: Resolve tombstoned missing O_CREAT mode
 
 # system/netd
-repopick 231201 # Revert "Don't look up the main table any more."
+repopick 231201 # netd: Allow devices to force-add directly-connected routes
+repopick 234190 # netd: Allow devices to opt-out of the tethering active FTP helper
 
 # system/sepolicy
-repopick 223748 # Build sepolicy tools with Android.bp.
 repopick 230151 # Fix storaged access to /sys/block/mmcblk0/stat after c936223c
 
 # vendor/lineage
+repopick 234352 # lineage-iosched: restorecon slice_idle on scheduler change
 repopick 225921 # overlay: Update list of GSF/GMS activities
+repopick 232659 # vendor/lineage: Build TrebuchetQuickStep
 
 # -------------- TOPIC STUFF --------------
 
