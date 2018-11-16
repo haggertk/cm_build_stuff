@@ -160,4 +160,7 @@ repopick 225921 # overlay: Update list of GSF/GMS activities
 
 # -------------- TOPIC STUFF --------------
 
+repopick -t pie-snap
+repopick -t pie-gallery2
+
 exit 0
