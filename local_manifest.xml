@@ -15,8 +15,5 @@
   <!-- Temp stuff until it gets into a real manifest -->
   <project path="packages/apps/Snap" name="LineageOS/android_packages_apps_Snap" />
 
-  <remove-project name="platform/packages/apps/Launcher3" />
-  <project path="packages/apps/Trebuchet" name="LineageOS/android_packages_apps_Trebuchet" />
-
   <project path="vendor/qcom/opensource/cryptfs_hw" name="LineageOS/android_vendor_qcom_opensource_cryptfs_hw" />
 </manifest>
