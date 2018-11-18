@@ -7,6 +7,11 @@ function privpick() {
   git -C $1 cherry-pick FETCH_HEAD
 }
 
+function checkchain() {
+  git -C $1 fetch github $2
+  git -C $1 checkout FETCH_HEAD
+}
+
 source build/envsetup.sh
 
 # -------------- DEVICE STUFF --------------
@@ -68,6 +73,7 @@ repopick 225476 # dexdeps: Ignore static initializers on analysis.
 
 # device/lineage/sepolicy
 repopick 234487 # common: Label and allow init to write to I/O sched tuning nodes
+repopick 234613 # common: Expand labeling of sysfs_vibrator nodes using regex
 
 # device/qcom/sepolicy
 repopick 228566 # qcom: Label vendor files with (vendor|system/vendor) instead of vendor
@@ -75,7 +81,6 @@ repopick 228569 # Use set_prop() macro for property sets
 repopick 228570 # sepolicy: Allow wcnss_service to set wlan.driver properties
 repopick 228572 # sepolicy: Allow system_server to 'read' qti_debugfs
 repopick 228573 # sepolicy: Add libsdm-disp-vndapis and libsdmutils to SP-HALs
-repopick 228575 # sepolicy: Add libcryptfs_hw to SP HALs
 repopick 228576 # sepolicy: Label mpctl_socket as data_file_type
 repopick 228578 # sepolicy: rules to allow camera daemon access to app buffer
 repopick 228580 # hal_gnss_default: Do not log udp socket failures
@@ -145,11 +150,11 @@ repopick 230151 # Fix storaged access to /sys/block/mmcblk0/stat after c936223c
 # vendor/lineage
 repopick 234352 # lineage-iosched: restorecon slice_idle on scheduler change
 repopick 225921 # overlay: Update list of GSF/GMS activities
-repopick 232659 # vendor/lineage: Build TrebuchetQuickStep
 
 # -------------- TOPIC STUFF --------------
 
-repopick -t pie-snap
+checkchain packages/apps/Snap refs/changes/23/233223/8 # pie-snap
 repopick -t pie-gallery2
+repopick -t pie-fde-crash-fix
 
 exit 0
