@@ -37,14 +37,21 @@ fi
 
 # device/samsung/msm8974-common
 if [ -d device/samsung/msm8974-common ] ; then
+  repopick 234687 # msm8974-common: sepolicy: Drop our mediaextractor additions
+  repopick 234591 # msm8974-common: sepolicy: Sort sysfs block of file_contexts sanely
   repopick 234520 # msm8974-common: sepolicy: Label sysfs_graphics nodes
   repopick 234521 # msm8974-common: sepolicy: Label sysfs_iio nodes
   repopick 234522 # msm8974-common: sepolicy: Label sysfs_input nodes
+  repopick 234688 # msm8974-common: sepolicy: Label sysfs_batteryinfo nodes
+  repopick 234689 # msm8974-common: sepolicy: Label sysfs_leds nodes
+  repopick 234690 # msm8974-common: sepolicy: Create variety of sysfs_sec_* types
   repopick 234523 # msm8974-common: sepolicy: Resolve hal_sensors_default denials
   repopick 234527 # msm8974-common: sepolicy: Label our custom sensors service
   repopick 234524 # msm8974-common: sepolicy: Resolve rild denials
   repopick 234525 # msm8974-common: sepolicy: Resolve surfaceflinger denials
   repopick 234526 # msm8974-common: sepolicy: Resolve mediaserver denials
+  repopick 234691 # msm8974-common: sepolicy: Resolve hal_wifi_hostapd_default denials
+  repopick 234692 # msm8974-common: sepolicy: Resolve dnsmasq denials
   repopick 231350 # msm8974-common: Set TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE to true
   repopick 234191 # msm8974-common: Disable netd active FTP helper
 fi
@@ -153,8 +160,7 @@ repopick 225921 # overlay: Update list of GSF/GMS activities
 
 # -------------- TOPIC STUFF --------------
 
-checkchain packages/apps/Snap refs/changes/23/233223/8 # pie-snap
-repopick -t pie-gallery2
+checkchain packages/apps/Snap refs/changes/23/233223/11 # pie-snap
 repopick -t pie-fde-crash-fix
 
 exit 0
