@@ -37,8 +37,6 @@ fi
 
 # device/samsung/msm8974-common
 if [ -d device/samsung/msm8974-common ] ; then
-  repopick 234687 # msm8974-common: sepolicy: Drop our mediaextractor additions
-  repopick 234591 # msm8974-common: sepolicy: Sort sysfs block of file_contexts sanely
   repopick 234520 # msm8974-common: sepolicy: Label sysfs_graphics nodes
   repopick 234521 # msm8974-common: sepolicy: Label sysfs_iio nodes
   repopick 234522 # msm8974-common: sepolicy: Label sysfs_input nodes
@@ -52,8 +50,12 @@ if [ -d device/samsung/msm8974-common ] ; then
   repopick 234526 # msm8974-common: sepolicy: Resolve mediaserver denials
   repopick 234691 # msm8974-common: sepolicy: Resolve hal_wifi_hostapd_default denials
   repopick 234692 # msm8974-common: sepolicy: Resolve dnsmasq denials
-  repopick 231350 # msm8974-common: Set TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE to true
   repopick 234191 # msm8974-common: Disable netd active FTP helper
+fi
+
+# kernel/samsung/msm8974
+if [ -d kernel/samsung/msm8974] ; then
+  repopick 234754 # Add define for O_TMPFILE
 fi
 
 fi # [ $USER != haggertk ]
@@ -62,7 +64,6 @@ fi # [ $USER != haggertk ]
 
 # bionic
 repopick 230099 # Actually restore pre-P mutex behavior
-repopick 223067 # libc fortify: Ignore open() O_TMPFILE mode bits warning
 
 # build/kati
 repopick 225213 # Do not limit threads upon calling legacy GNU make
@@ -106,9 +107,6 @@ repopick 230834 # legacy: allow init to read /proc/device-tree
 repopick 231054 # NFC: Add nfc data file context and rename property
 repopick 230235 # common: grant DRM HIDL HAL ownership access to /data/{misc,vendor}/media/
 
-# external/perfetto
-repopick 223413 # perfetto_cmd: Resolve missing O_CREAT mode
-
 # frameworks/base
 repopick 226236 # SystemUI: add navbar button layout inversion tuning
 repopick 227108 # SystemUI: Fix several issues in the ADB over Network tile
@@ -128,6 +126,7 @@ repopick 225506 # Camed HAL extension: Added support in HIDL for Extended FD.
 repopick 225507 # camera: Only link and use vendor.qti.hardware.camera.device if specified
 
 # hardware/lineage/interfaces
+repopick 233911 # Tuning of binder buffer for ARM devices
 repopick 223374 # interfaces: Add 2.0 livedisplay interfaces
 repopick 223410 # interfaces: Add touch HIDL interface definitions
 
@@ -145,10 +144,8 @@ repopick 231590 # SimSettings: Add manual SIM provisioning support
 
 # system/core
 privpick system/core refs/changes/19/206119/2 # init: I hate safety net
-repopick 224264 # debuggerd: Resolve tombstoned missing O_CREAT mode
 
 # system/netd
-repopick 231201 # netd: Allow devices to force-add directly-connected routes
 repopick 234190 # netd: Allow devices to opt-out of the tethering active FTP helper
 
 # system/sepolicy
