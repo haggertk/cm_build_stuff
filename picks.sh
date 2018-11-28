@@ -37,20 +37,9 @@ fi
 
 # device/samsung/msm8974-common
 if [ -d device/samsung/msm8974-common ] ; then
-  repopick 234520 # msm8974-common: sepolicy: Label sysfs_graphics nodes
-  repopick 234521 # msm8974-common: sepolicy: Label sysfs_iio nodes
-  repopick 234522 # msm8974-common: sepolicy: Label sysfs_input nodes
-  repopick 234688 # msm8974-common: sepolicy: Label sysfs_batteryinfo nodes
-  repopick 234689 # msm8974-common: sepolicy: Label sysfs_leds nodes
-  repopick 234690 # msm8974-common: sepolicy: Create variety of sysfs_sec_* types
-  repopick 234523 # msm8974-common: sepolicy: Resolve hal_sensors_default denials
-  repopick 234527 # msm8974-common: sepolicy: Label our custom sensors service
   repopick 234524 # msm8974-common: sepolicy: Resolve rild denials
-  repopick 234525 # msm8974-common: sepolicy: Resolve surfaceflinger denials
   repopick 234526 # msm8974-common: sepolicy: Resolve mediaserver denials
-  repopick 234691 # msm8974-common: sepolicy: Resolve hal_wifi_hostapd_default denials
   repopick 234692 # msm8974-common: sepolicy: Resolve dnsmasq denials
-  repopick 234191 # msm8974-common: Disable netd active FTP helper
 fi
 
 # kernel/samsung/msm8974
@@ -61,9 +50,6 @@ fi
 fi # [ $USER != haggertk ]
 
 # -------------- PLATFORM STUFF --------------
-
-# bionic
-repopick 230099 # Actually restore pre-P mutex behavior
 
 # build/kati
 repopick 225213 # Do not limit threads upon calling legacy GNU make
@@ -81,7 +67,8 @@ repopick 225476 # dexdeps: Ignore static initializers on analysis.
 
 # device/lineage/sepolicy
 repopick 234487 # common: Label and allow init to write to I/O sched tuning nodes
-repopick 234613 # common: Expand labeling of sysfs_vibrator nodes using regex
+repopick 234613 # common: common: Expand labeling of sysfs_vibrator nodes using genfscon
+repopick 234837 # common: Label and allow access over LiveDisplay sysfs nodes
 
 # device/qcom/sepolicy
 repopick 228566 # qcom: Label vendor files with (vendor|system/vendor) instead of vendor
@@ -99,11 +86,6 @@ repopick 228585 # sepolicy: Allow mm-qcamerad to access v4L "name" node
 repopick 228586 # common: Fix labelling of lcd-backlight
 
 # device/qcom/sepolicy-legacy
-repopick 234248 # sepolicy : set write permissions for sysfs_boot_adsp.
-repopick 230828 # legacy: Label more power_supply sysfs
-repopick 230829 # legacy: Resolve hal_gnss_default denial
-repopick 230830 # legacy: Resolve hal_bluetooth_default denial
-repopick 230834 # legacy: allow init to read /proc/device-tree
 repopick 231054 # NFC: Add nfc data file context and rename property
 repopick 230235 # common: grant DRM HIDL HAL ownership access to /data/{misc,vendor}/media/
 
@@ -116,6 +98,7 @@ repopick 224513 # SystemUI: Disable config_keyguardUserSwitcher on sw600dp
 repopick 224266 # SystemUI: Add Lineage statusbar item holder
 repopick 224267 # SystemUI: Network Traffic [1/3]
 repopick 226343 # CameraServiceProxy: Loosen UID check
+repopick 230016 # Implement expanded desktop feature
 
 # frameworks/native
 repopick 224443 # libbinder: Don't log call trace when waiting for vendor service on non-eng builds
@@ -134,6 +117,9 @@ repopick 223410 # interfaces: Add touch HIDL interface definitions
 repopick 224752 # Use mCameraAgentNg for getting camera info when available
 repopick 225265 # Add Storage preference (1/2)
 
+# packages/apps/LineageParts
+repopick 230017 # LineageParts: Re-enable expanded desktop.
+
 # packages/apps/Settings
 repopick 226148 # Settings: "Security & location" -> "Security & privacy"
 repopick 226142 # Settings: Add developer setting for root access
@@ -145,11 +131,11 @@ repopick 231590 # SimSettings: Add manual SIM provisioning support
 # system/core
 privpick system/core refs/changes/19/206119/2 # init: I hate safety net
 
-# system/netd
-repopick 234190 # netd: Allow devices to opt-out of the tethering active FTP helper
-
 # system/sepolicy
 repopick 230151 # Fix storaged access to /sys/block/mmcblk0/stat after c936223c
+repopick 234868 # sepolicy: Address denials for legacy last_kmsg file
+repopick 234884 # Allow init to write to /proc/cpu/alignment
+repopick 234886 # Allow init to chmod/chown /proc/slabinfo
 
 # vendor/lineage
 repopick 234352 # lineage-iosched: restorecon slice_idle on scheduler change
