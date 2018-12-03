@@ -29,7 +29,6 @@ fi
 
 # device/samsung/klte-common
 if [ -d device/samsung/klte-common ] ; then
-  repopick 234490 # klte-common: restorecon I/O scheduler tunables before touching them
   repopick 231209 # klte-common: nfc: pn547: Use prebuilt NFC HAL from 15.1
   repopick 225192 # klte-common: Align ril.h to samsung_msm8974-common P libril changes
   repopick 224917 # DO NOT MERGE: klte-common: Requisite bring-up BS change
@@ -37,9 +36,9 @@ fi
 
 # device/samsung/msm8974-common
 if [ -d device/samsung/msm8974-common ] ; then
-  repopick 234524 # msm8974-common: sepolicy: Resolve rild denials
+  repopick 235140 # msm8974-common: sepolicy: Clean up
+  repopick 235457 # msm8974-common: sepolicy: Limit execmod to specifically labeled files
   repopick 234526 # msm8974-common: sepolicy: Resolve mediaserver denials
-  repopick 234692 # msm8974-common: sepolicy: Resolve dnsmasq denials
 fi
 
 # kernel/samsung/msm8974
@@ -66,7 +65,7 @@ repopick 225475 # dexdeps: Add option for --include-lineage-classes.
 repopick 225476 # dexdeps: Ignore static initializers on analysis.
 
 # device/lineage/sepolicy
-repopick 234487 # common: Label and allow init to write to I/O sched tuning nodes
+repopick 235402 # common: Allow init to relabel I/O sched tuning nodes
 repopick 234613 # common: common: Expand labeling of sysfs_vibrator nodes using genfscon
 repopick 234837 # common: Label and allow access over LiveDisplay sysfs nodes
 
@@ -88,6 +87,7 @@ repopick 228586 # common: Fix labelling of lcd-backlight
 # device/qcom/sepolicy-legacy
 repopick 231054 # NFC: Add nfc data file context and rename property
 repopick 230235 # common: grant DRM HIDL HAL ownership access to /data/{misc,vendor}/media/
+repopick 235455 # legacy: Allow platform_app to read qemu_hw_mainkeys_prop
 
 # frameworks/base
 repopick 226236 # SystemUI: add navbar button layout inversion tuning
@@ -132,13 +132,11 @@ repopick 231590 # SimSettings: Add manual SIM provisioning support
 privpick system/core refs/changes/19/206119/2 # init: I hate safety net
 
 # system/sepolicy
-repopick 230151 # Fix storaged access to /sys/block/mmcblk0/stat after c936223c
-repopick 234868 # sepolicy: Address denials for legacy last_kmsg file
 repopick 234884 # Allow init to write to /proc/cpu/alignment
 repopick 234886 # Allow init to chmod/chown /proc/slabinfo
+repopick 235196 # Allow dnsmasq to getattr netd unix_stream_socket
 
 # vendor/lineage
-repopick 234352 # lineage-iosched: restorecon slice_idle on scheduler change
 repopick 225921 # overlay: Update list of GSF/GMS activities
 
 # -------------- TOPIC STUFF --------------
