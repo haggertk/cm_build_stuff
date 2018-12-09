@@ -24,7 +24,6 @@ if [ $USER != haggertk ]; then
 # device/samsung/hlte-common
 if [ -d device/samsung/hlte-common ] ; then
   repopick 225618 # hlte-common: Align ril.h to samsung_msm8974-common P libril changes
-  repopick 225619 # DO NOT MERGE: hlte-common: Requisite bring-up BS change
 fi
 
 # device/samsung/klte-common
@@ -70,8 +69,6 @@ repopick 234613 # common: common: Expand labeling of sysfs_vibrator nodes using 
 repopick 234837 # common: Label and allow access over LiveDisplay sysfs nodes
 
 # device/qcom/sepolicy
-repopick 228566 # qcom: Label vendor files with (vendor|system/vendor) instead of vendor
-repopick 228569 # Use set_prop() macro for property sets
 repopick 228570 # sepolicy: Allow wcnss_service to set wlan.driver properties
 repopick 228572 # sepolicy: Allow system_server to 'read' qti_debugfs
 repopick 228573 # sepolicy: Add libsdm-disp-vndapis and libsdmutils to SP-HALs
@@ -80,9 +77,6 @@ repopick 228578 # sepolicy: rules to allow camera daemon access to app buffer
 repopick 228580 # hal_gnss_default: Do not log udp socket failures
 repopick 228582 # sepolicy: qti_init_shell needs to read dir too
 repopick 228583 # sepolicy: allow vold to read persist dirs
-repopick 228584 # sepolicy: Fix video4linux "name" node labeling
-repopick 228585 # sepolicy: Allow mm-qcamerad to access v4L "name" node
-repopick 228586 # common: Fix labelling of lcd-backlight
 
 # device/qcom/sepolicy-legacy
 repopick 231054 # NFC: Add nfc data file context and rename property
