@@ -2,8 +2,6 @@
 <manifest>
   <project name="haggertk/android_vendor_extra" path="vendor/extra" remote="github" />
 
-  <project name="MindTheGapps/vendor_gapps" path="vendor/gapps" remote="github" revision="master" />
-
 <!--  <project name="TheMuppets/proprietary_vendor_essential" path="vendor/essential" remote="github" /> -->
 <!--  <project name="TheMuppets/proprietary_vendor_htc" path="vendor/htc" remote="github" /> -->
 <!--  <project name="TheMuppets/proprietary_vendor_lge" path="vendor/lge" remote="github" /> -->
