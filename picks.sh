@@ -49,19 +49,12 @@ fi # [ $USER != haggertk ]
 
 # -------------- PLATFORM STUFF --------------
 
-# build/kati
-repopick 225213 # Do not limit threads upon calling legacy GNU make
-
 # build/make
 repopick 222760 # Add LOCAL_AIDL_FLAGS
 repopick 222742 # build: Use project pathmap for recovery
 
 # build/soong
 repopick 224613 # soong: Add LOCAL_AIDL_FLAGS handling
-
-# dalvik
-repopick 225475 # dexdeps: Add option for --include-lineage-classes.
-repopick 225476 # dexdeps: Ignore static initializers on analysis.
 
 # device/lineage/sepolicy
 repopick 235402 # common: Allow init to relabel I/O sched tuning nodes
@@ -79,20 +72,14 @@ repopick 228582 # sepolicy: qti_init_shell needs to read dir too
 repopick 228583 # sepolicy: allow vold to read persist dirs
 
 # device/qcom/sepolicy-legacy
-repopick 231054 # NFC: Add nfc data file context and rename property
 repopick 230235 # common: grant DRM HIDL HAL ownership access to /data/{misc,vendor}/media/
 repopick 235455 # legacy: Allow platform_app to read qemu_hw_mainkeys_prop
 
 # frameworks/base
-repopick 226236 # SystemUI: add navbar button layout inversion tuning
-repopick 227108 # SystemUI: Fix several issues in the ADB over Network tile
-repopick 227821 # GlobalScreenshot: Fix screenshot not saved when appending appname with some languages
-repopick 229230 # SystemUI: allow the power menu to be relocated
 repopick 224513 # SystemUI: Disable config_keyguardUserSwitcher on sw600dp
 repopick 224266 # SystemUI: Add Lineage statusbar item holder
 repopick 224267 # SystemUI: Network Traffic [1/3]
 repopick 226343 # CameraServiceProxy: Loosen UID check
-repopick 230016 # Implement expanded desktop feature
 
 # frameworks/native
 repopick 224443 # libbinder: Don't log call trace when waiting for vendor service on non-eng builds
@@ -103,16 +90,12 @@ repopick 225506 # Camed HAL extension: Added support in HIDL for Extended FD.
 repopick 225507 # camera: Only link and use vendor.qti.hardware.camera.device if specified
 
 # hardware/lineage/interfaces
-repopick 233911 # Tuning of binder buffer for ARM devices
 repopick 223374 # interfaces: Add 2.0 livedisplay interfaces
 repopick 223410 # interfaces: Add touch HIDL interface definitions
 
 # packages/apps/Camera2
 repopick 224752 # Use mCameraAgentNg for getting camera info when available
 repopick 225265 # Add Storage preference (1/2)
-
-# packages/apps/LineageParts
-repopick 230017 # LineageParts: Re-enable expanded desktop.
 
 # packages/apps/Settings
 repopick 226148 # Settings: "Security & location" -> "Security & privacy"
