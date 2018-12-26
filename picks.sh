@@ -118,7 +118,6 @@ repopick 225921 # overlay: Update list of GSF/GMS activities
 
 # -------------- TOPIC STUFF --------------
 
-checkchain packages/apps/Snap refs/changes/23/233223/11 # pie-snap
 repopick -t pie-fde-crash-fix
 
 exit 0

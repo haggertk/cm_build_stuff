@@ -13,8 +13,5 @@
   <project name="lineageos-infra/auth" path="lineage/infra/auth" remote="github" revision="master" />
   <project name="LineageOS/infra/gerrit-config" path="lineage/infra/gerrit-config" remote="gitlab" revision="master" />
 
-  <!-- Temp stuff until it gets into a real manifest -->
-  <project path="packages/apps/Snap" name="LineageOS/android_packages_apps_Snap" />
-
   <project path="vendor/qcom/opensource/cryptfs_hw" name="LineageOS/android_vendor_qcom_opensource_cryptfs_hw" />
 </manifest>
