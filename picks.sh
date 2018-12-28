@@ -60,17 +60,17 @@ repopick 224266 # SystemUI: Add Lineage statusbar item holder
 repopick 224267 # SystemUI: Network Traffic [1/3]
 repopick 235986 # frameworks: Add unlinked ringtone and notification volumes
 repopick 233633 # Phone ringtone setting for Multi SIM device
-#repopick 226343 # CameraServiceProxy: Loosen UID check
+repopick 226343 # CameraServiceProxy: Loosen UID check
 
 # packages/apps/Settings
-repopick 226148 # Settings: "Security & location" -> "Security & privacy"
-repopick 236550 # fingerprint: Remove unnecessary spacing in enroll layout
-repopick 226154 # fingerprint: Allow devices to configure sensor location
-repopick 227120 # Settings: Check interfaces before enabling ADB over network
-repopick 233634 # Phone ringtone setting for Multi SIM device
 repopick 226142 # Settings: Add developer setting for root access
 repopick 235978 # Settings: Add switch for linked ring and media notification volumes
 repopick 236184 # Settings: Use correct icon for ring volume
+repopick 231590 # SimSettings: Add manual SIM provisioning support
+repopick 233634 # Phone ringtone setting for Multi SIM device
+repopick 227120 # Settings: Check interfaces before enabling ADB over network
+repopick 236550 # fingerprint: Remove unnecessary spacing in enroll layout
+repopick 226154 # fingerprint: Allow devices to configure sensor location
 
 # packages/services/Telecomm
 repopick 233635 # Phone ringtone setting for Multi SIM device
@@ -83,6 +83,9 @@ repopick 237226 # Allow mediaserver to read device directories
 repopick 234884 # Allow init to write to /proc/cpu/alignment
 repopick 234886 # Allow init to chmod/chown /proc/slabinfo
 repopick 235196 # Allow dnsmasq to getattr netd unix_stream_socket
+
+# vendor/lineage
+repopick 237352 # qcom: Mark some gralloc bits as valid
 
 # -------------- TOPIC STUFF --------------
 
