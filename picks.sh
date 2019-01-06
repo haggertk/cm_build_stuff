@@ -34,7 +34,6 @@ fi
 # device/samsung/msm8974-common
 if [ -d device/samsung/msm8974-common ] ; then
   repopick 235457 # msm8974-common: sepolicy: Limit execmod to specifically labeled files
-  repopick 237215 # msm8974-common: sepolicy: Eliminate qemu_hw_mainkeys_prop entries
 fi
 
 # kernel/samsung/msm8974
@@ -53,20 +52,16 @@ repopick 236446 # common: Improve label of I/O sched tuning nodes
 
 # device/qcom/sepolicy-legacy
 repopick 230235 # common: grant DRM HIDL HAL ownership access to /data/{misc,vendor}/media/
-repopick 237211 # Remove vendor se-labelling of AOSP's qemu.hw.mainkeys prop.
 
 # frameworks/base
 repopick 224266 # SystemUI: Add Lineage statusbar item holder
 repopick 224267 # SystemUI: Network Traffic [1/3]
 repopick 235986 # frameworks: Add unlinked ringtone and notification volumes
 repopick 233633 # Phone ringtone setting for Multi SIM device
-repopick 226343 # CameraServiceProxy: Loosen UID check
 
 # packages/apps/Settings
-repopick 226142 # Settings: Add developer setting for root access
 repopick 235978 # Settings: Add switch for linked ring and media notification volumes
 repopick 236184 # Settings: Use correct icon for ring volume
-repopick 231590 # SimSettings: Add manual SIM provisioning support
 repopick 233634 # Phone ringtone setting for Multi SIM device
 repopick 227120 # Settings: Check interfaces before enabling ADB over network
 repopick 236550 # fingerprint: Remove unnecessary spacing in enroll layout
@@ -89,6 +84,6 @@ repopick 237352 # qcom: Mark some gralloc bits as valid
 
 # -------------- TOPIC STUFF --------------
 
-repopick -t pie-fde-crash-fix
+#repopick -t pie-fde-crash-fix
 
 exit 0
