@@ -45,9 +45,6 @@ fi # [ $USER != haggertk ]
 
 # -------------- PLATFORM STUFF --------------
 
-# device/lineage/sepolicy
-repopick 236446 # common: Improve label of I/O sched tuning nodes
-
 # device/qcom/sepolicy-legacy
 repopick 230235 # common: grant DRM HIDL HAL ownership access to /data/{misc,vendor}/media/
 
@@ -72,8 +69,6 @@ repopick 233635 # Phone ringtone setting for Multi SIM device
 privpick system/core refs/changes/19/206119/2 # init: I hate safety net
 
 # system/sepolicy
-repopick 234884 # Allow init to write to /proc/cpu/alignment
-repopick 234886 # Allow init to chmod/chown /proc/slabinfo
 repopick 235196 # Allow dnsmasq to getattr netd unix_stream_socket
 
 # vendor/lineage
