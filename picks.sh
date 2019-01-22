@@ -38,6 +38,8 @@ fi
 
 # kernel/samsung/msm8974
 if [ -d kernel/samsung/msm8974] ; then
+  repopick 239737 # crypto: Allow kernel to compile without CONFIG_CRYPTO_FIPS
+  repopick 239738 # ARM: configs: Disable CONFIG_CRYPTO_FIPS for hlte devices
   repopick 234754 # Add define for O_TMPFILE
 fi
 
@@ -46,7 +48,7 @@ fi # [ $USER != haggertk ]
 # -------------- PLATFORM STUFF --------------
 
 # device/qcom/sepolicy-legacy
-repopick 230235 # common: grant DRM HIDL HAL ownership access to /data/{misc,vendor}/media/
+repopick 239736 # sepolicy-legacy: Allow vold to open keymaster firmware
 
 # frameworks/base
 repopick 224266 # SystemUI: Add Lineage statusbar item holder
@@ -59,17 +61,12 @@ repopick 235978 # Settings: Add switch for linked ring and media notification vo
 repopick 236184 # Settings: Use correct icon for ring volume
 repopick 233634 # Phone ringtone setting for Multi SIM device
 repopick 227120 # Settings: Check interfaces before enabling ADB over network
-repopick 236550 # fingerprint: Remove unnecessary spacing in enroll layout
-repopick 226154 # fingerprint: Allow devices to configure sensor location
 
 # packages/services/Telecomm
 repopick 233635 # Phone ringtone setting for Multi SIM device
 
 # system/core
 privpick system/core refs/changes/19/206119/2 # init: I hate safety net
-
-# system/sepolicy
-repopick 235196 # Allow dnsmasq to getattr netd unix_stream_socket
 
 # vendor/lineage
 repopick 237352 # qcom: Mark some gralloc bits as valid
