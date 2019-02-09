@@ -38,8 +38,6 @@ fi
 
 # kernel/samsung/msm8974
 if [ -d kernel/samsung/msm8974] ; then
-  repopick 239737 # crypto: Allow kernel to compile without CONFIG_CRYPTO_FIPS
-  repopick 239738 # ARM: configs: Disable CONFIG_CRYPTO_FIPS for hlte devices
   repopick 234754 # Add define for O_TMPFILE
 fi
 
@@ -48,7 +46,7 @@ fi # [ $USER != haggertk ]
 # -------------- PLATFORM STUFF --------------
 
 # device/qcom/sepolicy-legacy
-repopick 239736 # sepolicy-legacy: Allow vold to open keymaster firmware
+#repopick 239736 # sepolicy-legacy: Allow vold to open keymaster firmware
 
 # frameworks/base
 repopick 224266 # SystemUI: Add Lineage statusbar item holder
@@ -68,11 +66,7 @@ repopick 233635 # Phone ringtone setting for Multi SIM device
 # system/core
 privpick system/core refs/changes/19/206119/2 # init: I hate safety net
 
-# vendor/lineage
-repopick 237352 # qcom: Mark some gralloc bits as valid
-
 # -------------- TOPIC STUFF --------------
 
-#repopick -t pie-fde-crash-fix
 
 exit 0
