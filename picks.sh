@@ -23,36 +23,44 @@ if [ $USER != haggertk ]; then
 
 # device/samsung/hlte-common
 if [ -d device/samsung/hlte-common ] ; then
+  repopick 241829 # hlte-common: Create media_profiles_V1_0.xml
+  repopick 241825 # hlte-common: Update power profile for Pie
   repopick 225618 # hlte-common: Align ril.h to samsung_msm8974-common P libril changes
 fi
 
 # device/samsung/klte-common
 if [ -d device/samsung/klte-common ] ; then
+  repopick 242365 # klte-common: Create media_profiles_V1_0.xml
+  repopick 242366 # klte-common: Update power profile for Pie
   repopick 225192 # klte-common: Align ril.h to samsung_msm8974-common P libril changes
 fi
 
 # device/samsung/msm8974-common
 if [ -d device/samsung/msm8974-common ] ; then
-  repopick 235457 # msm8974-common: sepolicy: Limit execmod to specifically labeled files
-fi
-
-# kernel/samsung/msm8974
-if [ -d kernel/samsung/msm8974] ; then
-  repopick 234754 # Add define for O_TMPFILE
+  repopick 241854 # msm8974-common: manifest: Add OMX media HAL
+  repopick 241853 # msm8974-common: manifest: Add health HAL
+  repopick 241858 # msm8974-common: Build Samsung LiveDisplay service
 fi
 
 fi # [ $USER != haggertk ]
 
 # -------------- PLATFORM STUFF --------------
 
+# device/lineage/sepolicy
+repopick 241903 # vendor: Label all the livedisplay service implementations
+
 # device/qcom/sepolicy-legacy
-#repopick 239736 # sepolicy-legacy: Allow vold to open keymaster firmware
+repopick 241875 # Revert "legacy: allow init to read /proc/device-tree"
 
 # frameworks/base
-repopick 224266 # SystemUI: Add Lineage statusbar item holder
-repopick 224267 # SystemUI: Network Traffic [1/3]
 repopick 235986 # frameworks: Add unlinked ringtone and notification volumes
 repopick 233633 # Phone ringtone setting for Multi SIM device
+
+# hardware/samsung
+repopick 238519 # samsung: Add dummy lineagehw HIDL interfaces for vendor.lineage.touch
+repopick 238520 # hidl: touch: Add binderized service implementation
+repopick 239597 # samsung: Add dummy lineagehw HIDL interfaces for vendor.lineage.livedisplay
+repopick 239598 # hidl: livedisplay: Add binderized service implementation
 
 # packages/apps/Settings
 repopick 235978 # Settings: Add switch for linked ring and media notification volumes
@@ -65,6 +73,9 @@ repopick 233635 # Phone ringtone setting for Multi SIM device
 
 # system/core
 privpick system/core refs/changes/19/206119/2 # init: I hate safety net
+
+# system/sepolicy
+repopick 241874 # sepolicy: Treat proc-based DT fstab the same and sys-based
 
 # -------------- TOPIC STUFF --------------
 
