@@ -23,23 +23,25 @@ if [ $USER != haggertk ]; then
 
 # device/samsung/hlte-common
 if [ -d device/samsung/hlte-common ] ; then
-  repopick 241829 # hlte-common: Create media_profiles_V1_0.xml
   repopick 241825 # hlte-common: Update power profile for Pie
   repopick 225618 # hlte-common: Align ril.h to samsung_msm8974-common P libril changes
 fi
 
 # device/samsung/klte-common
 if [ -d device/samsung/klte-common ] ; then
-  repopick 242365 # klte-common: Create media_profiles_V1_0.xml
   repopick 242366 # klte-common: Update power profile for Pie
   repopick 225192 # klte-common: Align ril.h to samsung_msm8974-common P libril changes
 fi
 
 # device/samsung/msm8974-common
 if [ -d device/samsung/msm8974-common ] ; then
-  repopick 241854 # msm8974-common: manifest: Add OMX media HAL
-  repopick 241853 # msm8974-common: manifest: Add health HAL
+  repopick 242394 # msm8974-common: Build Trust HAL
   repopick 241858 # msm8974-common: Build Samsung LiveDisplay service
+fi
+
+# kernel/samsung/msm8974
+if [ -d kernel/samsung/msm8974 ] ; then
+  repopick 242430 # add toggle for disabling newly added USB devices
 fi
 
 fi # [ $USER != haggertk ]
@@ -48,9 +50,6 @@ fi # [ $USER != haggertk ]
 
 # device/lineage/sepolicy
 repopick 241903 # vendor: Label all the livedisplay service implementations
-
-# device/qcom/sepolicy-legacy
-repopick 241875 # Revert "legacy: allow init to read /proc/device-tree"
 
 # frameworks/base
 repopick 235986 # frameworks: Add unlinked ringtone and notification volumes
@@ -73,9 +72,6 @@ repopick 233635 # Phone ringtone setting for Multi SIM device
 
 # system/core
 privpick system/core refs/changes/19/206119/2 # init: I hate safety net
-
-# system/sepolicy
-repopick 241874 # sepolicy: Treat proc-based DT fstab the same and sys-based
 
 # -------------- TOPIC STUFF --------------
 
