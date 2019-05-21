@@ -35,29 +35,19 @@ fi
 
 # device/samsung/msm8974-common
 if [ -d device/samsung/msm8974-common ] ; then
-  repopick 242394 # msm8974-common: Build Trust HAL
   repopick 241858 # msm8974-common: Build Samsung LiveDisplay service
-fi
-
-# kernel/samsung/msm8974
-if [ -d kernel/samsung/msm8974 ] ; then
-  repopick 242430 # add toggle for disabling newly added USB devices
 fi
 
 fi # [ $USER != haggertk ]
 
 # -------------- PLATFORM STUFF --------------
 
-# device/lineage/sepolicy
-repopick 241903 # vendor: Label all the livedisplay service implementations
-
 # frameworks/base
 repopick 235986 # frameworks: Add unlinked ringtone and notification volumes
 repopick 233633 # Phone ringtone setting for Multi SIM device
+repopick 248662 # Fix bugs regarding system app cannot write visible path
 
 # hardware/samsung
-repopick 238519 # samsung: Add dummy lineagehw HIDL interfaces for vendor.lineage.touch
-repopick 238520 # hidl: touch: Add binderized service implementation
 repopick 239597 # samsung: Add dummy lineagehw HIDL interfaces for vendor.lineage.livedisplay
 repopick 239598 # hidl: livedisplay: Add binderized service implementation
 
@@ -67,6 +57,9 @@ repopick 236184 # Settings: Use correct icon for ring volume
 repopick 233634 # Phone ringtone setting for Multi SIM device
 repopick 227120 # Settings: Check interfaces before enabling ADB over network
 
+# packages/apps/Snap
+repopick 248663 # Snap: Save SDCard photos to legacy path
+
 # packages/services/Telecomm
 repopick 233635 # Phone ringtone setting for Multi SIM device
 
@@ -74,6 +67,5 @@ repopick 233635 # Phone ringtone setting for Multi SIM device
 privpick system/core refs/changes/19/206119/2 # init: I hate safety net
 
 # -------------- TOPIC STUFF --------------
-
 
 exit 0
