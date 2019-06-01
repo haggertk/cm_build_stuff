@@ -23,37 +23,28 @@ if [ $USER != haggertk ]; then
 
 # device/samsung/hlte-common
 if [ -d device/samsung/hlte-common ] ; then
-  repopick 241825 # hlte-common: Update power profile for Pie
   repopick 225618 # hlte-common: Align ril.h to samsung_msm8974-common P libril changes
 fi
 
 # device/samsung/klte-common
 if [ -d device/samsung/klte-common ] ; then
-  repopick 242366 # klte-common: Update power profile for Pie
   repopick 225192 # klte-common: Align ril.h to samsung_msm8974-common P libril changes
 fi
 
 # device/samsung/msm8974-common
-if [ -d device/samsung/msm8974-common ] ; then
-  repopick 241858 # msm8974-common: Build Samsung LiveDisplay service
-fi
+#if [ -d device/samsung/msm8974-common ] ; then
+
+#fi
 
 fi # [ $USER != haggertk ]
 
 # -------------- PLATFORM STUFF --------------
 
 # frameworks/base
-repopick 235986 # frameworks: Add unlinked ringtone and notification volumes
 repopick 233633 # Phone ringtone setting for Multi SIM device
 repopick 248662 # Fix bugs regarding system app cannot write visible path
 
-# hardware/samsung
-repopick 239597 # samsung: Add dummy lineagehw HIDL interfaces for vendor.lineage.livedisplay
-repopick 239598 # hidl: livedisplay: Add binderized service implementation
-
 # packages/apps/Settings
-repopick 235978 # Settings: Add switch for linked ring and media notification volumes
-repopick 236184 # Settings: Use correct icon for ring volume
 repopick 233634 # Phone ringtone setting for Multi SIM device
 repopick 227120 # Settings: Check interfaces before enabling ADB over network
 
