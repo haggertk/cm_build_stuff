@@ -41,18 +41,10 @@ fi # [ $USER != haggertk ]
 # -------------- PLATFORM STUFF --------------
 
 # frameworks/base
-repopick 233633 # Phone ringtone setting for Multi SIM device
 repopick 248662 # Fix bugs regarding system app cannot write visible path
-
-# packages/apps/Settings
-repopick 233634 # Phone ringtone setting for Multi SIM device
-repopick 227120 # Settings: Check interfaces before enabling ADB over network
 
 # packages/apps/Snap
 repopick 248663 # Snap: Save SDCard photos to legacy path
-
-# packages/services/Telecomm
-repopick 233635 # Phone ringtone setting for Multi SIM device
 
 # system/core
 privpick system/core refs/changes/19/206119/2 # init: I hate safety net
