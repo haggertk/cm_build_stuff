@@ -2,10 +2,10 @@
 <manifest>
   <project name="haggertk/cm_build_stuff" path="haggertk" remote="github" >
     <linkfile src="picks.sh" dest="picks.sh" />
-    <linkfile src="000_remotes.xml" dest=".repo/local_manifests/000_remotes.xml" />
-    <linkfile src="local_manifest.xml" dest=".repo/local_manifests/z00_local_manifest.xml" />
-    <linkfile src="local_devices.xml" dest=".repo/local_manifests/z01_local_devices.xml" />
-    <linkfile src="vendor.xml" dest=".repo/local_manifests/z02_vendor.xml" />
+    <linkfile src="000_remotes.xml" dest="\.repo/local_manifests/000_remotes.xml" />
+    <linkfile src="local_manifest.xml" dest="\.repo/local_manifests/z00_local_manifest.xml" />
+    <linkfile src="local_devices.xml" dest="\.repo/local_manifests/z01_local_devices.xml" />
+    <linkfile src="vendor.xml" dest="\.repo/local_manifests/z02_vendor.xml" />
   </project>
 
   <!-- LineageOS Infrastructure Stuff -->
