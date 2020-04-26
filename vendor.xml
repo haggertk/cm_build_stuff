@@ -3,9 +3,7 @@
   <project name="haggertk/android_vendor_extra" path="vendor/extra" remote="github" />
 
   <project name="TheMuppets/proprietary_vendor_essential" path="vendor/essential" remote="github" />
-<!--  <project name="TheMuppets/proprietary_vendor_htc" path="vendor/htc" remote="github" /> -->
+  <project name="TheMuppets/proprietary_vendor_google" path="vendor/google" remote="github" />
   <project name="TheMuppets/proprietary_vendor_lge" path="vendor/lge" remote="github" />
-<!--  <project name="TheMuppets/proprietary_vendor_oneplus" path="vendor/oneplus" remote="github" /> -->
-<!--  <project name="TheMuppets/proprietary_vendor_oppo" path="vendor/oppo" remote="github" /> -->
-  <project name="haggertk/proprietary_vendor_samsung" path="vendor/samsung" remote="github" />
+  <project name="TheMuppets/proprietary_vendor_samsung" path="vendor/samsung" remote="github" />
 </manifest>
