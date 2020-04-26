@@ -22,14 +22,14 @@ source build/envsetup.sh
 if [ $USER != haggertk ]; then
 
 # device/samsung/hlte-common
-if [ -d device/samsung/hlte-common ] ; then
-  repopick 225618 # hlte-common: Align ril.h to samsung_msm8974-common P libril changes
-fi
+#if [ -d device/samsung/hlte-common ] ; then
+
+#fi
 
 # device/samsung/klte-common
-if [ -d device/samsung/klte-common ] ; then
-  repopick 225192 # klte-common: Align ril.h to samsung_msm8974-common P libril changes
-fi
+#if [ -d device/samsung/klte-common ] ; then
+
+#fi
 
 # device/samsung/msm8974-common
 #if [ -d device/samsung/msm8974-common ] ; then
@@ -40,14 +40,6 @@ fi # [ $USER != haggertk ]
 
 # -------------- PLATFORM STUFF --------------
 
-# frameworks/base
-repopick 248662 # Fix bugs regarding system app cannot write visible path
-
-# packages/apps/Snap
-repopick 248663 # Snap: Save SDCard photos to legacy path
-
-# system/core
-privpick system/core refs/changes/19/206119/2 # init: I hate safety net
 
 # -------------- TOPIC STUFF --------------
 
