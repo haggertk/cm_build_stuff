@@ -2,10 +2,12 @@
 <manifest>
 
   <project path="vendor/opengapps/build" name="opengapps/aosp_build" revision="master" />
+
+  <!--
   <project path="vendor/opengapps/sources/all" name="opengapps/all" revision="master" remote="gitlab-opengapps" />
 
-  <!-- arm64 depends on arm -->
   <project path="vendor/opengapps/sources/arm" name="opengapps/arm" revision="master" remote="gitlab-opengapps" />
   <project path="vendor/opengapps/sources/arm64" name="opengapps/arm64" revision="master" remote="gitlab-opengapps" />
+  -->
 
 </manifest>
