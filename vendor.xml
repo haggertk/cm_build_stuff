@@ -6,4 +6,5 @@
   <project name="TheMuppets/proprietary_vendor_google" path="vendor/google" remote="github" />
   <project name="TheMuppets/proprietary_vendor_lge" path="vendor/lge" remote="github" />
   <project name="TheMuppets/proprietary_vendor_samsung" path="vendor/samsung" remote="github" />
+  <project name="TheMuppets/manifests" path="vendor/TheMuppets" remote="github" />
 </manifest>
