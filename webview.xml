@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remove-project name="LineageOS/android_external_chromium-webview" />
+  <remove-project name="platform/external/chromium-webview" />
+<!--  <remove-project name="LineageOS/android_external_chromium-webview" /> -->
   <project path="external/chromium-webview" name="LineageOS/android_external_chromium-webview" groups="pdk" revision="master" />
 </manifest>
