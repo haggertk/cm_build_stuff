@@ -16,19 +16,10 @@
   <project name="LineageOS/infra/gerrit-config" path="lineage/infra/gerrit-config" remote="gitlab" revision="master" />
 
   <!-- Bringup Stuff -->
-  <project path="device/qcom/sepolicy-legacy" name="LineageOS/android_device_qcom_sepolicy" groups="qcom,pdk-qcom" revision="lineage-17.1-legacy" />
-
   <remove-project name="platform/art" />
   <project path="art" name="LineageOS/android_art" groups="pdk" />
 
-  <remove-project name="platform/external/e2fsprogs" />
-  <project path="external/e2fsprogs" name="LineageOS/android_external_e2fsprogs" groups="pdk" />
-
-  <remove-project name="platform/external/gptfdisk" />
-  <project path="external/gptfdisk" name="LineageOS/android_external_gptfdisk" groups="pdk" />
-
   <remove-project name="platform/external/perfetto" />
   <project path="external/perfetto" name="LineageOS/android_external_perfetto" groups="pdk" />
-
 
 </manifest>
