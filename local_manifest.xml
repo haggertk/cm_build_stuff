@@ -16,9 +16,6 @@
   <project name="LineageOS/infra/gerrit-config" path="lineage/infra/gerrit-config" remote="gitlab" revision="master" />
 
   <!-- Bringup Stuff -->
-  <remove-project name="platform/art" />
-  <project path="art" name="LineageOS/android_art" groups="pdk" />
-
   <remove-project name="platform/external/perfetto" />
   <project path="external/perfetto" name="LineageOS/android_external_perfetto" groups="pdk" />
 
