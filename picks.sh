@@ -40,29 +40,8 @@ source build/envsetup.sh
 
 # -------------- PLATFORM STUFF --------------
 
-# bionic
-repopick 290067 # Add ability to build scudo-free 32-bit libc variant.
-
 # build
-repopick 290066 # soong: Add ability to build scudo-free 32-bit libc variant.
 repopick 288657 # Sorry bro: 6 -> 3
-
-# build/soong
-repopick 290065 # Add ability to enable scudo-free 32-bit libc variant.
-
-# frameworks/native
-repopick 291971 # SurfaceFlinger: Don't cleanup resource from previous frame
-
-# hardware/qcom-caf/msm8974/audio
-repopick 293116 # audio: Add audio headers lib
-repopick 293117 # audio: Include media headers
-
-# hardware/qcom-caf/msm8974/display
-repopick 293118 # display: Add display headers lib
-
-# hardware/qcom-caf/msm8974/media
-repopick 293114 # media: Add media headers lib
-repopick 293115 # media: Include display headers
 
 # packages/apps/Gallery2
 repopick -p 294650 # Gallery2: Remove LOCAL_NDK_STL_VARIANT
@@ -86,9 +65,6 @@ repopick 286952 # vold ext4/f2fs: do not use dirsync if we're mounting adopted s
 repopick 286953 # Fix the group permissions of the sdcard root.
 repopick 286954 # vold: skip first disk change when converting MBR to GPT
 repopick 286955 # vold: Accept Linux GPT partitions on external SD cards
-
-# vendor/lineage
-repopick 291988 # soong: Add flag for disabling postrender cleanup
 
 # -------------- TOPIC STUFF --------------
 
