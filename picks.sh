@@ -43,6 +43,12 @@ source build/envsetup.sh
 # build
 repopick 288657 # Sorry bro: 6 -> 3
 
+# frameworks/base
+repopick 294860 # NavBar: Don't crash when we can't find navigation overlays
+
+# lineage-sdk
+repopick 294783 # Profile: Don't NPE when service is not started
+
 # packages/apps/Gallery2
 repopick -p 294650 # Gallery2: Remove LOCAL_NDK_STL_VARIANT
 
