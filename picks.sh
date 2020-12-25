@@ -43,11 +43,9 @@ source build/envsetup.sh
 # build
 repopick 288657 # Sorry bro: 6 -> 3
 
-# packages/apps/Snap
-repopick -p 294911 # Snap: Remove saving to sdcard
-
 # system/core
 repopick 292788 # core: Bring back support for legacy FunctionFS
+repopick 291972 # fastboot: Don't fail when unable to get boot partition size
 
 # system/vold
 #repopick 286947 # vold: add support for more filesystems for public storage

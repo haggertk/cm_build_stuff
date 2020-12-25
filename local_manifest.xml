@@ -15,6 +15,4 @@
   <project name="lineageos-infra/auth" path="lineage/infra/auth" remote="github" revision="master" />
   <project name="LineageOS/infra/gerrit-config" path="lineage/infra/gerrit-config" remote="gitlab" revision="master" />
 
-  <project path="packages/apps/Snap" name="LineageOS/android_packages_apps_Snap" />
-
 </manifest>
