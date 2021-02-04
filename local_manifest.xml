@@ -15,4 +15,5 @@
   <project name="lineageos-infra/auth" path="lineage/infra/auth" remote="github" revision="master" />
   <project name="LineageOS/infra/gerrit-config" path="lineage/infra/gerrit-config" remote="gitlab" revision="master" />
 
+  <project name="haggertk/android_device_samsung_klteaio" path="device/samsung/klteaio" />
 </manifest>
