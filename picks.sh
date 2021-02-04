@@ -43,8 +43,14 @@ source build/envsetup.sh
 # build
 repopick 288657 # Sorry bro: 6 -> 3
 
+# external/chromium-webview
+repopick 302271 # Update Chromium Webview to 88.0.4324.93
+
+# packages/apps/Snap
+repopick 302289 # Revert "Snap: Let mediaprovider add entry for newly taken photos"
+repopick 302290 # SnapCam: Fix thumbnail not update
+
 # system/core
-repopick 292788 # core: Bring back support for legacy FunctionFS
 repopick 291972 # fastboot: Don't fail when unable to get boot partition size
 
 # system/vold
