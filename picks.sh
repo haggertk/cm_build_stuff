@@ -43,15 +43,9 @@ source build/envsetup.sh
 # build
 repopick 288657 # Sorry bro: 6 -> 3
 
-# external/chromium-webview
-repopick 302271 # Update Chromium Webview to 88.0.4324.93
-
 # packages/apps/Snap
 repopick 302289 # Revert "Snap: Let mediaprovider add entry for newly taken photos"
 repopick 302290 # SnapCam: Fix thumbnail not update
-
-# system/core
-repopick 291972 # fastboot: Don't fail when unable to get boot partition size
 
 # system/vold
 #repopick 286947 # vold: add support for more filesystems for public storage
@@ -64,5 +58,7 @@ repopick 291972 # fastboot: Don't fail when unable to get boot partition size
 #repopick 286955 # vold: Accept Linux GPT partitions on external SD cards
 
 # -------------- TOPIC STUFF --------------
+
+repopick -t eleven-write-sdcard
 
 exit 0
