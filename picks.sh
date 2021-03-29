@@ -43,9 +43,6 @@ source build/envsetup.sh
 # build
 repopick 288657 # Sorry bro: 6 -> 3
 
-# external/chromium-webview
-repopick 305088 # Update Chromium Webview to 89.0.4389.72
-
 # system/vold
 #repopick 286947 # vold: add support for more filesystems for public storage
 #repopick 286948 # vold: Fix fsck on public volumes
@@ -57,7 +54,5 @@ repopick 305088 # Update Chromium Webview to 89.0.4389.72
 #repopick 286955 # vold: Accept Linux GPT partitions on external SD cards
 
 # -------------- TOPIC STUFF --------------
-
-repopick -t eleven-write-sdcard
 
 exit 0
