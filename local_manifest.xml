@@ -10,6 +10,8 @@
     -->
   </project>
 
+  <project name="luk1337/ih8sn" path="external/ih8sn" remote="github" revision="master" />
+
   <!-- LineageOS Infrastructure Stuff -->
 
   <project name="lineageos-infra/auth" path="lineage/infra/auth" remote="github" revision="master" />
