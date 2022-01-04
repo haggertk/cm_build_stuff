@@ -14,6 +14,6 @@
 
   <!-- LineageOS Infrastructure Stuff -->
 
-  <project name="lineageos-infra/auth" path="lineage/infra/auth" remote="github" revision="master" />
+  <project name="lineageos-infra/auth" path="lineage/infra/auth" remote="github" revision="main" />
   <project name="LineageOS/infra/gerrit-config" path="lineage/infra/gerrit-config" remote="gitlab" revision="master" />
 </manifest>
