@@ -16,5 +16,6 @@
 
   <project name="lineageos-infra/auth" path="lineage/infra/auth" remote="github" revision="main" />
   <project name="lineageos-infra/cron" path="lineage/infra/cron" remote="github-ssh" revision="master" />
-  <project name="LineageOS/infra/gerrit-config" path="lineage/infra/gerrit-config" remote="gitlab" revision="master" />
+  <project name="lineageos-infra/gerrit-config" path="lineage/infra/gerrit-config" remote="github" revision="main" />
+
 </manifest>
