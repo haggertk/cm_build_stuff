@@ -41,17 +41,10 @@ source build/envsetup.sh
 # -------------- PLATFORM STUFF --------------
 
 # build
-repopick 288657 # Sorry bro: 6 -> 3
+#repopick 288657 # Sorry bro: 6 -> 3
 
-# system/vold
-#repopick 286947 # vold: add support for more filesystems for public storage
-#repopick 286948 # vold: Fix fsck on public volumes
-#repopick 286949 # vold: Support internal storage partitions
-#repopick 286950 # vold: Honor mount options for ext4/f2fs partitions
-#repopick 286951 # vold: Mount ext4/f2fs portable storage with sdcard_posix
-#repopick 286952 # vold ext4/f2fs: do not use dirsync if we're mounting adopted storage
-#repopick 286953 # Fix the group permissions of the sdcard root.
-#repopick 286955 # vold: Accept Linux GPT partitions on external SD cards
+# frameworks/base
+privpick frameworks/base 08911ba84fbf4b44ac50047cd9bca649836a1d7e
 
 # -------------- TOPIC STUFF --------------
 
