@@ -12,6 +12,8 @@
 
   <project name="luk1337/ih8sn" path="external/ih8sn" remote="github" revision="master" />
 
+  <project name="MindTheGapps/vendor_gapps" path="vendor/gapps" remote="gitlab" revision="qoppa" />
+
   <!-- LineageOS Infrastructure Stuff -->
 
   <project name="lineageos-infra/auth" path="lineage/infra/auth" remote="github" revision="main" />
