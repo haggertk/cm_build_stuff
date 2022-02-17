@@ -2,11 +2,10 @@
 <manifest>
   <project name="haggertk/android_vendor_extra" path="vendor/extra" remote="github" />
 
-  <project name="TheMuppets/proprietary_vendor_essential" path="vendor/essential" remote="github" />
+<!--  <project name="TheMuppets/proprietary_vendor_essential" path="vendor/essential" remote="github" /> -->
   <project name="TheMuppets/proprietary_vendor_google" path="vendor/google" remote="github" />
-<!--  <project name="TheMuppets/proprietary_vendor_lge" path="vendor/lge" remote="github" /> -->
   <project name="TheMuppets/proprietary_vendor_samsung" path="vendor/samsung" remote="github" />
   <project name="TheMuppets/manifests" path="vendor/TheMuppets" remote="github" />
 
-  <project name="MindTheGapps/vendor_gapps" path="vendor/gapps" remote="gitlab" revision="rho" />
+  <project name="MindTheGapps/vendor_gapps" path="vendor/gapps" remote="gitlab" revision="sigma" />
 </manifest>
