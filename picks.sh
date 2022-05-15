@@ -18,13 +18,11 @@ source build/envsetup.sh
 
 # -------------- PLATFORM STUFF --------------
 
-# external/chromium-webview
-repopick 325922 # Update arm{,64} Chromium Webview to 99.0.4844.73
-
 # frameworks/base
-repopick 318763 # SystemUI: runtime configurable audio panel location
-repopick 321160 # Keyguard: Allow disabling fingerprint wake-and-unlock
+#repopick 318763 # SystemUI: runtime configurable audio panel location
 repopick 320714 # SystemUI: add burnIn protection
+privpick frameworks/base baf2e2f48a4ef6b64e67ad6dfd7740113058aad7 # Alter model name to avoid SafetyNet HW attestation enforcement
+privpick frameworks/base f96f3f09b4cadfbf0474ab633ad33f55c6449e90 # keystore: Block key attestation for SafetyNet
 
 # packages/apps/Trebuchet
 repopick 317967 # Enable crossfade when changing theme
