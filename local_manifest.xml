@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project name="haggertk/cm_build_stuff" path="haggertk" remote="github" >
+  <project name="haggertk/cm_build_stuff" path="haggertk" remote="github" revision="lineage-20" >
     <linkfile src="picks.sh" dest="picks.sh" />
   </project>
 

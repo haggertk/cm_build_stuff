@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project name="haggertk/android_vendor_extra" path="vendor/extra" remote="github" />
+  <project name="haggertk/android_vendor_extra" path="vendor/extra" remote="github" revision="lineage-20" />
 
+<!--
   <project name="TheMuppets/proprietary_vendor_essential" path="vendor/essential" remote="github" />
   <project name="TheMuppets/proprietary_vendor_google" path="vendor/google" remote="github" />
   <project name="TheMuppets/proprietary_vendor_samsung" path="vendor/samsung" remote="github" />
   <project name="TheMuppets/manifests" path="vendor/TheMuppets" remote="github" />
+-->
 
-  <project name="MindTheGapps/vendor_gapps" path="vendor/gapps" remote="gitlab" revision="sigma" />
+  <!-- Pixel 6/6XL -->
+  <project name="TheMuppets/proprietary_vendor_google_bramble" path="vendor/google/bramble" remote="github" revision="lineage-20" />
+  <project name="TheMuppets/proprietary_vendor_google_redfin" path="vendor/google/redfin" remote="github" revision="lineage-20" />
+
+  <project name="MindTheGapps/vendor_gapps" path="vendor/gapps" remote="gitlab" revision="tau" />
 </manifest>
