@@ -2,16 +2,20 @@
 <manifest>
   <project name="haggertk/android_vendor_extra" path="vendor/extra" remote="github" revision="lineage-20" />
 
-<!--
-  <project name="TheMuppets/proprietary_vendor_essential" path="vendor/essential" remote="github" />
-  <project name="TheMuppets/proprietary_vendor_google" path="vendor/google" remote="github" />
-  <project name="TheMuppets/proprietary_vendor_samsung" path="vendor/samsung" remote="github" />
-  <project name="TheMuppets/manifests" path="vendor/TheMuppets" remote="github" />
--->
+  <!-- gapps -->
+  <project name="MindTheGapps/vendor_gapps" path="vendor/gapps" clone-depth="1" remote="gitlab" revision="tau" />
 
-  <!-- Pixel 6/6XL -->
-  <project name="TheMuppets/proprietary_vendor_google_bramble" path="vendor/google/bramble" remote="github" revision="lineage-20" />
+  <!-- Firmware -->
+  <project name="The-Muppets/proprietary_vendor_firmware" path="vendor/firmware" remote="gitlab" revision="lineage-20" />
+
+  <!-- manifests -->
+  <project name="TheMuppets/manifests" path="vendor/TheMuppets" remote="github" />
+  <project name="The-Muppets/manifest" path="vendor/The-Muppets" remote="gitlab" />
+
+  <!-- Pixel 5 -->
   <project name="TheMuppets/proprietary_vendor_google_redfin" path="vendor/google/redfin" remote="github" revision="lineage-20" />
 
-  <project name="MindTheGapps/vendor_gapps" path="vendor/gapps" remote="gitlab" revision="tau" />
+  <!-- Pixel 6 -->
+  <project name="TheMuppets/proprietary_vendor_google_bramble" path="vendor/google/bramble" remote="github" revision="lineage-20" />
+
 </manifest>
