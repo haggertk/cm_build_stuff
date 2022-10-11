@@ -16,6 +16,6 @@
   <project name="TheMuppets/proprietary_vendor_google_redfin" path="vendor/google/redfin" remote="github" revision="lineage-20" />
 
   <!-- Pixel 6 -->
-  <project name="TheMuppets/proprietary_vendor_google_bramble" path="vendor/google/bramble" remote="github" revision="lineage-20" />
+  <project name="The-Muppets/proprietary_vendor_google_oriole" path="vendor/google/oriole" remote="gitlab" revision="lineage-20" />
 
 </manifest>
