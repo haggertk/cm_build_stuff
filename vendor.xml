@@ -12,6 +12,15 @@
   <project name="TheMuppets/manifests" path="vendor/TheMuppets" remote="github" />
   <project name="The-Muppets/manifest" path="vendor/The-Muppets" remote="gitlab" />
 
+  <!-- Galaxy Tab S6 Lite -->
+  <project name="TheMuppets/proprietary_vendor_samsung_gta4xl" path="vendor/samsung/gta4xl" remote="github" revision="lineage-20" />
+  <project name="TheMuppets/proprietary_vendor_samsung_gta4xl-common" path="vendor/samsung/gta4xl-common" remote="github" revision="lineage-20" />
+  <project name="TheMuppets/proprietary_vendor_samsung_gta4xlwifi" path="vendor/samsung/gta4xlwifi" remote="github" revision="lineage-20" />
+
+  <!-- PH-1 -->
+
+  <project name="TheMuppets/proprietary_vendor_essential_mata" path="vendor/essential/mata" remote="github" revision="lineage-20" />
+
   <!-- Pixel 5 -->
   <project name="TheMuppets/proprietary_vendor_google_redfin" path="vendor/google/redfin" remote="github" revision="lineage-20" />
 
