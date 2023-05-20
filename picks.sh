@@ -19,8 +19,7 @@ source build/envsetup.sh
 # -------------- PLATFORM STUFF --------------
 
 # frameworks/base
-privpick frameworks/base baf2e2f48a4ef6b64e67ad6dfd7740113058aad7 # Alter model name to avoid SafetyNet HW attestation enforcement
-privpick frameworks/base f96f3f09b4cadfbf0474ab633ad33f55c6449e90 # keystore: Block key attestation for SafetyNet
+repopick -f -t 20-snet
 
 # -------------- TOPIC STUFF --------------
 
