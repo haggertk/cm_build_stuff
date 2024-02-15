@@ -14,6 +14,8 @@ function checkchain() {
 
 source build/envsetup.sh
 
+# -------------- ASB STUFF --------------
+
 # -------------- DEVICE STUFF --------------
 
 # -------------- PLATFORM STUFF --------------
