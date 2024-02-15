@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project name="haggertk/cm_build_stuff" path="haggertk" remote="github" revision="lineage-20" >
+  <project name="haggertk/cm_build_stuff" path="haggertk" remote="github" revision="lineage-21" >
     <linkfile src="picks.sh" dest="picks.sh" />
   </project>
 
@@ -9,7 +9,6 @@
   <!-- LineageOS Infrastructure Stuff -->
 
   <project name="lineageos-infra/auth" path="lineage/infra/auth" remote="github" revision="main" />
-  <project name="lineageos-infra/cron" path="lineage/infra/cron" remote="github-ssh" revision="master" />
   <project name="lineageos-infra/gerrit-config" path="lineage/infra/gerrit-config" remote="github" revision="main" />
 
 </manifest>
