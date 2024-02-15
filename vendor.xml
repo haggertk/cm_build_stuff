@@ -5,9 +5,6 @@
   <!-- gapps -->
   <project name="MindTheGapps/vendor_gapps" path="vendor/gapps" clone-depth="1" remote="gitlab" revision="upsilon" />
 
-  <!-- Firmware -->
-  <project name="The-Muppets/proprietary_vendor_firmware" path="vendor/firmware" remote="gitlab" revision="lineage-21" />
-
   <!-- manifests -->
   <project name="TheMuppets/manifests" path="vendor/TheMuppets" remote="github" />
   <project name="The-Muppets/manifest" path="vendor/The-Muppets" remote="gitlab" />
