@@ -20,9 +20,6 @@ source build/envsetup.sh
 
 # -------------- PLATFORM STUFF --------------
 
-# frameworks/base
-repopick -f -t 21-snet
-
 # -------------- TOPIC STUFF --------------
 
 exit 0
