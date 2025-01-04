@@ -10,11 +10,9 @@
   <project name="The-Muppets/manifest" path="vendor/The-Muppets" remote="gitlab" />
 
   <!-- Galaxy Tab S6 Lite -->
-<!--
-  <project name="TheMuppets/proprietary_vendor_samsung_gta4xl" path="vendor/samsung/gta4xl" remote="github" revision="lineage-21" />
-  <project name="TheMuppets/proprietary_vendor_samsung_gta4xl-common" path="vendor/samsung/gta4xl-common" remote="github" revision="lineage-21" />
-  <project name="TheMuppets/proprietary_vendor_samsung_gta4xlwifi" path="vendor/samsung/gta4xlwifi" remote="github" revision="lineage-21" />
--->
+  <project name="TheMuppets/proprietary_vendor_samsung_gta4xl" path="vendor/samsung/gta4xl" remote="github" />
+  <project name="TheMuppets/proprietary_vendor_samsung_gta4xl-common" path="vendor/samsung/gta4xl-common" />
+  <project name="TheMuppets/proprietary_vendor_samsung_gta4xlwifi" path="vendor/samsung/gta4xlwifi" remote="github" />
 
   <!-- PH-1 -->
   <project name="TheMuppets/proprietary_vendor_essential_mata" path="vendor/essential/mata" remote="github" />
