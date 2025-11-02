@@ -13,9 +13,6 @@
   <project name="TheMuppets/proprietary_vendor_samsung_gta4xl-common" path="vendor/samsung/gta4xl-common" />
   <project name="TheMuppets/proprietary_vendor_samsung_gta4xlwifi" path="vendor/samsung/gta4xlwifi" remote="github" />
 
-  <!-- PH-1 -->
-  <project name="TheMuppets/proprietary_vendor_essential_mata" path="vendor/essential/mata" remote="github" />
-
   <!-- Pixel 5 -->
   <project name="TheMuppets/proprietary_vendor_google_redfin" path="vendor/google/redfin" remote="github" />
 
