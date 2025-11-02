@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project name="haggertk/android_vendor_extra" path="vendor/extra" remote="github" revision="lineage-22" />
+  <project name="haggertk/android_vendor_extra" path="vendor/extra" remote="github" />
 
   <!-- gapps -->
-  <project name="MindTheGapps/vendor_gapps" path="vendor/gapps" clone-depth="1" remote="gitlab" revision="vic" />
+  <project name="MindTheGapps/vendor_gapps" path="vendor/gapps" clone-depth="1" remote="gitlab" revision="baklava" />
 
   <!-- manifests -->
   <project name="TheMuppets/manifests" path="vendor/TheMuppets" remote="github" />
@@ -19,10 +19,5 @@
 
   <!-- Pixel 5 -->
   <project name="TheMuppets/proprietary_vendor_google_redfin" path="vendor/google/redfin" remote="github" />
-
-  <!-- Pixel 6 -->
-<!--
-  <project name="TheMuppets/proprietary_vendor_google_oriole" path="vendor/google/oriole" remote="github" />
--->
 
 </manifest>
